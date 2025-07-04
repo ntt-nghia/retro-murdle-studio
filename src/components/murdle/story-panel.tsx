@@ -1,4 +1,6 @@
 "use client";
+import { useState } from 'react';
+import { cn } from "@/lib/utils";
 import type { Story, Clue } from "@/lib/types";
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -7,19 +9,25 @@ import { BookOpen, MapPin, Microscope, Users } from "lucide-react";
 interface StoryPanelProps {
   story: Pick<Story, 'title' | 'setting' | 'intro' | 'victim'>;
   clues: Clue[];
-  revealedClueCount: number;
-  onRevealClue: () => void;
   onOpenModal: (type: "suspects" | "weapons" | "locations") => void;
 }
 
 export default function StoryPanel({
   story,
   clues,
-  revealedClueCount,
-  onRevealClue,
   onOpenModal,
 }: StoryPanelProps) {
-  const revealedClues = clues.slice(0, revealedClueCount);
+  const [strikedClues, setStrikedClues] = useState<boolean[]>(() =>
+    Array(clues.length).fill(false)
+  );
+
+  const handleToggleClue = (index: number) => {
+    setStrikedClues((prev) => {
+      const newStriked = [...prev];
+      newStriked[index] = !newStriked[index];
+      return newStriked;
+    });
+  };
 
   return (
     <div className="space-y-4">
@@ -45,27 +53,22 @@ export default function StoryPanel({
 
       <div className="retro-frame" data-tutorial="clues-panel">
         <div className="flex justify-between items-center p-2">
-            <h2 className="text-xl font-bold retro-text-glow-cyan">CLUES</h2>
-            <div className="retro-input !text-red-500 px-2 py-1 text-lg">
-                {revealedClueCount} / {clues.length}
-            </div>
+            <h2 className="text-xl font-bold retro-text-glow-cyan">CLUES & EVIDENCE</h2>
         </div>
         <div className="retro-frame-inset p-4 space-y-3">
           <ScrollArea className="h-64 font-code">
-            {revealedClues.map((clue, index) => (
-              <div key={index} className="retro-frame bg-black/30 border-accent/50 p-2">
-                <p className="text-lime-300">{clue.text}</p>
+            {clues.map((clue, index) => (
+              <div 
+                key={index} 
+                className="retro-frame bg-black/30 border-accent/50 p-2 cursor-pointer hover:bg-accent/20"
+                onClick={() => handleToggleClue(index)}
+              >
+                <p className={cn("text-lime-300 transition-all", strikedClues[index] && "line-through opacity-60")}>
+                  {clue.text}
+                </p>
               </div>
             ))}
           </ScrollArea>
-           <Button
-              className="retro-button w-full"
-              onClick={onRevealClue}
-              disabled={revealedClueCount >= clues.length}
-              data-tutorial="next-clue-button"
-            >
-              NEXT CLUE
-            </Button>
         </div>
       </div>
     </div>

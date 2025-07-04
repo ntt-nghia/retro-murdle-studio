@@ -26,7 +26,6 @@ export default function MurdleGameLayout({ murdleData, onRestart, isSample }: Mu
   const allItems = useMemo(() => ({ suspects, weapons, locations }), [suspects, weapons, locations]);
 
   const [gridState, setGridState] = useState<GridState>({});
-  const [revealedClueCount, setRevealedClueCount] = useState(1);
 
   const [modalState, setModalState] = useState<{
     isOpen: boolean;
@@ -48,12 +47,6 @@ export default function MurdleGameLayout({ murdleData, onRestart, isSample }: Mu
       return { ...prevState, [key]: nextState };
     });
   };
-  
-  const handleRevealClue = () => {
-    if (revealedClueCount < clues.length) {
-      setRevealedClueCount(revealedClueCount + 1);
-    }
-  };
 
   const openModal = (type: "suspects" | "weapons" | "locations") => {
     setModalState({ isOpen: true, type });
@@ -73,10 +66,6 @@ export default function MurdleGameLayout({ murdleData, onRestart, isSample }: Mu
   };
 
   const startTutorial = () => {
-    if (revealedClueCount < 1) {
-      handleRevealClue();
-    }
-    
     const intro = introJs();
     intro.setOptions({
       steps: [
@@ -90,23 +79,11 @@ export default function MurdleGameLayout({ murdleData, onRestart, isSample }: Mu
         },
         {
           element: '[data-tutorial="clues-panel"]',
-          intro: "Here you will find clues. Reveal them one by one to piece together the puzzle. Some clues might be puzzles you need to solve!",
-        },
-        {
-          element: '[data-tutorial="next-clue-button"]',
-          intro: "Click this button to get your next clue. Let's see what we've got.",
+          intro: "Here you will find all the clues for the case. As you use a clue to make a deduction, click on it to strike it through and keep track of your progress.",
         },
         {
           element: '[data-tutorial="deduction-grid"]',
-          intro: "This is your deduction grid. As you gather clues, use this grid to mark off impossibilities and confirm connections.",
-        },
-        {
-          element: '[data-tutorial="deduction-grid"]',
-          intro: "Click a cell once for 'X' (impossible), twice for '✓' (confirmed), three times for '?' (uncertain), and a fourth time to clear it.",
-        },
-        {
-          element: '[data-tutorial="deduction-grid"]',
-          intro: "The first clue says 'The victim was not stabbed.' This means you can eliminate the 'Antique Dagger'. Find the column for the dagger and mark 'X' for all suspects.",
+          intro: "This is your deduction grid. Use the clues to mark off impossibilities and confirm connections. Click a cell once for 'X', twice for '✓', three times for '?', and a fourth time to clear it.",
         },
         {
           element: '[data-tutorial="accusation-form"]',
@@ -150,8 +127,6 @@ export default function MurdleGameLayout({ murdleData, onRestart, isSample }: Mu
           <StoryPanel
             story={story}
             clues={clues}
-            revealedClueCount={revealedClueCount}
-            onRevealClue={handleRevealClue}
             onOpenModal={openModal}
           />
         </div>

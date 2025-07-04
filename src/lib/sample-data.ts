@@ -78,24 +78,24 @@ export const sampleMurdleData: GenerateMurdleMysteryOutput = {
     ],
     clues: [
       {
-        text: "The coroner confirmed the cause of death was not poison or strangulation.",
+        text: "The coroner confirmed the cause of death was a single puncture wound. Poison and strangulation have been ruled out.",
         type: "elimination"
       },
       {
-        text: "The murder did not take place in the Observatory; the mystic, Elara Vance, was there alone all evening, meditating.",
+        text: "The murder did not happen in the Billiards Room or the Observatory.",
         type: "elimination"
       },
       {
-        text: "Lady Genevieve was seen in the Billiards Room during the time of the murder, visibly upset but with clean hands.",
+        text: "Lady Genevieve was not in the Study at the time of the murder.",
+        type: "elimination"
+      },
+      {
+        text: "Elara Vance did not use the Ornate Letter Opener.",
         type: "relationship"
       },
       {
-        text: "A character known for their pride and business acumen would likely choose a direct and personal method of confrontation.",
-        type: "direct_statement"
-      },
-      {
-        text: "The murder weapon was an item belonging to the victim, found in its usual place.",
-        type: "direct_statement"
+        text: "The person in the Billiards room was not Silas Croft.",
+        type: "relationship"
       }
     ],
     solution: {
