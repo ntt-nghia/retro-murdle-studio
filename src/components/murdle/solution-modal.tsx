@@ -31,6 +31,15 @@ export default function SolutionModal({ isOpen, onClose, title, solution, story,
   const [loadingHints, setLoadingHints] = useState(false);
 
   useEffect(() => {
+    if (status === 'failed') {
+      const timer = setTimeout(() => {
+        onClose(); // This will set gameState back to 'playing'
+      }, 2000);
+      return () => clearTimeout(timer);
+    }
+  }, [status, onClose]);
+
+  useEffect(() => {
     if (solution && story && items) {
       const fetchHints = async () => {
         setLoadingHints(true);
@@ -65,7 +74,7 @@ export default function SolutionModal({ isOpen, onClose, title, solution, story,
           {status === 'failed' && (
             <Alert variant="destructive" className="retro-frame !border-red-500">
               <AlertTitle className="font-bold text-blink">INCORRECT!</AlertTitle>
-              <AlertDescription>Your accusation was wrong. The killer remains at large...</AlertDescription>
+              <AlertDescription>Your accusation was wrong. The killer remains at large... Try again!</AlertDescription>
             </Alert>
           )}
           <div className="space-y-2">
@@ -126,7 +135,7 @@ export default function SolutionModal({ isOpen, onClose, title, solution, story,
   };
 
   return (
-    <Dialog open={isOpen} onOpenChange={isFinalAccusation ? onClose : undefined}>
+    <Dialog open={isOpen} onOpenChange={isFinalAccusation && status !== 'failed' ? onClose : undefined}>
       <DialogContent className="max-w-2xl h-[80vh] retro-frame !bg-[#1d0a4e] border-accent shadow-[0_0_20px_hsl(var(--accent))] flex flex-col">
         <DialogHeader>
           <DialogTitle className="text-3xl font-black retro-text-rainbow">{title}</DialogTitle>

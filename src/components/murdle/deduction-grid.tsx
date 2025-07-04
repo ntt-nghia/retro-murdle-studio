@@ -26,8 +26,8 @@ const GridCell = ({ state, onClick }: { state: CellState, onClick: () => void })
 };
 
 interface SubGridProps {
-  rows: { name: string, icon?: string }[];
-  cols: { name: string, icon?: string }[];
+  rows: { name: string, icon?: string, avatar?: string }[];
+  cols: { name: string, icon?: string, avatar?: string }[];
   gridState: { [key: string]: CellState };
   onCellClick: (key: string) => void;
   title: string;
@@ -36,29 +36,31 @@ interface SubGridProps {
 const SubGrid = ({ rows, cols, gridState, onCellClick, title }: SubGridProps) => (
   <div className="retro-frame-inset p-2 md:p-4">
     <h3 className="text-lg font-bold text-center mb-2 retro-text-glow-cyan">{title}</h3>
-    <div className="grid grid-cols-1 gap-2 overflow-x-auto p-1">
-      <div className="flex gap-1 sticky top-0 bg-background/80 z-10">
-        <div className="w-16 md:w-20 flex-shrink-0" />
-        {cols.map((col) => (
-          <div key={col.name} className="w-10 md:w-12 flex-shrink-0 flex items-center justify-center text-2xl" title={col.name}>
-            {col.icon || col.name.charAt(0)}
+    <div className="flex justify-center">
+        <div className="inline-grid grid-cols-1 gap-2 overflow-x-auto p-1">
+          <div className="flex gap-1 sticky top-0 bg-background/80 z-10">
+            <div className="w-36 flex-shrink-0" />
+            {cols.map((col) => (
+              <div key={col.name} className="w-10 md:w-12 flex-shrink-0 flex items-center justify-center text-2xl" title={col.name}>
+                {col.icon || col.avatar || col.name.charAt(0)}
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
-      {rows.map((row) => (
-        <div key={row.name} className="flex gap-1 items-center">
-          <div className="w-16 md:w-20 flex-shrink-0 text-right pr-2 text-2xl truncate" title={row.name}>
-             {row.icon || row.name.split(' ').pop()?.substring(0,4)}
-          </div>
-          {cols.map((col) => (
-            <GridCell
-              key={`${row.name}-${col.name}`}
-              state={gridState[`${row.name}-${col.name}`] || 'empty'}
-              onClick={() => onCellClick(`${row.name}-${col.name}`)}
-            />
+          {rows.map((row) => (
+            <div key={row.name} className="flex gap-1 items-center">
+              <div className="w-36 flex-shrink-0 text-right pr-2 text-sm" title={row.name}>
+                 {row.name}
+              </div>
+              {cols.map((col) => (
+                <GridCell
+                  key={`${row.name}-${col.name}`}
+                  state={gridState[`${row.name}-${col.name}`] || 'empty'}
+                  onClick={() => onCellClick(`${row.name}-${col.name}`)}
+                />
+              ))}
+            </div>
           ))}
         </div>
-      ))}
     </div>
   </div>
 );

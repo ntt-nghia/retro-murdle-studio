@@ -66,15 +66,13 @@ export default function MurdleGameLayout({ murdleData, onRestart }: MurdleGameLa
       setGameState("solved");
     } else {
       setGameState("failed");
-      // After a brief moment, revert to playing to allow another try
-      setTimeout(() => setGameState("accusing"), 2000);
     }
   };
 
 
   return (
     <div className="flex flex-col lg:flex-row gap-8 p-4 max-w-full">
-      <div className="lg:w-1/3 w-full">
+      <div className="lg:w-1/2 w-full">
         <StoryPanel
           story={story}
           clues={clues}
@@ -85,7 +83,7 @@ export default function MurdleGameLayout({ murdleData, onRestart }: MurdleGameLa
           onOpenModal={openModal}
         />
       </div>
-      <div className="lg:w-2/3 w-full">
+      <div className="lg:w-1/2 w-full">
         <div className="retro-frame">
            <h2 className="text-2xl font-bold retro-text-glow-pink p-4 text-center">DEDUCTION GRID</h2>
            <DeductionGrid
@@ -123,9 +121,7 @@ export default function MurdleGameLayout({ murdleData, onRestart }: MurdleGameLa
             isFinalAccusation={true}
             onAccuse={handleAccusation}
             status={gameState}
-            suspects={suspects}
-            weapons={weapons}
-            locations={locations}
+            items={allItems}
           />
       )}
       
