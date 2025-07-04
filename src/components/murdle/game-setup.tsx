@@ -10,10 +10,11 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
-import { AlertTriangle } from "lucide-react";
+import { AlertTriangle, FileText } from "lucide-react";
 
 interface GameSetupProps {
   onGenerate: (theme: string, difficulty: "Easy" | "Medium" | "Hard") => void;
+  onLoadSample: () => void;
   error: string | null;
 }
 
@@ -28,7 +29,7 @@ const themes = [
 
 const difficulties = ["Easy", "Medium", "Hard"] as const;
 
-export default function GameSetup({ onGenerate, error }: GameSetupProps) {
+export default function GameSetup({ onGenerate, onLoadSample, error }: GameSetupProps) {
   const [theme, setTheme] = useState(themes[0]);
   const [difficulty, setDifficulty] = useState<"Easy" | "Medium" | "Hard">("Easy");
 
@@ -84,6 +85,19 @@ export default function GameSetup({ onGenerate, error }: GameSetupProps) {
             </div>
             <Button type="submit" className="retro-button w-full !bg-green-500 !text-black hover:!bg-green-400">
               START INVESTIGATION
+            </Button>
+            <div className="relative flex py-2 items-center">
+              <div className="flex-grow border-t border-muted"></div>
+              <span className="flex-shrink mx-4 text-muted">OR</span>
+              <div className="flex-grow border-t border-muted"></div>
+            </div>
+            <Button
+              type="button"
+              onClick={onLoadSample}
+              className="retro-button w-full !bg-blue-500 !text-white hover:!bg-blue-400"
+            >
+              <FileText className="mr-2 h-4 w-4" />
+              LOAD SAMPLE CASE
             </Button>
           </form>
         </div>

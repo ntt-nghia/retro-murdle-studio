@@ -6,6 +6,7 @@ import { generateMysteryAction } from "@/app/actions";
 import GameSetup from "@/components/murdle/game-setup";
 import MurdleGameLayout from "@/components/murdle/murdle-game-layout";
 import { Skeleton } from "@/components/ui/skeleton";
+import { sampleMurdleData } from "@/lib/sample-data";
 
 type GameState = "setup" | "loading" | "playing";
 
@@ -34,6 +35,12 @@ export default function Home() {
     }
   };
 
+  const handleLoadSample = () => {
+    setError(null);
+    setMurdleData(sampleMurdleData);
+    setGameState("playing");
+  };
+
   const handleRestart = () => {
     setGameState("setup");
     setMurdleData(null);
@@ -44,7 +51,11 @@ export default function Home() {
     switch (gameState) {
       case "setup":
         return (
-          <GameSetup onGenerate={handleGenerateMystery} error={error} />
+          <GameSetup
+            onGenerate={handleGenerateMystery}
+            onLoadSample={handleLoadSample}
+            error={error}
+          />
         );
       case "loading":
         return (
