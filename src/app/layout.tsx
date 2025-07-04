@@ -1,6 +1,7 @@
 import type {Metadata} from 'next';
 import { Toaster } from "@/components/ui/toaster"
 import './globals.css';
+import 'intro.js/introjs.css';
 
 export const metadata: Metadata = {
   title: 'Retro Sleuth AI',

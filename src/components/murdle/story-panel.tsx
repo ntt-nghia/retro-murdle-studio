@@ -28,7 +28,7 @@ export default function StoryPanel({
 
   return (
     <div className="space-y-4">
-      <div className="retro-frame">
+      <div className="retro-frame" data-tutorial="story-panel">
         <h1 className="text-2xl font-black retro-text-glow-pink p-2">{story.title}</h1>
         <div className="retro-frame-inset p-4">
           <ScrollArea className="h-48 font-code text-lime-300">
@@ -39,7 +39,7 @@ export default function StoryPanel({
         </div>
       </div>
 
-      <div className="retro-frame">
+      <div className="retro-frame" data-tutorial="navigation-panel">
         <h2 className="text-xl font-bold p-2 retro-text-glow-cyan">NAVIGATION</h2>
         <div className="grid grid-cols-3 gap-2 p-2">
             <Button className="retro-button !text-xs" onClick={() => onOpenModal('suspects')}><Users className="mr-2 h-4 w-4"/>SUSPECTS</Button>
@@ -48,7 +48,7 @@ export default function StoryPanel({
         </div>
       </div>
 
-      <div className="retro-frame">
+      <div className="retro-frame" data-tutorial="clues-panel">
         <div className="flex justify-between items-center p-2">
             <h2 className="text-xl font-bold retro-text-glow-cyan">CLUES</h2>
             <div className="retro-input !text-red-500 px-2 py-1 text-lg">
@@ -58,7 +58,7 @@ export default function StoryPanel({
         <div className="retro-frame-inset p-4 space-y-3">
           <ScrollArea className="h-64 font-code">
             {revealedClues.map((clue, index) => (
-               <div key={index} className={clue.isPuzzle ? "puzzle-frame" : "retro-frame bg-green-900/50 border-green-500"}>
+               <div key={index} className={"p-2 " + (clue.isPuzzle ? "puzzle-frame" : "retro-frame bg-green-900/50 border-green-500")}>
                 {clue.isPuzzle ? (
                   <PuzzleClue
                     clue={clue}
@@ -76,6 +76,7 @@ export default function StoryPanel({
               className="retro-button w-full"
               onClick={onRevealClue}
               disabled={revealedClueCount >= clues.length}
+              data-tutorial="next-clue-button"
             >
               NEXT CLUE
             </Button>

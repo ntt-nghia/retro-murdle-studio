@@ -13,7 +13,7 @@ interface AccusationFormProps {
 
 export default function AccusationForm({ onAccuse }: AccusationFormProps) {
   return (
-    <div className="retro-frame !border-destructive shadow-[0_0_15px_hsl(var(--destructive))]">
+    <div className="retro-frame !border-destructive shadow-[0_0_15px_hsl(var(--destructive))]" data-tutorial="accusation-form">
         <div className="p-4 text-center space-y-4">
             <h2 className="text-2xl font-black retro-text-glow-pink flex items-center justify-center gap-2">
                 <AlertTriangle className="text-destructive w-8 h-8 text-blink" />

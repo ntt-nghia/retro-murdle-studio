@@ -15,10 +15,12 @@ export default function Home() {
   const [murdleData, setMurdleData] =
     useState<GenerateMurdleMysteryOutput | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [isSampleData, setIsSampleData] = useState(false);
 
   const handleGenerateMystery = async (theme: string, difficulty: "Easy" | "Medium" | "Hard") => {
     setGameState("loading");
     setError(null);
+    setIsSampleData(false);
     try {
       const result = await generateMysteryAction({ theme, difficulty });
       if (result) {
@@ -38,6 +40,7 @@ export default function Home() {
   const handleLoadSample = () => {
     setError(null);
     setMurdleData(sampleMurdleData);
+    setIsSampleData(true);
     setGameState("playing");
   };
 
@@ -45,6 +48,7 @@ export default function Home() {
     setGameState("setup");
     setMurdleData(null);
     setError(null);
+    setIsSampleData(false);
   };
 
   const renderContent = () => {
@@ -80,6 +84,7 @@ export default function Home() {
             <MurdleGameLayout
               murdleData={murdleData.murdleData}
               onRestart={handleRestart}
+              isSample={isSampleData}
             />
           );
         }

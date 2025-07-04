@@ -48,7 +48,7 @@ const SubGrid = ({ rows, cols, gridState, onCellClick, title }: SubGridProps) =>
           </div>
           {rows.map((row) => (
             <div key={row.name} className="flex gap-1 items-center">
-              <div className="w-36 flex-shrink-0 text-right pr-2 text-sm" title={row.name}>
+              <div className="w-36 flex-shrink-0 text-right pr-2" title={row.name}>
                  {row.name}
               </div>
               {cols.map((col) => (
@@ -68,7 +68,7 @@ const SubGrid = ({ rows, cols, gridState, onCellClick, title }: SubGridProps) =>
 
 export default function DeductionGrid({ suspects, weapons, locations, gridState, onCellClick }: DeductionGridProps) {
   return (
-    <div className="space-y-4">
+    <div className="space-y-4" data-tutorial="deduction-grid">
       <SubGrid
         rows={suspects}
         cols={locations}
