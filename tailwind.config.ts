@@ -8,11 +8,18 @@ export default {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    container: {
+      center: true,
+      padding: '2rem',
+      screens: {
+        '2xl': '1400px',
+      },
+    },
     extend: {
       fontFamily: {
-        body: ['Inter', 'sans-serif'],
-        headline: ['Inter', 'sans-serif'],
-        code: ['monospace'],
+        body: ['"Courier Prime"', 'monospace'],
+        headline: ['Orbitron', 'sans-serif'],
+        code: ['"Courier Prime"', 'monospace'],
       },
       colors: {
         background: 'hsl(var(--background))',
@@ -88,10 +95,24 @@ export default {
             height: '0',
           },
         },
+        'rainbow-text': {
+          '0%': { backgroundPosition: '0% 50%' },
+          '100%': { backgroundPosition: '100% 50%' },
+        },
+        blink: {
+          '50%': { opacity: '0' },
+        },
+        marquee: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-100%)' },
+        }
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
+        'rainbow-text': 'rainbow-text 8s linear infinite',
+        'blink': 'blink 1s step-end infinite',
+        'marquee': 'marquee 15s linear infinite',
       },
     },
   },
