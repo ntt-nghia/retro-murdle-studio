@@ -21,8 +21,16 @@ export default function Home() {
     setGameState("loading");
     setError(null);
     setIsSampleData(false);
+
+    const suspectCountMap = {
+      Easy: 3,
+      Medium: 4,
+      Hard: 5,
+    };
+    const suspectCount = suspectCountMap[difficulty];
+
     try {
-      const result = await generateMysteryAction({ theme, difficulty });
+      const result = await generateMysteryAction({ theme, difficulty, suspectCount });
       if (result) {
         setMurdleData(result);
         setGameState("playing");

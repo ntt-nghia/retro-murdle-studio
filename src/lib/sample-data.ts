@@ -3,141 +3,108 @@ import type { GenerateMurdleMysteryOutput } from "@/ai/flows/generate-murdle-mys
 export const sampleMurdleData: GenerateMurdleMysteryOutput = {
   murdleData: {
     story: {
-      title: "The Case of the Silent Nightingale",
-      setting: "A lavish Victorian manor on a stormy night.",
-      intro: "The grand Blackwood Manor, owned by the reclusive Lord Harrington, was a place of secrets. Tonight, a storm rages outside, mirroring the turmoil within. The famed opera singer, Eleonora Vance, known as 'The Nightingale,' was found lifeless in the music room. Her voice, once the toast of the town, is now silenced forever. The few guests and staff present are trapped by the storm, and one of them is a killer.",
+      title: "The Serpent's Shadow",
+      setting: "Blackwood Manor, a sprawling Gothic estate shrouded in mist and secrets, perched on a cliff overlooking a stormy sea.",
+      atmosphere: "A palpable tension hangs in the air, thick with unspoken rivalries and old money. Rain lashes against the stained-glass windows, and the distant cry of a lighthouse echoes the manor's isolation.",
+      intro: "The annual Blackwood gala was the event of the season, but its glittering facade shattered when the host, Lord Alistair Blackwood, a ruthless industrialist with a venomous reputation, was found dead in his private study. A single, clean puncture wound marked his chest. The storm has trapped the remaining guests in the manor, turning a night of celebration into a theater of suspicion. The killer walks among them.",
       victim: {
-        name: "Eleonora Vance",
-        background: "A rising star in the opera world, known for her powerful voice and charismatic stage presence. She was a guest of Lord Harrington.",
-        motive_for_murder: "Eleonora had recently discovered a secret about one of the guests, a secret she threatened to expose."
+        name: "Lord Alistair Blackwood",
+        background: "A self-made tycoon who built his empire on cunning and cruelty. He was admired for his wealth but despised for his methods.",
+        motive_for_murder: "Lord Blackwood had recently announced plans to cut off several key associates, leaving them ruined. He collected enemies like he collected rare art."
       }
     },
     suspects: [
       {
-        name: "Lord Harrington",
-        avatar: "🧐",
-        profession: "Retired Aristocrat",
-        description: "The enigmatic and wealthy owner of Blackwood Manor.",
-        background: "Lord Harrington inherited his fortune and title but has lived in seclusion for years. He invited Eleonora to perform at a private gathering.",
-        motive: "Eleonora discovered he was bankrupt and planned to use her performance to announce it and ruin him.",
-        relationship_to_victim: "Host",
-        story_hints: "He seemed unusually agitated, constantly checking his pocket watch."
+        name: "Lady Genevieve Blackwood",
+        avatar: "💎",
+        profession: "The Trophy Wife",
+        description: "Alistair's young, beautiful, and deeply unhappy wife.",
+        background: "Married into wealth, Genevieve found herself in a gilded cage. She is elegant and composed, but her eyes betray a desperate longing for freedom. She often sought solace in the Billiards Room.",
+        motive: "Alistair's iron-clad prenuptial agreement would leave her with nothing in a divorce, but his death would make her a very wealthy widow.",
+        relationship_to_victim: "Wife"
       },
       {
-        name: "Beatrice Sinclair",
-        avatar: "🎭",
-        profession: "Rival Singer",
-        description: "A jealous rival of Eleonora, also a guest.",
-        background: "Beatrice was once the reigning diva of the opera, but Eleonora's talent has overshadowed her. She was heard arguing with Eleonora earlier in the evening.",
-        motive: "Professional jealousy and the fear of her own career fading into obscurity.",
-        relationship_to_victim: "Rival",
-        story_hints: "She was seen near the conservatory, where a similar decorative dagger is missing from a collection."
+        name: "Silas Croft",
+        avatar: "⚖️",
+        profession: "The Bitter Partner",
+        description: "Alistair's long-time business partner, recently betrayed.",
+        background: "Silas was the architect of their early success, but Alistair pushed him into the shadows. He is a pragmatic and proud man, now simmering with resentment after being forced out of the company.",
+        motive: "Alistair was about to expose a secret deal Silas made, which would not only ruin him financially but also land him in prison. He had to be silenced.",
+        relationship_to_victim: "Business Partner"
       },
       {
-        name: "Alistair Finch",
-        avatar: "✒️",
-        profession: "Journalist",
-        description: "A gossip columnist who snuck into the party.",
-        background: "Alistair is known for his scandalous articles. He believed Eleonora was his ticket to a career-making story about the secrets of the upper class.",
-        motive: "Eleonora refused to give him an exclusive story and threatened to expose him as a fraud.",
-        relationship_to_victim: "Acquaintance",
-        story_hints: "He was seen scribbling furiously in a notepad in the library."
+        name: "Elara Vance",
+        avatar: "🔮",
+        profession: "The Enigmatic Mystic",
+        description: "A spiritual advisor with a mysterious connection to the Blackwood family.",
+        background: "Elara was a frequent visitor, hired by Alistair for her supposed insights. She carries an aura of mystique and claims to see truths others cannot. She spent much of the evening in the Observatory.",
+        motive: "Alistair discovered she was a charlatan who had been extorting money from his late mother for years and threatened to expose her to her wealthy clientele.",
+        relationship_to_victim: "Spiritual Advisor"
       }
     ],
     weapons: [
       {
-        name: "Poisoned Wine",
-        icon: "🍷",
-        description: "A glass of expensive red wine, laced with a fast-acting poison.",
-        story_connection: "A spilled glass of red wine was found near the victim's body. The bottle it came from is missing from the cellar."
-      },
-      {
-        name: "Antique Dagger",
+        name: "Ornate Letter Opener",
         icon: "🗡️",
-        description: "An ornate, silver-handled dagger from Lord Harrington's collection.",
-        story_connection: "The dagger is missing from a display case in the conservatory. It matches the description of the murder weapon."
+        description: "A sharp, serpent-themed letter opener made of silver, a gift from a rival, kept on the desk in the Study."
       },
       {
-        name: "Heavy Candlestick",
-        icon: "🕯️",
-        description: "A solid brass candlestick from the grand hall.",
-        story_connection: "A candlestick was found out of place in the music room, with a faint, dark stain on its base."
+        name: "Poisoned Brandy",
+        icon: "🍷",
+        description: "A decanter of Alistair's favorite expensive brandy, which he often drank in the Billiards Room, potentially laced with a fast-acting toxin."
+      },
+      {
+        name: "Heavy Velvet Curtain Cord",
+        icon: "🎗️",
+        description: "A thick, tasseled cord from the heavy blackout curtains in the Observatory, strong enough to be used for strangulation."
       }
     ],
     locations: [
       {
-        name: "The Library",
+        name: "The Study",
         icon: "📚",
-        description: "A vast room filled with floor-to-ceiling bookshelves and a large, imposing fireplace.",
-        story_connection: "A book on rare poisons was found left open on a reading table."
+        description: "A room of dark mahogany, filled with leather-bound books, a massive oak desk, and the lingering scent of cigar smoke."
       },
       {
-        name: "The Conservatory",
-        icon: "🌿",
-        description: "A glass-walled room filled with exotic plants and the scent of damp earth.",
-        story_connection: "The display case for antique weapons has been forced open."
+        name: "The Observatory",
+        icon: "🔭",
+        description: "A circular room at the top of the manor's tallest tower, with a large brass telescope aimed at the stormy sky."
       },
       {
-        name: "The Music Room",
-        icon: "🎹",
-        description: "A room with a grand piano, velvet curtains, and where the body was discovered.",
-        story_connection: "The site of the murder. The air is thick with tension."
+        name: "The Billiards Room",
+        icon: "🎱",
+        description: "A dimly lit chamber with a full-sized billiards table, a well-stocked bar, and green-shaded lamps casting long shadows."
       }
     ],
     clues: [
       {
-        text: "The victim was not stabbed. The coroner found no puncture wounds.",
-        type: "elimination",
-        isPuzzle: false,
-        puzzleType: "",
-        solution: "",
-        hint: ""
+        text: "The coroner confirmed the cause of death was not poison or strangulation.",
+        type: "elimination"
       },
       {
-        text: "Lord Harrington was seen in the Library, far from the Music Room, at the estimated time of death.",
-        type: "elimination",
-        isPuzzle: false,
-        puzzleType: "",
-        solution: "",
-        hint: ""
+        text: "The murder did not take place in the Observatory; the mystic, Elara Vance, was there alone all evening, meditating.",
+        type: "elimination"
       },
       {
-        text: "The killer acted out of desperation, not just anger. The evidence suggests a planned action, not a crime of passion.",
-        type: "relationship",
-        isPuzzle: false,
-        puzzleType: "",
-        solution: "",
-        hint: ""
+        text: "Lady Genevieve was seen in the Billiards Room during the time of the murder, visibly upset but with clean hands.",
+        type: "relationship"
       },
       {
-        text: "The following message was found scrawled on a piece of sheet music: 'Svool, I've got you now.' What is the first word?",
-        type: "puzzle",
-        isPuzzle: true,
-        puzzleType: "anagram",
-        solution: "Fools",
-        hint: "Unscramble the letters to reveal a word."
+        text: "A character known for their pride and business acumen would likely choose a direct and personal method of confrontation.",
+        type: "direct_statement"
       },
       {
-        text: "The murder weapon was something that could be easily concealed.",
-        type: "direct_statement",
-        isPuzzle: false,
-        puzzleType: "",
-        solution: "",
-        hint: ""
+        text: "The murder weapon was an item belonging to the victim, found in its usual place.",
+        type: "direct_statement"
       }
     ],
     solution: {
-      suspect: "Beatrice Sinclair",
-      weapon: "Poisoned Wine",
-      location: "The Music Room",
-      motive: "Consumed by professional jealousy, Beatrice poisoned Eleonora to reclaim her spot as the top opera singer.",
-      method: "Beatrice offered Eleonora a glass of wine before her performance, pretending it was a peace offering. The wine was laced with a fast-acting poison she acquired from a shady apothecary, which she read about in a book from the library.",
-      reveal_narrative: "The final clue was Beatrice's desperation. While others had motives, only she stood to gain her entire world back with Eleonora gone. She feigned friendship, offering a toast to her rival's success, a toast that sealed Eleonora's fate. The argument was a ruse to make it seem like a crime of passion, but the poison was planned.",
-      story_connections: [
-        "Beatrice's argument with the victim.",
-        "The spilled wine.",
-        "The open book on poisons in the library."
-      ]
+      suspect: "Silas Croft",
+      weapon: "Ornate Letter Opener",
+      location: "The Study",
+      motive: "Silas killed Alistair to prevent his own financial and social ruin after Alistair threatened to expose his fraudulent dealings.",
+      method: "Knowing Alistair would be in his Study after the party, Silas confronted him. The argument escalated, and in a moment of cold fury, Silas grabbed the nearest object - the letter opener on the desk - and stabbed Alistair, staging it to look like a suicide before slipping out unnoticed.",
+      reveal_narrative: "It was a crime of desperation, committed by a man of pride. Silas Croft, pushed to the brink, saw only one way out. He confronted his old partner in the heart of his power, the Study. The letter opener, a symbol of the very correspondence that built their empire, became the instrument of its bloody end. It was a direct, calculated act, befitting a man who had spent his life in the cutthroat world of business."
     }
   }
 };

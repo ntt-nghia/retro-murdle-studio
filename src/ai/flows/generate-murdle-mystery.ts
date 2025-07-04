@@ -13,58 +13,52 @@ import {z} from 'genkit';
 const GenerateMurdleMysteryInputSchema = z.object({
   theme: z.string().describe('The theme of the Murdle mystery.'),
   difficulty: z.enum(['Easy', 'Medium', 'Hard']).describe('The difficulty level of the Murdle mystery.'),
+  suspectCount: z.number().describe('The number of suspects, weapons, and locations.'),
 });
 export type GenerateMurdleMysteryInput = z.infer<typeof GenerateMurdleMysteryInputSchema>;
 
 const MurdleDataSchema = z.object({
     story: z.object({
       title: z.string().describe("Compelling case title"),
-      setting: z.string().describe("Atmospheric location"),
-      intro: z.string().describe("Multi-paragraph narrative"),
+      setting: z.string().describe("Detailed location description"),
+      atmosphere: z.string().describe("Mood and ambiance"),
+      intro: z.string().describe("Opening narrative that hooks the reader"),
       victim: z.object({
-        name: z.string().describe("Full victim name"),
-        background: z.string().describe("Who they were"),
-        motive_for_murder: z.string().describe("Why someone wanted them dead")
+        name: z.string().describe("Full name"),
+        background: z.string().describe("Who they were, their importance"),
+        motive_for_murder: z.string().describe("Why someone would want them dead")
       })
     }),
     suspects: z.array(z.object({
-      name: z.string().describe("Full suspect name"),
+      name: z.string().describe("Full name"),
       avatar: z.string().describe("Emoji representation"),
       profession: z.string().describe("What they do"),
-      description: z.string().describe("Brief summary"),
-      background: z.string().describe("Detailed backstory"),
-      motive: z.string().describe("Why they want victim dead"),
-      relationship_to_victim: z.string().describe("Connection to victim"),
-      story_hints: z.string().describe("Behavioral tells in narrative")
+      description: z.string().describe("Brief character summary"),
+      background: z.string().describe("Detailed backstory and personality"),
+      motive: z.string().describe("Why they might want the victim dead"),
+      relationship_to_victim: z.string().describe("How they knew the victim")
     })),
     weapons: z.array(z.object({
       name: z.string().describe("Weapon name"),
       icon: z.string().describe("Emoji representation"),
-      description: z.string().describe("Detailed description"),
-      story_connection: z.string().describe("How weapon appears in story")
+      description: z.string().describe("Detailed description")
     })),
     locations: z.array(z.object({
       name: z.string().describe("Location name"),
       icon: z.string().describe("Emoji representation"),
-      description: z.string().describe("Atmospheric description"),
-      story_connection: z.string().describe("Significance in narrative")
+      description: z.string().describe("Atmospheric description")
     })),
     clues: z.array(z.object({
-      text: z.string().describe("Clue statement"),
-      type: z.string().describe("direct_statement|elimination|relationship|puzzle"),
-      isPuzzle: z.boolean().describe("Whether requires solving"),
-      puzzleType: z.string().describe("caesar|anagram|etc"),
-      solution: z.string().describe("Puzzle answer"),
-      hint: z.string().describe("Help text for puzzle")
+      text: z.string().describe("The clue statement"),
+      type: z.enum(["direct_statement", "elimination", "relationship"]).describe("Type of clue"),
     })),
     solution: z.object({
-      suspect: z.string().describe("Murderer name"),
+      suspect: z.string().describe("Name of the murderer"),
       weapon: z.string().describe("Murder weapon"),
-      location: z.string().describe("Murder location"),
+      location: z.string().describe("Where the murder occurred"),
       motive: z.string().describe("Why they did it"),
-      method: z.string().describe("How murder was committed"),
-      reveal_narrative: z.string().describe("Dramatic solution explanation"),
-      story_connections: z.array(z.string()).describe("Array of story hints player should have noticed")
+      method: z.string().describe("How the murder was committed"),
+      reveal_narrative: z.string().describe("Dramatic revelation of the truth")
     })
   });
 
@@ -81,69 +75,74 @@ const prompt = ai.definePrompt({
   name: 'generateMurdleMysteryPrompt',
   input: {schema: GenerateMurdleMysteryInputSchema},
   output: {schema: GenerateMurdleMysteryOutputSchema},
-  prompt: `Generate a Murdle-style mystery based on the following theme and difficulty:
+  prompt: `You are a master mystery writer creating a Murdle-style logic puzzle game. Generate a complete murder mystery with rich storytelling and perfectly logical clues.
 
-Theme: {{{theme}}}
-Difficulty: {{{difficulty}}}
+## REQUIREMENTS:
+- **Theme**: {{{theme}}}
+- **Difficulty**: {{{difficulty}}}
+- **Suspects**: Exactly {{{suspectCount}}} suspects
+- **Weapons**: Exactly {{{suspectCount}}} unique weapons
+- **Locations**: Exactly {{{suspectCount}}} distinct locations
 
-Follow the schema below:
+## CRITICAL LOGIC RULES:
+1. **One Solution**: There must be exactly ONE logical solution. The clues must lead to a single, unambiguous answer for the suspect, weapon, and location.
+2. **Solvable**: All clues must work together to eliminate possibilities. No guesswork should be required.
+3. **No Contradictions**: Every clue must be consistent with the solution and all other clues.
+4. **Balanced**: Each suspect should have a viable motive and opportunity. Red herrings should be plausible but ultimately disprovable with the given clues.
+5. **Thematic**: All elements (characters, weapons, locations, story) should fit the chosen theme and tone.
+
+Generate a compelling murder mystery with rich character development, atmospheric descriptions, and perfectly logical puzzle mechanics. Return ONLY valid JSON matching this structure:
+
 \{
-  story: \{
-    title: "String - Compelling case title",
-    setting: "String - Atmospheric location",
-    intro: "String - Multi-paragraph narrative", 
-    victim: \{
-      name: "String - Full victim name",
-      background: "String - Who they were",
-      motive_for_murder: "String - Why someone wanted them dead"
+  "story": \{
+    "title": "String - Compelling case title",
+    "setting": "String - Detailed location description",
+    "atmosphere": "String - Mood and ambiance",
+    "intro": "String - Opening narrative that hooks the reader",
+    "victim": \{
+      "name": "String - Full name",
+      "background": "String - Who they were, their importance",
+      "motive_for_murder": "String - Why someone would want them dead"
     \}
   \},
-  suspects: [
+  "suspects": [
     \{
-      name: "String - Full suspect name",
-      avatar: "String - Emoji representation",
-      profession: "String - What they do", 
-      description: "String - Brief summary",
-      background: "String - Detailed backstory",
-      motive: "String - Why they want victim dead",
-      relationship_to_victim: "String - Connection to victim",
-      story_hints: "String - Behavioral tells in narrative"
+      "name": "String - Full name",
+      "avatar": "String - Emoji representation",
+      "profession": "String - What they do",
+      "description": "String - Brief character summary",
+      "background": "String - Detailed backstory and personality",
+      "motive": "String - Why they might want the victim dead",
+      "relationship_to_victim": "String - How they knew the victim"
     \}
   ],
-  weapons: [
+  "weapons": [
     \{
-      name: "String - Weapon name",
-      icon: "String - Emoji representation",
-      description: "String - Detailed description",
-      story_connection: "String - How weapon appears in story"
+      "name": "String - Weapon name",
+      "icon": "String - Emoji representation",
+      "description": "String - Detailed description"
     \}
   ],
-  locations: [
+  "locations": [
     \{
-      name: "String - Location name",
-      icon: "String - Emoji representation", 
-      description: "String - Atmospheric description",
-      story_connection: "String - Significance in narrative"
+      "name": "String - Location name",
+      "icon": "String - Emoji representation",
+      "description": "String - Atmospheric description"
     \}
   ],
-  clues: [
+  "clues": [
     \{
-      text: "String - Clue statement",
-      type: "String - direct_statement|elimination|relationship|puzzle",
-      isPuzzle: "Boolean - Whether requires solving",
-      puzzleType: "String - caesar|anagram|etc",
-      solution: "String - Puzzle answer", 
-      hint: "String - Help text for puzzle"
+      "text": "String - The clue statement",
+      "type": "String - direct_statement | elimination | relationship"
     \}
   ],
-  solution: \{
-    suspect: "String - Murderer name",
-    weapon: "String - Murder weapon",
-    location: "String - Murder location", 
-    motive: "String - Why they did it",
-    method: "String - How murder was committed",
-    reveal_narrative: "String - Dramatic solution explanation",
-    story_connections: ["Array of story hints player should have noticed"]
+  "solution": \{
+    "suspect": "String - Name of the murderer",
+    "weapon": "String - Murder weapon",
+    "location": "String - Where the murder occurred",
+    "motive": "String - Why they did it",
+    "method": "String - How the murder was committed",
+    "reveal_narrative": "String - Dramatic revelation of the truth"
   \}
 \}
 

@@ -27,7 +27,6 @@ export default function MurdleGameLayout({ murdleData, onRestart, isSample }: Mu
 
   const [gridState, setGridState] = useState<GridState>({});
   const [revealedClueCount, setRevealedClueCount] = useState(1);
-  const [puzzleSolutions, setPuzzleSolutions] = useState<{ [key: number]: boolean }>({});
 
   const [modalState, setModalState] = useState<{
     isOpen: boolean;
@@ -54,10 +53,6 @@ export default function MurdleGameLayout({ murdleData, onRestart, isSample }: Mu
     if (revealedClueCount < clues.length) {
       setRevealedClueCount(revealedClueCount + 1);
     }
-  };
-
-  const handlePuzzleSolved = (clueIndex: number) => {
-    setPuzzleSolutions((prev) => ({ ...prev, [clueIndex]: true }));
   };
 
   const openModal = (type: "suspects" | "weapons" | "locations") => {
@@ -156,9 +151,7 @@ export default function MurdleGameLayout({ murdleData, onRestart, isSample }: Mu
             story={story}
             clues={clues}
             revealedClueCount={revealedClueCount}
-            puzzleSolutions={puzzleSolutions}
             onRevealClue={handleRevealClue}
-            onPuzzleSolved={handlePuzzleSolved}
             onOpenModal={openModal}
           />
         </div>

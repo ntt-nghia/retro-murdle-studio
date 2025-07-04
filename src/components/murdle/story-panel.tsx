@@ -2,16 +2,13 @@
 import type { Story, Clue } from "@/lib/types";
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import PuzzleClue from "./puzzle-clue";
 import { BookOpen, MapPin, Microscope, Users } from "lucide-react";
 
 interface StoryPanelProps {
   story: Pick<Story, 'title' | 'setting' | 'intro' | 'victim'>;
   clues: Clue[];
   revealedClueCount: number;
-  puzzleSolutions: { [key: number]: boolean };
   onRevealClue: () => void;
-  onPuzzleSolved: (clueIndex: number) => void;
   onOpenModal: (type: "suspects" | "weapons" | "locations") => void;
 }
 
@@ -19,9 +16,7 @@ export default function StoryPanel({
   story,
   clues,
   revealedClueCount,
-  puzzleSolutions,
   onRevealClue,
-  onPuzzleSolved,
   onOpenModal,
 }: StoryPanelProps) {
   const revealedClues = clues.slice(0, revealedClueCount);
@@ -58,17 +53,8 @@ export default function StoryPanel({
         <div className="retro-frame-inset p-4 space-y-3">
           <ScrollArea className="h-64 font-code">
             {revealedClues.map((clue, index) => (
-               <div key={index} className={"p-2 " + (clue.isPuzzle ? "puzzle-frame" : "retro-frame bg-green-900/50 border-green-500")}>
-                {clue.isPuzzle ? (
-                  <PuzzleClue
-                    clue={clue}
-                    clueIndex={index}
-                    isSolved={!!puzzleSolutions[index]}
-                    onSolved={onPuzzleSolved}
-                  />
-                ) : (
-                  <p className="text-green-300 p-2">{clue.text}</p>
-                )}
+              <div key={index} className="retro-frame bg-black/30 border-accent/50 p-2">
+                <p className="text-lime-300">{clue.text}</p>
               </div>
             ))}
           </ScrollArea>
