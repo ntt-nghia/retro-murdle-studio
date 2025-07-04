@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState, useMemo } from "react";
@@ -17,7 +18,7 @@ interface MurdleGameLayoutProps {
   isSample: boolean;
 }
 
-type CellState = "empty" | "x" | "check";
+type CellState = "empty" | "x" | "check" | "question";
 type GridState = { [key: string]: CellState };
 
 export default function MurdleGameLayout({ murdleData, onRestart, isSample }: MurdleGameLayoutProps) {
@@ -41,7 +42,10 @@ export default function MurdleGameLayout({ murdleData, onRestart, isSample }: Mu
     setGridState((prevState) => {
       const currentState = prevState[key] || "empty";
       const nextState: CellState =
-        currentState === "empty" ? "x" : currentState === "x" ? "check" : "empty";
+        currentState === "empty" ? "x" 
+        : currentState === "x" ? "check" 
+        : currentState === "check" ? "question"
+        : "empty";
       return { ...prevState, [key]: nextState };
     });
   };
@@ -103,7 +107,11 @@ export default function MurdleGameLayout({ murdleData, onRestart, isSample }: Mu
         },
         {
           element: '[data-tutorial="deduction-grid"]',
-          intro: "The first clue says 'The victim was not stabbed.' This means you can eliminate the 'Antique Dagger' for everyone. Click the cells in that column to mark them with an 'X'. A second click makes a checkmark ✓, and a third clears it.",
+          intro: "Click a cell once for 'X' (impossible), twice for '✓' (confirmed), three times for '?' (uncertain), and a fourth time to clear it.",
+        },
+        {
+          element: '[data-tutorial="deduction-grid"]',
+          intro: "The first clue says 'The victim was not stabbed.' This means you can eliminate the 'Antique Dagger'. Find the column for the dagger and mark 'X' for all suspects.",
         },
         {
           element: '[data-tutorial="accusation-form"]',
@@ -155,7 +163,7 @@ export default function MurdleGameLayout({ murdleData, onRestart, isSample }: Mu
           />
         </div>
         <div className="lg:w-1/2 w-full space-y-8">
-          <div className="retro-frame">
+          <div className="retro-frame overflow-x-auto">
             <h2 className="text-2xl font-bold retro-text-glow-pink p-4 text-center">DEDUCTION GRID</h2>
             <div className="p-2 md:p-4">
               <DeductionGrid
