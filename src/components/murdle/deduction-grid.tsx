@@ -1,4 +1,3 @@
-
 "use client";
 
 import React from "react";
@@ -16,17 +15,15 @@ interface DeductionGridProps {
 }
 
 export default function DeductionGrid({ suspects, weapons, locations, gridState, onCellClick }: DeductionGridProps) {
+  // Generalize to handle any number of groups
   const groups = [
     { title: 'Suspects', items: suspects },
     { title: 'Weapons', items: weapons },
     { title: 'Locations', items: locations },
-  ];
-
-  const rowGroups = groups.slice(0, -1);
-  const colGroups = groups.slice(1);
+  ].filter(g => g.items && g.items.length > 0); // Filter out empty groups if any
 
   const iconSizeClass = "w-14 h-14";
-  const iconHeaderWidth = "3.5rem"; // Corresponds to w-14
+  const iconHeaderWidth = "3.5rem";
   const textSizeClass = "text-4xl";
   const markSizeClass = "w-11 h-11";
 
@@ -71,18 +68,8 @@ export default function DeductionGrid({ suspects, weapons, locations, gridState,
     </div>
   );
 
-  const TopHeader = ({ items }: { items: any[] }) => (
-    <div className="flex">
-      {items.map(item => (
-        <div key={item.name} className={`flex items-center justify-center ${iconSizeClass} ${textSizeClass}`} title={item.name}>
-          {item.icon || item.avatar || item.name.charAt(0)}
-        </div>
-      ))}
-    </div>
-  );
-
-  const SideHeader = ({ items }: { items: any[] }) => (
-    <div className="flex flex-col justify-around h-full">
+  const Header = ({ items, orientation }: { items: any[]; orientation: 'horizontal' | 'vertical' }) => (
+    <div className={`flex ${orientation === 'vertical' ? 'flex-col justify-around h-full' : 'flex-row'}`}>
       {items.map(item => (
         <div key={item.name} className={`flex items-center justify-center ${iconSizeClass} ${textSizeClass}`} title={item.name}>
           {item.icon || item.avatar || item.name.charAt(0)}
@@ -93,34 +80,45 @@ export default function DeductionGrid({ suspects, weapons, locations, gridState,
 
   return (
     <div className="flex justify-center" data-tutorial="deduction-grid">
-      <div className="flex flex-col gap-px">
-        {/* Header Row */}
-        <div className="flex gap-px">
-          <div style={{ width: iconHeaderWidth }} className="flex-shrink-0" />
-          {colGroups.map((group) => (
-            <div key={group.title} className="p-1">
-              <TopHeader items={group.items} />
-            </div>
-          ))}
-        </div>
+      <div className="grid auto-cols-auto gap-px">
+        {/* This empty cell is the top-left corner */}
+        <div style={{ gridRow: 1, gridColumn: 1 }}></div>
 
-        {/* Data Rows */}
-        {rowGroups.map((rowGroup, rowIndex) => (
-          <div key={rowGroup.title} className="flex gap-px">
-            <div style={{ width: iconHeaderWidth }} className="flex-shrink-0 flex items-stretch p-1">
-              <SideHeader items={rowGroup.items} />
-            </div>
-            {colGroups.slice(rowIndex).map((colGroup) => (
-              <div key={`${rowGroup.title}-${colGroup.title}`}>
-                <SubGrid
-                  rows={rowGroup.items}
-                  cols={colGroup.items}
-                  gridState={gridState}
-                  onCellClick={onCellClick}
-                />
-              </div>
-            ))}
+        {/* Create the top header row (e.g., Weapons, Locations) */}
+        {groups.slice(1).map((group, index) => (
+          <div key={`top-header-${group.title}`} className="p-1" style={{ gridRow: 1, gridColumn: index + 2 }}>
+            <Header items={group.items} orientation="horizontal" />
           </div>
+        ))}
+        
+        {/* Create side headers and sub-grids row by row */}
+        {groups.slice(0, -1).map((rowGroup, rowIndex) => (
+          <React.Fragment key={`row-fragment-${rowGroup.title}`}>
+            {/* Side Header (e.g., Suspects, Weapons) */}
+            <div className="p-1" style={{ gridRow: rowIndex + 2, gridColumn: 1 }}>
+              <Header items={rowGroup.items} orientation="vertical" />
+            </div>
+            
+            {/* The sub-grids that form the upper-right triangle */}
+            {groups.slice(rowIndex + 1).map((colGroup) => {
+                const group1Index = groups.findIndex(g => g.title === rowGroup.title);
+                const group2Index = groups.findIndex(g => g.title === colGroup.title);
+
+                return (
+                    <div 
+                        key={`${rowGroup.title}-${colGroup.title}`} 
+                        style={{ gridRow: group1Index + 2, gridColumn: group2Index + 1 }}
+                    >
+                    <SubGrid
+                        rows={rowGroup.items}
+                        cols={colGroup.items}
+                        gridState={gridState}
+                        onCellClick={onCellClick}
+                    />
+                    </div>
+                );
+            })}
+          </React.Fragment>
         ))}
       </div>
     </div>
