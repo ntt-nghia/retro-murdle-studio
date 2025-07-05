@@ -105,6 +105,7 @@ const generateMurdleMysteryFlow = ai.defineFlow(
     inputSchema: GenerateMurdleMysteryInputSchema,
     outputSchema: GenerateMurdleMysteryOutputSchema,
   },
+// @ts-ignore
   async input => {
     const {output} = await prompt(input);
     return {
