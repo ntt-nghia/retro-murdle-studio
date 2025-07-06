@@ -100,5 +100,5 @@ export default function Home() {
     }
   };
 
-  return <main className="container mx-auto p-4">{renderContent()}</main>;
+  return <main className="mx-auto p-4">{renderContent()}</main>;
 }

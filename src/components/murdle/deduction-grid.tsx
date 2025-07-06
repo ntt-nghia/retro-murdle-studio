@@ -1,8 +1,8 @@
 "use client";
 
 import React from "react";
-import { Check, X, HelpCircle } from "lucide-react";
-import type { Suspect, Weapon, Location } from "@/lib/types";
+import {Check, HelpCircle, X} from "lucide-react";
+import type {Location, Suspect, Weapon} from "@/lib/types";
 
 type CellState = "empty" | "x" | "check" | "question";
 
@@ -14,46 +14,62 @@ interface DeductionGridProps {
   onCellClick: (key: string) => void;
 }
 
-export default function DeductionGrid({ suspects, weapons, locations, gridState, onCellClick }: DeductionGridProps) {
-  // Generalize to handle any number of groups
-  const groups = [
-    { title: 'Suspects', items: suspects },
-    { title: 'Weapons', items: weapons },
-    { title: 'Locations', items: locations },
-  ].filter(g => g.items && g.items.length > 0); // Filter out empty groups if any
+export default function DeductionGrid({suspects, weapons, locations, gridState, onCellClick}: DeductionGridProps) {
+  const categories = [
+    {title: 'Suspects', items: suspects},
+    {title: 'Weapons', items: weapons},
+    {title: 'Locations', items: locations},
+  ].filter(c => c.items && c.items.length > 0);
 
-  const iconSizeClass = "w-14 h-14";
-  const iconHeaderWidth = "3.5rem";
-  const textSizeClass = "text-4xl";
-  const markSizeClass = "w-11 h-11";
+  const columnCategories = [categories[0], ...categories.slice(2)];
 
-  const GridCell = ({ state, onClick }: { state: CellState, onClick: () => void }) => (
+  const rowCategories = categories.slice(1);
+
+  const GridCell = ({state, onClick}: { state: CellState, onClick: () => void }) => (
     <div
-      className={`flex items-center justify-center cursor-pointer retro-frame-inset bg-black/50 ${iconSizeClass}`}
+      className="w-12 h-12 flex items-center justify-center cursor-pointer bg-black/70 border border-gray-500 rounded hover:bg-accent/20 hover:border-accent transition-all"
       onClick={onClick}
     >
-      {state === 'x' && <X className={`${markSizeClass} text-red-500`} />}
-      {state === 'check' && <Check className={`${markSizeClass} text-green-500`} />}
-      {state === 'question' && <HelpCircle className={`${markSizeClass} text-yellow-500`} />}
+      {state === 'x' && <X className="w-8 h-8 text-red-500"/>}
+      {state === 'check' && <Check className="w-8 h-8 text-green-500"/>}
+      {state === 'question' && <HelpCircle className="w-8 h-8 text-yellow-500"/>}
     </div>
   );
-  
-  const SubGrid = ({
-    rows,
-    cols,
-    gridState,
-    onCellClick,
-  }: {
-    rows: any[];
-    cols: any[];
-    gridState: { [key: string]: CellState };
-    onCellClick: (key: string) => void;
-  }) => (
-    <div className="p-1 bg-black/20">
-      <div className="grid" style={{ gridTemplateColumns: `repeat(${cols.length}, ${iconHeaderWidth})`, gap: '2px' }}>
-        {rows.map((row) =>
-          cols.map((col) => {
-            const keyParts = [row.name, col.name].sort();
+
+  const CategoryHeader = ({ category, orientation }: { category: any, orientation: 'horizontal' | 'vertical' }) => (
+      <div className={orientation === 'vertical' ? 'flex flex-row gap-3 justify-center items-center h-full' : 'flex flex-col gap-3 justify-center items-center'}>
+        {/* Category Title */}
+        <div className={`font-black text-lg retro-text-glow-cyan uppercase tracking-wider ${
+          orientation === 'vertical' ? '[writing-mode:sideways-lr]' : 'text-center'
+        }`}>
+          {category.title}
+        </div>
+
+        {/* Icons Container */}
+        <div className={`flex gap-2 ${orientation === 'vertical' ? 'flex-col' : 'flex-row justify-center items-center'}`}>
+          {category.items.map((item: any) => (
+            <div key={item.name} className="flex flex-col items-center gap-1" title={item.name}>
+              <div className="w-12 h-12 flex items-center justify-center text-2xl bg-black/50 border border-white/30 rounded">
+                {item.icon || item.avatar || item.name.charAt(0)}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+
+
+  const SubGrid = ({rowCategory, colCategory}: { rowCategory: any, colCategory: any }) => {
+    const colCount = colCategory.items.length;
+
+    return (
+      <div
+        className="grid gap-1 p-2 bg-black/50 rounded overflow-clip"
+        style={{gridTemplateColumns: `repeat(${colCount}, 1fr)`}}
+      >
+        {rowCategory.items.map((rowItem: any) =>
+          colCategory.items.map((colItem: any) => {
+            const keyParts = [rowItem.name, colItem.name].sort();
             const key = keyParts.join('-');
             return (
               <GridCell
@@ -65,61 +81,48 @@ export default function DeductionGrid({ suspects, weapons, locations, gridState,
           })
         )}
       </div>
-    </div>
-  );
-
-  const Header = ({ items, orientation }: { items: any[]; orientation: 'horizontal' | 'vertical' }) => (
-    <div className={`flex ${orientation === 'vertical' ? 'flex-col justify-around h-full' : 'flex-row'}`}>
-      {items.map(item => (
-        <div key={item.name} className={`flex items-center justify-center ${iconSizeClass} ${textSizeClass}`} title={item.name}>
-          {item.icon || item.avatar || item.name.charAt(0)}
-        </div>
-      ))}
-    </div>
-  );
+    );
+  };
 
   return (
-    <div className="flex justify-center" data-tutorial="deduction-grid">
-      <div className="grid auto-cols-auto gap-px">
-        {/* This empty cell is the top-left corner */}
-        <div style={{ gridRow: 1, gridColumn: 1 }}></div>
-
-        {/* Create the top header row (e.g., Weapons, Locations) */}
-        {groups.slice(1).map((group, index) => (
-          <div key={`top-header-${group.title}`} className="p-1" style={{ gridRow: 1, gridColumn: index + 2 }}>
-            <Header items={group.items} orientation="horizontal" />
-          </div>
-        ))}
-        
-        {/* Create side headers and sub-grids row by row */}
-        {groups.slice(0, -1).map((rowGroup, rowIndex) => (
-          <React.Fragment key={`row-fragment-${rowGroup.title}`}>
-            {/* Side Header (e.g., Suspects, Weapons) */}
-            <div className="p-1" style={{ gridRow: rowIndex + 2, gridColumn: 1 }}>
-              <Header items={rowGroup.items} orientation="vertical" />
-            </div>
-            
-            {/* The sub-grids that form the upper-right triangle */}
-            {groups.slice(rowIndex + 1).map((colGroup) => {
-                const group1Index = groups.findIndex(g => g.title === rowGroup.title);
-                const group2Index = groups.findIndex(g => g.title === colGroup.title);
-
-                return (
-                    <div 
-                        key={`${rowGroup.title}-${colGroup.title}`} 
-                        style={{ gridRow: group1Index + 2, gridColumn: group2Index + 1 }}
-                    >
-                    <SubGrid
-                        rows={rowGroup.items}
-                        cols={colGroup.items}
-                        gridState={gridState}
-                        onCellClick={onCellClick}
-                    />
-                    </div>
-                );
-            })}
-          </React.Fragment>
-        ))}
+    <div className="flex justify-center p-4 overflow-x-auto" data-tutorial="deduction-grid">
+      <div className="bg-black/30 p-4 rounded-lg border-2 border-gray-600">
+        <table className="border-separate border-spacing-2">
+          <thead>
+          <tr>
+            {/* Empty top-left corner */}
+            <th className=""></th>
+            {/* Column headers */}
+            {columnCategories.map((category) => (
+              <th
+                key={category.title}
+                className="bg-primary/20 border-2 border-primary rounded p-2"
+              >
+                <CategoryHeader category={category} orientation="horizontal"/>
+              </th>
+            ))}
+          </tr>
+          </thead>
+          <tbody>
+          {rowCategories.map((rowCategory, rowIndex) => (
+            <tr key={rowCategory.title}>
+              {/* Row header */}
+              <th className="bg-accent/20 border-2 border-accent rounded p-2">
+                <CategoryHeader category={rowCategory} orientation="vertical"/>
+              </th>
+              {/* Grid sections - each row has fewer cells (triangular) */}
+              {columnCategories.slice(0, columnCategories.length - rowIndex).map((colCategory) => (
+                <td
+                  key={`${rowCategory.title}-${colCategory.title}`}
+                  className="bg-muted/20 border-2 border-muted rounded"
+                >
+                  <SubGrid rowCategory={rowCategory} colCategory={colCategory}/>
+                </td>
+              ))}
+            </tr>
+          ))}
+          </tbody>
+        </table>
       </div>
     </div>
   );

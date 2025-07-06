@@ -16,8 +16,7 @@ export async function generateMysteryAction(
 ): Promise<GenerateMurdleMysteryOutput | null> {
   console.log("Generating mystery with input:", input);
   try {
-    const result = await generateMurdleMystery(input);
-    return result;
+    return await generateMurdleMystery(input);
   } catch (error) {
     console.error("Error in generateMysteryAction:", error);
     // It's better to throw the error so the client can handle it specifically
@@ -29,6 +28,5 @@ export async function extractHintsAction(
   input: ExtractStoryHintsInput
 ): Promise<ExtractStoryHintsOutput> {
   console.log("Extracting hints with input:", input);
-  const result = await extractStoryHints(input);
-  return result;
+  return await extractStoryHints(input);
 }

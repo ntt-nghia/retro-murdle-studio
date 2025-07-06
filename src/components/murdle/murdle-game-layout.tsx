@@ -35,13 +35,13 @@ export default function MurdleGameLayout({ murdleData, onRestart, isSample }: Mu
   const [gameState, setGameState] = useState<"playing" | "accusing" | "solved" | "failed">(
     "playing"
   );
-  
+
   const handleCellClick = (key: string) => {
     setGridState((prevState) => {
       const currentState = prevState[key] || "empty";
       const nextState: CellState =
-        currentState === "empty" ? "x" 
-        : currentState === "x" ? "check" 
+        currentState === "empty" ? "x"
+        : currentState === "x" ? "check"
         : currentState === "check" ? "question"
         : "empty";
       return { ...prevState, [key]: nextState };
@@ -105,7 +105,7 @@ export default function MurdleGameLayout({ murdleData, onRestart, isSample }: Mu
   };
 
   return (
-    <div className="max-w-7xl mx-auto">
+    <div className="max-w-[90%] mx-auto">
        <div className="flex justify-between items-center mb-4 p-4 retro-frame">
           <h1 className="text-3xl font-black retro-text-rainbow">Retro Sleuth AI</h1>
           <div className="flex gap-2">
@@ -171,7 +171,7 @@ export default function MurdleGameLayout({ murdleData, onRestart, isSample }: Mu
               items={allItems}
             />
         )}
-        
+
         {gameState === 'solved' && (
           <SolutionModal
             isOpen={true}

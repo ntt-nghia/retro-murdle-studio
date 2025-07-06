@@ -34,7 +34,7 @@
 
     --radius: 0.25rem;
   }
- 
+
   .dark {
     --background: 266 83% 11%;
     --foreground: 0 0% 98%;
@@ -120,7 +120,7 @@
   }
 
   .retro-button {
-    @apply px-4 py-2 bg-secondary text-secondary-foreground font-bold border-2 border-solid uppercase tracking-wider;
+    @apply px-4 py-2 bg-secondary font-bold border-2 border-solid uppercase tracking-wider;
     border-top-color: #E0E0E0;
     border-left-color: #E0E0E0;
     border-bottom-color: #A0A0A0;
@@ -149,7 +149,7 @@
     background-size: 1.5em;
     padding-right: 2.5rem;
   }
-  
+
   .marquee {
     width: 100%;
     overflow: hidden;
