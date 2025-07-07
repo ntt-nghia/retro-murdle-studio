@@ -36,27 +36,29 @@ export default function DeductionGrid({suspects, weapons, locations, gridState, 
     </div>
   );
 
-  const CategoryHeader = ({ category, orientation }: { category: any, orientation: 'horizontal' | 'vertical' }) => (
-      <div className={orientation === 'vertical' ? 'flex flex-row gap-3 justify-center items-center h-full' : 'flex flex-col gap-3 justify-center items-center'}>
-        {/* Category Title */}
-        <div className={`font-black text-lg retro-text-glow-cyan uppercase tracking-wider ${
-          orientation === 'vertical' ? '[writing-mode:sideways-lr]' : 'text-center'
-        }`}>
-          {category.title}
-        </div>
-
-        {/* Icons Container */}
-        <div className={`flex gap-2 ${orientation === 'vertical' ? 'flex-col' : 'flex-row justify-center items-center'}`}>
-          {category.items.map((item: any) => (
-            <div key={item.name} className="flex flex-col items-center gap-1" title={item.name}>
-              <div className="w-12 h-12 flex items-center justify-center text-2xl bg-black/50 border border-white/30 rounded">
-                {item.icon || item.avatar || item.name.charAt(0)}
-              </div>
-            </div>
-          ))}
-        </div>
+  const CategoryHeader = ({category, orientation}: { category: any, orientation: 'horizontal' | 'vertical' }) => (
+    <div
+      className={orientation === 'vertical' ? 'flex flex-row gap-3 justify-center items-center h-full' : 'flex flex-col gap-3 justify-center items-center'}>
+      {/* Category Title */}
+      <div className={`font-black text-lg retro-text-glow-cyan uppercase tracking-wider ${
+        orientation === 'vertical' ? '[writing-mode:sideways-lr]' : 'text-center'
+      }`}>
+        {category.title}
       </div>
-    );
+
+      {/* Icons Container */}
+      <div className={`flex gap-2 ${orientation === 'vertical' ? 'flex-col' : 'flex-row justify-center items-center'}`}>
+        {category.items.map((item: any) => (
+          <div key={item.name} className="flex flex-col items-center gap-1" title={item.name}>
+            <div
+              className="w-12 h-12 flex items-center justify-center text-2xl bg-black/50 border border-white/30 rounded">
+              {item.icon || item.avatar || item.name.charAt(0)}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 
 
   const SubGrid = ({rowCategory, colCategory}: { rowCategory: any, colCategory: any }) => {

@@ -1,9 +1,9 @@
 "use client";
 
-import type { Suspect, Weapon, Location } from "@/lib/types";
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { ScrollArea } from "../ui/scroll-area";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import type {Location, Suspect, Weapon} from "@/lib/types";
+import {Dialog, DialogContent, DialogHeader, DialogTitle} from "@/components/ui/dialog";
+import {ScrollArea} from "../ui/scroll-area";
+import {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from "@/components/ui/accordion";
 
 type Item = Suspect | Weapon | Location;
 
@@ -14,7 +14,7 @@ interface ItemModalProps {
   type: "suspects" | "weapons" | "locations";
 }
 
-export default function ItemModal({ isOpen, onClose, items, type }: ItemModalProps) {
+export default function ItemModal({isOpen, onClose, items, type}: ItemModalProps) {
   const formatTraits = (traits: string) => {
     // Split by bullet points and clean up each trait
     return traits.split('•').map(trait => trait.trim()).filter(trait => trait.length > 0);
@@ -22,7 +22,8 @@ export default function ItemModal({ isOpen, onClose, items, type }: ItemModalPro
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-4xl h-[90vh] retro-frame !bg-[#2D0B69] border-primary shadow-[0_0_20px_hsl(var(--primary))] flex flex-col">
+      <DialogContent
+        className="max-w-4xl h-[90vh] retro-frame !bg-[#2D0B69] border-primary shadow-[0_0_20px_hsl(var(--primary))] flex flex-col">
         <DialogHeader className="flex-shrink-0">
           <DialogTitle className="text-3xl font-black retro-text-rainbow">
             {type.toUpperCase()}
@@ -34,13 +35,15 @@ export default function ItemModal({ isOpen, onClose, items, type }: ItemModalPro
               {items.map((item) => (
                 <AccordionItem value={item.name} key={item.name} className="retro-frame !border-accent/50 bg-black/20">
                   <AccordionTrigger className="w-full p-4 hover:bg-primary/20 text-left">
-                     <div className="flex items-center gap-4">
-                        <div className="text-6xl">{(item as Suspect).avatar || (item as Weapon).icon || (item as Location).icon}</div>
-                        <div className="flex-1">
-                          <p className="text-xl font-bold">{item.name}</p>
-                          {'profession' in item && <p className="text-md retro-text-glow-cyan normal-case">{item.profession}</p>}
-                        </div>
-                     </div>
+                    <div className="flex items-center gap-4">
+                      <div
+                        className="text-6xl">{(item as Suspect).avatar || (item as Weapon).icon || (item as Location).icon}</div>
+                      <div className="flex-1">
+                        <p className="text-xl font-bold">{item.name}</p>
+                        {'profession' in item &&
+                            <p className="text-md retro-text-glow-cyan normal-case">{item.profession}</p>}
+                      </div>
+                    </div>
                   </AccordionTrigger>
                   <AccordionContent className="border-t-2 border-accent/50">
                     <div className="p-4 space-y-4 font-code text-lime-300">

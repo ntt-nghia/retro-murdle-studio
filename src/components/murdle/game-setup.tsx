@@ -1,16 +1,10 @@
 "use client";
 
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
-import { AlertTriangle, FileText } from "lucide-react";
+import {useState} from "react";
+import {Button} from "@/components/ui/button";
+import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue,} from "@/components/ui/select";
+import {Alert, AlertDescription, AlertTitle} from "@/components/ui/alert";
+import {AlertTriangle, FileText} from "lucide-react";
 
 interface GameSetupProps {
   onGenerate: (theme: string, difficulty: "Easy" | "Medium" | "Hard") => void;
@@ -29,7 +23,7 @@ const themes = [
 
 const difficulties = ["Easy", "Medium", "Hard"] as const;
 
-export default function GameSetup({ onGenerate, onLoadSample, error }: GameSetupProps) {
+export default function GameSetup({onGenerate, onLoadSample, error}: GameSetupProps) {
   const [theme, setTheme] = useState(themes[0]);
   const [difficulty, setDifficulty] = useState<"Easy" | "Medium" | "Hard">("Easy");
 
@@ -57,7 +51,7 @@ export default function GameSetup({ onGenerate, onLoadSample, error }: GameSetup
               <label className="text-lg font-bold">THEME:</label>
               <Select value={theme} onValueChange={setTheme}>
                 <SelectTrigger className="retro-select">
-                  <SelectValue placeholder="Select a theme..." />
+                  <SelectValue placeholder="Select a theme..."/>
                 </SelectTrigger>
                 <SelectContent className="font-code bg-black border-primary text-primary retro-frame-inset">
                   {themes.map((t) => (
@@ -72,7 +66,7 @@ export default function GameSetup({ onGenerate, onLoadSample, error }: GameSetup
               <label className="text-lg font-bold">DIFFICULTY:</label>
               <Select value={difficulty} onValueChange={(v: any) => setDifficulty(v)}>
                 <SelectTrigger className="retro-select">
-                  <SelectValue placeholder="Select difficulty..." />
+                  <SelectValue placeholder="Select difficulty..."/>
                 </SelectTrigger>
                 <SelectContent className="font-code bg-black border-primary text-primary retro-frame-inset">
                   {difficulties.map((d) => (
@@ -96,16 +90,16 @@ export default function GameSetup({ onGenerate, onLoadSample, error }: GameSetup
               onClick={onLoadSample}
               className="retro-button w-full !bg-blue-500 !text-white hover:!bg-blue-400"
             >
-              <FileText className="mr-2 h-4 w-4" />
+              <FileText className="mr-2 h-4 w-4"/>
               LOAD SAMPLE CASE
             </Button>
           </form>
         </div>
       </div>
-      
+
       {error && (
         <Alert variant="destructive" className="mt-8 max-w-md retro-frame !border-destructive">
-          <AlertTriangle className="h-4 w-4" />
+          <AlertTriangle className="h-4 w-4"/>
           <AlertTitle className="font-bold">GENERATION FAILED</AlertTitle>
           <AlertDescription>
             {error} PLEASE TRY AGAIN.

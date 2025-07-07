@@ -1,15 +1,15 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import {useMemo, useState} from "react";
 import introJs from "intro.js";
-import type { MurdleData } from "@/lib/types";
+import type {MurdleData} from "@/lib/types";
 import StoryPanel from "./story-panel";
 import DeductionGrid from "./deduction-grid";
-import ItemModal from "./item-modal";
+import InvestigationPanel from "./investigation-panel";
 import AccusationForm from "./accusation-form";
 import SolutionModal from "./solution-modal";
-import { Button } from "../ui/button";
-import { HelpCircle, RefreshCw } from "lucide-react";
+import {Button} from "../ui/button";
+import {HelpCircle, RefreshCw} from "lucide-react";
 
 interface MurdleGameLayoutProps {
   murdleData: MurdleData;
@@ -20,16 +20,11 @@ interface MurdleGameLayoutProps {
 type CellState = "empty" | "x" | "check" | "question";
 type GridState = { [key: string]: CellState };
 
-export default function MurdleGameLayout({ murdleData, onRestart, isSample }: MurdleGameLayoutProps) {
-  const { story, suspects, weapons, locations, clues, solution } = murdleData;
-  const allItems = useMemo(() => ({ suspects, weapons, locations }), [suspects, weapons, locations]);
+export default function MurdleGameLayout({murdleData, onRestart, isSample}: MurdleGameLayoutProps) {
+  const {story, suspects, weapons, locations, clues, solution} = murdleData;
+  const allItems = useMemo(() => ({suspects, weapons, locations}), [suspects, weapons, locations]);
 
   const [gridState, setGridState] = useState<GridState>({});
-
-  const [modalState, setModalState] = useState<{
-    isOpen: boolean;
-    type: "suspects" | "weapons" | "locations" | null;
-  }>({ isOpen: false, type: null });
 
   const [gameState, setGameState] = useState<"playing" | "accusing" | "solved" | "failed">(
     "playing"
@@ -40,17 +35,12 @@ export default function MurdleGameLayout({ murdleData, onRestart, isSample }: Mu
       const currentState = prevState[key] || "empty";
       const nextState: CellState =
         currentState === "empty" ? "x"
-        : currentState === "x" ? "check"
-        : currentState === "check" ? "question"
-        : "empty";
-      return { ...prevState, [key]: nextState };
+          : currentState === "x" ? "check"
+            : currentState === "check" ? "question"
+              : "empty";
+      return {...prevState, [key]: nextState};
     });
   };
-
-  const openModal = (type: "suspects" | "weapons" | "locations") => {
-    setModalState({ isOpen: true, type });
-  };
-  const closeModal = () => setModalState({ isOpen: false, type: null });
 
   const handleAccusation = (accusation: { suspect: string; weapon: string; location: string }) => {
     if (
@@ -73,12 +63,12 @@ export default function MurdleGameLayout({ murdleData, onRestart, isSample }: Mu
           intro: "Welcome, detective! Your first step is to read the story, victim details, and setting. This will give you the background of the case.",
         },
         {
-          element: '[data-tutorial="navigation-panel"]',
-          intro: "Next, familiarize yourself with the Suspects, Weapons, and Locations. Click each button to view their details in a modal. Knowing the key players is crucial.",
-        },
-        {
           element: '[data-tutorial="clues-panel"]',
           intro: "Here you will find all the clues for the case. As you use a clue to make a deduction, click on it to strike it through and keep track of your progress.",
+        },
+        {
+          element: '[data-tutorial="investigation-panel"]',
+          intro: "This panel shows all suspects, weapons, and locations with their details. All information is visible at once - no need to click to expand! Study the traits carefully.",
         },
         {
           element: '[data-tutorial="deduction-grid"]',
@@ -104,71 +94,74 @@ export default function MurdleGameLayout({ murdleData, onRestart, isSample }: Mu
   };
 
   return (
-    <div className="max-w-[90%] mx-auto">
-       <div className="flex justify-between items-center mb-4 p-4 retro-frame">
-          <h1 className="text-3xl font-black retro-text-rainbow">Retro Sleuth AI</h1>
-          <div className="flex gap-2">
-            {isSample && (
-              <Button onClick={startTutorial} className="retro-button !bg-blue-500 hover:!bg-blue-400">
-                <HelpCircle className="mr-2 h-4 w-4" />
-                TUTORIAL
-              </Button>
-            )}
-            <Button onClick={onRestart} className="retro-button" data-tutorial="restart-button">
-              <RefreshCw className="mr-2 h-4 w-4" />
-              RESTART
+    <div className="max-w-[95%] mx-auto">
+      <div className="flex justify-between items-center mb-3 p-3 retro-frame">
+        <h1 className="text-2xl font-black retro-text-rainbow">Retro Sleuth AI</h1>
+        <div className="flex gap-2">
+          {isSample && (
+            <Button onClick={startTutorial} className="retro-button !bg-blue-500 hover:!bg-blue-400">
+              <HelpCircle className="mr-2 h-4 w-4"/>
+              TUTORIAL
             </Button>
-          </div>
-       </div>
-
-      <div className="flex flex-col lg:flex-row gap-8 p-4 max-w-full">
-        <div className="lg:w-1/2 w-full">
-          <StoryPanel
-            story={story}
-            clues={clues}
-            onOpenModal={openModal}
-          />
+          )}
+          <Button onClick={onRestart} className="retro-button" data-tutorial="restart-button">
+            <RefreshCw className="mr-2 h-4 w-4"/>
+            RESTART
+          </Button>
         </div>
-        <div className="lg:w-1/2 w-full space-y-8">
-          <div className="retro-frame overflow-x-auto">
-            <h2 className="text-2xl font-bold retro-text-glow-pink p-4 text-center">DEDUCTION GRID</h2>
-            <div className="p-2 md:p-4">
-              <DeductionGrid
-                suspects={suspects}
-                weapons={weapons}
-                locations={locations}
-                gridState={gridState}
-                onCellClick={handleCellClick}
-              />
+      </div>
+
+      <div className="space-y-4 p-4">
+        {/* Top Row: Story and Deduction Grid */}
+        <div className="flex flex-col xl:flex-row gap-4">
+          <div className="xl:w-1/2 w-full">
+            <StoryPanel
+              story={story}
+              clues={clues}
+            />
+          </div>
+          <div className="xl:w-1/2 w-full">
+            <div className="retro-frame overflow-x-auto">
+              <h2 className="text-xl font-bold retro-text-glow-pink p-2 text-center">DEDUCTION GRID</h2>
+              <div className="p-2">
+                <DeductionGrid
+                  suspects={suspects}
+                  weapons={weapons}
+                  locations={locations}
+                  gridState={gridState}
+                  onCellClick={handleCellClick}
+                />
+              </div>
             </div>
           </div>
-          <AccusationForm
-            suspects={suspects}
-            weapons={weapons}
-            locations={locations}
-            onAccuse={() => setGameState("accusing")}
-          />
         </div>
 
-        {modalState.isOpen && modalState.type && (
-          <ItemModal
-            isOpen={modalState.isOpen}
-            onClose={closeModal}
-            items={allItems[modalState.type]}
-            type={modalState.type}
-          />
-        )}
+        {/* Middle Row: Investigation Panel */}
+        <InvestigationPanel
+          suspects={suspects}
+          weapons={weapons}
+          locations={locations}
+        />
 
+        {/* Bottom Row: Accusation Form */}
+        <AccusationForm
+          suspects={suspects}
+          weapons={weapons}
+          locations={locations}
+          onAccuse={() => setGameState("accusing")}
+        />
+
+        {/* Modals */}
         {(gameState === "accusing" || gameState === "failed") && (
           <SolutionModal
-              isOpen={true}
-              onClose={() => setGameState("playing")}
-              title={gameState === 'failed' ? "ACCUSATION FAILED!" : "MAKE YOUR ACCUSATION"}
-              isFinalAccusation={true}
-              onAccuse={handleAccusation}
-              status={gameState}
-              items={allItems}
-            />
+            isOpen={true}
+            onClose={() => setGameState("playing")}
+            title={gameState === 'failed' ? "ACCUSATION FAILED!" : "MAKE YOUR ACCUSATION"}
+            isFinalAccusation={true}
+            onAccuse={handleAccusation}
+            status={gameState}
+            items={allItems}
+          />
         )}
 
         {gameState === 'solved' && (

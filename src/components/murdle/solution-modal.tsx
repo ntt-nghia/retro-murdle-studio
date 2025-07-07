@@ -1,6 +1,6 @@
 "use client";
 import {useEffect, useState} from "react";
-import type {Location, Story, Solution, Suspect, Weapon} from "@/lib/types";
+import type {Location, Solution, Story, Suspect, Weapon} from "@/lib/types";
 import {Dialog, DialogContent, DialogHeader, DialogTitle} from "@/components/ui/dialog";
 import {Button} from "@/components/ui/button";
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
