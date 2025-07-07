@@ -3,108 +3,106 @@ import type { GenerateMurdleMysteryOutput } from "@/ai/flows/generate-murdle-mys
 export const sampleMurdleData: GenerateMurdleMysteryOutput = {
   murdleData: {
     story: {
-      title: "The Serpent's Shadow",
-      setting: "Blackwood Manor, a sprawling Gothic estate shrouded in mist and secrets, perched on a cliff overlooking a stormy sea.",
-      atmosphere: "A palpable tension hangs in the air, thick with unspoken rivalries and old money. Rain lashes against the stained-glass windows, and the distant cry of a lighthouse echoes the manor's isolation.",
-      intro: "The annual Blackwood gala was the event of the season, but its glittering facade shattered when the host, Lord Alistair Blackwood, a ruthless industrialist with a venomous reputation, was found dead in his private study. A single, clean puncture wound marked his chest. The storm has trapped the remaining guests in the manor, turning a night of celebration into a theater of suspicion. The killer walks among them.",
+      title: "The Blackwood Estate Murder",
+      intro: "The annual Blackwood charity gala was supposed to be the social event of the season. Instead, it became a scene of horror when Lord Edmund Blackwood, the estate's reclusive owner, was found dead in his locked study. The storm raging outside has trapped all the guests inside the manor, and one of them is a killer. The victim was discovered with a fatal wound, and three potential murder weapons have been identified. Can you solve this deadly puzzle before the killer strikes again?",
       victim: {
-        name: "Lord Alistair Blackwood",
-        background: "A self-made tycoon who built his empire on cunning and cruelty. He was admired for his wealth but despised for his methods.",
-        motive_for_murder: "Lord Blackwood had recently announced plans to cut off several key associates, leaving them ruined. He collected enemies like he collected rare art."
+        name: "Lord Edmund Blackwood",
+        background: "A wealthy and reclusive nobleman who inherited the Blackwood estate. Known for his sharp business dealings and secretive nature, he had many enemies despite his charitable facade.",
+        motive_for_murder: "Lord Blackwood possessed damaging secrets about several guests and had recently changed his will, threatening to expose those who had wronged him."
       }
     },
     suspects: [
       {
-        name: "Lady Genevieve Blackwood",
-        avatar: "💎",
-        profession: "The Trophy Wife",
-        description: "Alistair's young, beautiful, and deeply unhappy wife.",
-        background: "Married into wealth, Genevieve found herself in a gilded cage. She is elegant and composed, but her eyes betray a desperate longing for freedom. She often sought solace in the Billiards Room.",
-        motive: "Alistair's iron-clad prenuptial agreement would leave her with nothing in a divorce, but his death would make her a very wealthy widow.",
-        relationship_to_victim: "Wife"
+        name: "Dr. Helena Marsh",
+        avatar: "👩‍⚕️",
+        profession: "Personal Physician",
+        description: "The victim's longtime personal doctor and trusted confidante.",
+        traits: "Tall stature • Left-handed • Medical expertise • Access to poisons • Wears distinctive red glasses"
       },
       {
-        name: "Silas Croft",
-        avatar: "⚖️",
-        profession: "The Bitter Partner",
-        description: "Alistair's long-time business partner, recently betrayed.",
-        background: "Silas was the architect of their early success, but Alistair pushed him into the shadows. He is a pragmatic and proud man, now simmering with resentment after being forced out of the company.",
-        motive: "Alistair was about to expose a secret deal Silas made, which would not only ruin him financially but also land him in prison. He had to be silenced.",
-        relationship_to_victim: "Business Partner"
+        name: "Captain William Sterling",
+        avatar: "🎖️",
+        profession: "Military Officer",
+        description: "A decorated war veteran and the victim's former business partner.",
+        traits: "Medium height • Right-handed • Military training • Knife expertise • Distinctive scar on left cheek"
       },
       {
-        name: "Elara Vance",
-        avatar: "🔮",
-        profession: "The Enigmatic Mystic",
-        description: "A spiritual advisor with a mysterious connection to the Blackwood family.",
-        background: "Elara was a frequent visitor, hired by Alistair for her supposed insights. She carries an aura of mystique and claims to see truths others cannot. She spent much of the evening in the Observatory.",
-        motive: "Alistair discovered she was a charlatan who had been extorting money from his late mother for years and threatened to expose her to her wealthy clientele.",
-        relationship_to_victim: "Spiritual Advisor"
+        name: "Miss Charlotte Worthington",
+        avatar: "🎭",
+        profession: "Estate Manager",
+        description: "The young and ambitious manager of the Blackwood estate's affairs.",
+        traits: "Short stature • Right-handed • Knowledge of estate layout • Financial expertise • Always wears pearl necklace"
       }
     ],
     weapons: [
       {
-        name: "Ornate Letter Opener",
+        name: "Antique Letter Opener",
         icon: "🗡️",
-        description: "A sharp, serpent-themed letter opener made of silver, a gift from a rival, kept on the desk in the Study."
+        description: "A sharp, ornate silver letter opener from Lord Blackwood's desk collection.",
+        traits: "Light weight • Sharp blade • Silver material • Easily concealed • Requires precision"
       },
       {
-        name: "Poisoned Brandy",
-        icon: "🍷",
-        description: "A decanter of Alistair's favorite expensive brandy, which he often drank in the Billiards Room, potentially laced with a fast-acting toxin."
+        name: "Medical Syringe",
+        icon: "💉",
+        description: "A professional medical syringe containing a lethal dose of morphine.",
+        traits: "Very light weight • Disposable plastic • Requires medical knowledge • Silent method • Quick acting"
       },
       {
-        name: "Heavy Velvet Curtain Cord",
-        icon: "🎗️",
-        description: "A thick, tasseled cord from the heavy blackout curtains in the Observatory, strong enough to be used for strangulation."
+        name: "Military Dagger",
+        icon: "🔪",
+        description: "A heavy ceremonial military dagger with an engraved handle.",
+        traits: "Heavy weight • Steel blade • Military origin • Requires strength • Distinctive engravings"
       }
     ],
     locations: [
       {
         name: "The Study",
         icon: "📚",
-        description: "A room of dark mahogany, filled with leather-bound books, a massive oak desk, and the lingering scent of cigar smoke."
+        description: "Lord Blackwood's private study with locked doors and heavy curtains.",
+        traits: "INDOORS"
       },
       {
-        name: "The Observatory",
-        icon: "🔭",
-        description: "A circular room at the top of the manor's tallest tower, with a large brass telescope aimed at the stormy sky."
+        name: "The Conservatory",
+        icon: "🌿",
+        description: "A glass-walled garden room filled with exotic plants and natural light.",
+        traits: "INDOORS"
       },
       {
-        name: "The Billiards Room",
-        icon: "🎱",
-        description: "A dimly lit chamber with a full-sized billiards table, a well-stocked bar, and green-shaded lamps casting long shadows."
+        name: "The Garden Maze",
+        icon: "🌲",
+        description: "An elaborate hedge maze behind the manor, dark and secluded.",
+        traits: "OUTDOORS"
       }
     ],
     clues: [
       {
-        text: "The coroner confirmed the cause of death was a single puncture wound. Poison and strangulation have been ruled out.",
+        text: "The victim was found with a puncture wound. The Medical Syringe and Military Dagger have been ruled out as the murder weapon.",
         type: "elimination"
       },
       {
-        text: "The murder did not happen in the Billiards Room or the Observatory.",
+        text: "The murder did not take place in the Garden Maze or the Conservatory.",
         type: "elimination"
       },
       {
-        text: "Lady Genevieve was not in the Study at the time of the murder.",
+        text: "Dr. Helena Marsh was not in the Study at the time of the murder.",
         type: "elimination"
       },
       {
-        text: "Elara Vance did not use the Ornate Letter Opener.",
+        text: "The person who used the Antique Letter Opener was not Captain William Sterling.",
         type: "relationship"
       },
       {
-        text: "The person in the Billiards room was not Silas Croft.",
+        text: "Miss Charlotte Worthington was not in the Conservatory during the incident.",
         type: "relationship"
       }
     ],
     solution: {
-      suspect: "Silas Croft",
-      weapon: "Ornate Letter Opener",
+      suspect: "Miss Charlotte Worthington",
+      weapon: "Antique Letter Opener",
       location: "The Study",
-      motive: "Silas killed Alistair to prevent his own financial and social ruin after Alistair threatened to expose his fraudulent dealings.",
-      method: "Knowing Alistair would be in his Study after the party, Silas confronted him. The argument escalated, and in a moment of cold fury, Silas grabbed the nearest object - the letter opener on the desk - and stabbed Alistair, staging it to look like a suicide before slipping out unnoticed.",
-      reveal_narrative: "It was a crime of desperation, committed by a man of pride. Silas Croft, pushed to the brink, saw only one way out. He confronted his old partner in the heart of his power, the Study. The letter opener, a symbol of the very correspondence that built their empire, became the instrument of its bloody end. It was a direct, calculated act, befitting a man who had spent his life in the cutthroat world of business."
+      motive: "Charlotte discovered that Lord Blackwood was planning to fire her and expose her embezzlement of estate funds. Facing financial ruin and imprisonment, she saw murder as her only escape.",
+      method: "Charlotte waited until Lord Blackwood was alone in his study reviewing documents. She entered under the pretense of discussing estate business, then grabbed the letter opener from his desk and stabbed him in a moment of desperate panic.",
+      reveal_narrative: "Miss Charlotte Worthington, the seemingly innocent estate manager, was driven to murder by desperation. Lord Blackwood had discovered her embezzlement and was preparing to destroy her life. In his own study, surrounded by the wealth she had been stealing, she used his own letter opener to silence him forever. Her knowledge of the estate layout allowed her to commit the perfect crime... or so she thought."
     }
   }
 };

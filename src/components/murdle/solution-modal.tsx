@@ -1,6 +1,6 @@
 "use client";
 import {useEffect, useState} from "react";
-import type {Location, MurdleData, Solution, Suspect, Weapon} from "@/lib/types";
+import type {Location, Story, Solution, Suspect, Weapon} from "@/lib/types";
 import {Dialog, DialogContent, DialogHeader, DialogTitle} from "@/components/ui/dialog";
 import {Button} from "@/components/ui/button";
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
@@ -13,7 +13,7 @@ interface SolutionModalProps {
   onClose: () => void;
   title: string;
   solution?: Solution;
-  story?: Pick<MurdleData["story"], 'title' | 'intro' | 'setting' | 'victim'>;
+  story?: Story;
   items?: {
     suspects: Suspect[];
     weapons: Weapon[];
@@ -128,6 +128,16 @@ export default function SolutionModal({
             <p className="text-lg">THE KILLER: <span className="text-primary font-bold">{solution.suspect}</span></p>
             <p className="text-lg">THE WEAPON: <span className="text-primary font-bold">{solution.weapon}</span></p>
             <p className="text-lg">THE LOCATION: <span className="text-primary font-bold">{solution.location}</span></p>
+
+            <div className="retro-frame-inset p-4">
+              <h3 className="retro-text-glow-cyan text-xl mb-2">MOTIVE</h3>
+              <p className="whitespace-pre-wrap">{solution.motive}</p>
+            </div>
+
+            <div className="retro-frame-inset p-4">
+              <h3 className="retro-text-glow-cyan text-xl mb-2">METHOD</h3>
+              <p className="whitespace-pre-wrap">{solution.method}</p>
+            </div>
 
             <div className="retro-frame-inset p-4">
               <h3 className="retro-text-glow-cyan text-xl mb-2">REVEAL NARRATIVE</h3>

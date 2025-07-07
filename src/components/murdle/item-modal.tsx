@@ -15,6 +15,11 @@ interface ItemModalProps {
 }
 
 export default function ItemModal({ isOpen, onClose, items, type }: ItemModalProps) {
+  const formatTraits = (traits: string) => {
+    // Split by bullet points and clean up each trait
+    return traits.split('•').map(trait => trait.trim()).filter(trait => trait.length > 0);
+  };
+
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="max-w-4xl h-[90vh] retro-frame !bg-[#2D0B69] border-primary shadow-[0_0_20px_hsl(var(--primary))] flex flex-col">
@@ -40,9 +45,18 @@ export default function ItemModal({ isOpen, onClose, items, type }: ItemModalPro
                   <AccordionContent className="border-t-2 border-accent/50">
                     <div className="p-4 space-y-4 font-code text-lime-300">
                       <p className="whitespace-pre-wrap">{item.description}</p>
-                      {'background' in item && <p className="mt-4 whitespace-pre-wrap">BACKGROUND: {item.background}</p>}
-                      {'motive' in item && <p className="mt-4 whitespace-pre-wrap">MOTIVE: {item.motive}</p>}
-                      {'story_connection' in item && <p className="mt-4 whitespace-pre-wrap">STORY CONNECTION: {item.story_connection}</p>}
+
+                      <div className="mt-4">
+                        <p className="text-amber-400 font-bold mb-2">DISTINCTIVE TRAITS:</p>
+                        <ul className="list-none space-y-1">
+                          {formatTraits(item.traits).map((trait, index) => (
+                            <li key={index} className="flex items-center gap-2">
+                              <span className="text-accent">▸</span>
+                              <span>{trait}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
                     </div>
                   </AccordionContent>
                 </AccordionItem>

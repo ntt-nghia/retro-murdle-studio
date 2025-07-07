@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState, useMemo } from "react";
@@ -178,7 +177,7 @@ export default function MurdleGameLayout({ murdleData, onRestart, isSample }: Mu
             onClose={onRestart}
             title="CASE SOLVED!"
             solution={solution}
-            story={{title: story.title, intro: story.intro, setting: story.setting, victim: story.victim}}
+            story={story}
             items={allItems}
           />
         )}
