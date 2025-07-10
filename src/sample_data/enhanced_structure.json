@@ -1,0 +1,24 @@
+{
+  "logical_complexity": {
+    "conditional_clues": 2,
+    "height_ranking_clues": 1,
+    "multi_step_chains": 4
+  },
+  "theme_consistency": {
+    "setting": ["piracy","literary","awards_ceremony"],
+    "character_archetypes": ["pirate", "editor", "agent"],
+    "weapon_theme_match": true
+  },
+  "encoding_complexity": {
+    "cipher_types": ["reverse_alphabet", "scrambled_anagram", "substitution"],
+    "decryption_difficulties": ["simple","moderate","complex"],
+    "multiple_codes": true,
+    "named_systems": ["Next Letter Code", "Detective Code"]
+  },
+  "logical_mechanisms": {
+    "height_ranking_elimination": true,
+    "economic_restrictions": true,
+    "physical_evidence_correlation": true,
+    "conditional_weapon_location": true
+  }
+}

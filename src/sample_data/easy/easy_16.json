@@ -1,0 +1,121 @@
+{
+  "game_id": "murdle_16",
+  "title": "Fifteen Percent of Murder",
+  "difficulty": "easy",
+  "victim": {
+    "name": "Powerful Agent",
+    "background": "Best-earning agent of the month at Dame Obsidian's literary agency",
+    "death_details": "Found dead in his office (the best office)",
+    "case_context": "Detective Logico was searching Dame Obsidian's literary agency for a body"
+  },
+  "suspects": [
+    {
+      "name": "Editor Ivory",
+      "relationship": "Romance editor",
+      "description": "The greatest romance editor of all time. She invented the enemies-to-lovers genre, and she was the first person to put a naked man on the cover of a book",
+      "traits": ["5'6\"", "left-handed", "light brown eyes", "gray hair"],
+      "motive": "Editorial conflicts with agent"
+    },
+    {
+      "name": "Assistant Applegreen",
+      "relationship": "Assistant seeking advancement",
+      "description": "Her father is a principal, and she is making him proud. But you know what's not making? Enough money",
+      "traits": ["5'3\"", "left-handed", "blue eyes", "blond hair"],
+      "motive": "Financial desperation, seeking promotion"
+    },
+    {
+      "name": "Agent Ink",
+      "relationship": "Competitive agent",
+      "description": "An agent with a heart of gold, but a mind for gold, too. If you like living, don't cross her",
+      "traits": ["5'5\"", "right-handed", "dark brown eyes", "black hair"],
+      "motive": "Competition for best office and earnings"
+    }
+  ],
+  "weapons": [
+    {
+      "name": "An Antique Typewriter",
+      "type": "blunt",
+      "weight": "heavy-weight",
+      "description": "You can write your themes subtly, or you can hit them over the head with it"
+    },
+    {
+      "name": "A Giant Stack of Books",
+      "type": "crushing",
+      "weight": "heavy-weight",
+      "description": "You can shove this over and crush someone beneath it. But it's hard to carry around"
+    },
+    {
+      "name": "A Ream of Paper",
+      "type": "cutting/blunt",
+      "weight": "medium-weight",
+      "description": "You could use these blank pages to give someone a thousand paper cuts or one paper bash"
+    }
+  ],
+  "locations": [
+    {
+      "name": "The Balcony",
+      "environment": "outdoors",
+      "description": "Standing on the balcony, you can look out over the city you ruin",
+      "significance": "Assistant Applegreen not allowed here"
+    },
+    {
+      "name": "The Best Office",
+      "environment": "indoors",
+      "description": "The best-earning agent of the month gets this office. The worst is fired",
+      "significance": "Where victim was found dead"
+    },
+    {
+      "name": "The Unsolicited Submissions Room",
+      "environment": "indoors",
+      "description": "It also doubles as an incinerator",
+      "significance": "Requires right-handed person to avoid burns"
+    }
+  ],
+  "clues": [
+    {
+      "id": "editor_books_relationship",
+      "description": "Editor Ivory and the person who brought a giant stack of books had known each other for years",
+      "type": "relationship",
+      "points_to": ["Editor Ivory connected to person with giant stack of books"]
+    },
+    {
+      "id": "balcony_restriction",
+      "description": "Assistant Applegreen wasn't allowed to go out on the balcony",
+      "type": "elimination",
+      "eliminates": ["Assistant Applegreen was not at The Balcony"]
+    },
+    {
+      "id": "detective_code",
+      "description": "Logico received a clue from the Detective Club, written in their signature code: ZTVMG RMP SZW Z NVWREFN-DVRTSG DVZKLM",
+      "decoded": "AGENT INK HAD A MEDIUM-WEIGHT WEAPON",
+      "type": "elimination",
+      "points_to": ["Agent Ink had A Ream of Paper"]
+    },
+    {
+      "id": "submissions_room_requirement",
+      "description": "Whoever was in the unsolicited submissions room had to be right-handed, because otherwise you get burned",
+      "type": "elimination",
+      "eliminates": ["Left-handed suspects cannot be in submissions room"]
+    },
+    {
+      "id": "victim_office",
+      "description": "The agent who died in his office had been the best-earning agent that month",
+      "type": "physical_evidence",
+      "points_to": ["Murder occurred at The Best Office"]
+    }
+  ],
+  "solution": {
+    "killer": "Agent Ink",
+    "weapon": "A Ream of Paper",
+    "location": "The Best Office",
+    "logic_chain": [
+      "Agent Ink had medium-weight weapon (ream of paper) from detective code",
+      "Victim died in best office (best-earning agent)",
+      "Assistant Applegreen not allowed on balcony",
+      "Submissions room requires right-handed person",
+      "Agent Ink is right-handed, could access submissions room",
+      "Editor Ivory knew person with giant stack of books",
+      "By elimination: Agent Ink killed victim with ream of paper in best office"
+    ]
+  }
+}

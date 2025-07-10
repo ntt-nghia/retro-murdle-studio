@@ -1,0 +1,121 @@
+{
+  "game_id": "murdle_21",
+  "title": "Oil Kill You For This",
+  "difficulty": "easy",
+  "victim": {
+    "name": "Unknown person",
+    "background": "Found dead at oil field location",
+    "death_details": "Killed with powdered cement evidence found beside victim",
+    "case_context": "Detective Logico followed old pirate map to oil field, found Dame Obsidian and others present"
+  },
+  "suspects": [
+    {
+      "name": "Chairman Chalk",
+      "relationship": "Business mogul",
+      "description": "He figured out the publishing business years ago and never looked back. He called eBooks a 'fad' and still owns a rotary phone. He is worth a billion dollars",
+      "traits": ["5'9\"", "right-handed", "blue eyes", "white hair"],
+      "motive": "Protecting business interests"
+    },
+    {
+      "name": "Midnight III",
+      "relationship": "Movie industry figure",
+      "description": "Maybe the only person capable of returning Midnight Movies Studios to its former glory",
+      "traits": ["5'8\"", "left-handed", "dark brown eyes", "dark brown hair"],
+      "motive": "Studio business connections"
+    },
+    {
+      "name": "Dame Obsidian",
+      "relationship": "Mystery writer",
+      "description": "Back from the dead! But Logico remembered when an interviewer asked her how she got all of her ideas for all of her fictional perfect murders, and she chuckled for two full minutes",
+      "traits": ["5'4\"", "left-handed", "green eyes", "black hair"],
+      "motive": "Connected to previous cases"
+    }
+  ],
+  "weapons": [
+    {
+      "name": "A Crowbar",
+      "type": "blunt",
+      "weight": "medium-weight",
+      "description": "Honestly, at this point, they're used more often for crime than anything else"
+    },
+    {
+      "name": "A Piece of Rebar",
+      "type": "blunt/stabbing",
+      "weight": "medium-weight",
+      "description": "A long piece of metal. If this isn't a weapon, nothing is. Often used with powdered cement"
+    },
+    {
+      "name": "An Oil Drum",
+      "type": "blunt/crushing",
+      "weight": "heavy-weight",
+      "description": "Really more of a giant can than a drum: you've never seen a band feature one of these"
+    }
+  ],
+  "locations": [
+    {
+      "name": "An Oil Derrick",
+      "environment": "outdoors",
+      "description": "They're digging another well right now with this massive derrick",
+      "significance": "Active drilling site"
+    },
+    {
+      "name": "The Offices",
+      "environment": "indoors",
+      "description": "Air-conditioned to such a low temperature that it uses most of the energy the field produces",
+      "significance": "Corporate headquarters"
+    },
+    {
+      "name": "The Ancient Ruins",
+      "environment": "outdoors",
+      "description": "You can see them from the edge of the fields, silhouetted in the light of the setting sun",
+      "significance": "Visible from oil field"
+    }
+  ],
+  "clues": [
+    {
+      "id": "oil_drum_superstition",
+      "description": "Nobody ever put an oil drum anywhere near the ancient ruins. It was a superstition",
+      "type": "elimination",
+      "eliminates": ["Oil drum was not at ancient ruins"]
+    },
+    {
+      "id": "chalk_weapon_choice",
+      "description": "Either Chairman Chalk brought an oil drum, or a crowbar was in an oil derrick",
+      "type": "conditional",
+      "points_to": ["Chairman Chalk had oil drum OR crowbar was at derrick"]
+    },
+    {
+      "id": "next_letter_code",
+      "description": "A trusted confidant gave Deductive Logico a piece of paper with a message written in what he called the Next Letter Code: SGD RGNQSDRS RTRODBS VZR MNS AX SGD ZMBHDMS OTHMR",
+      "decoded": "THE SHORTEST SUSPECT WAS NOT BY THE ANCIENT RUINS",
+      "type": "elimination",
+      "eliminates": ["Dame Obsidian (5'4\", shortest) was not at ancient ruins"]
+    },
+    {
+      "id": "office_restriction",
+      "description": "Neither Midnight III nor Dame Obsidian had ever been in the offices",
+      "type": "elimination",
+      "eliminates": ["Midnight III not at offices", "Dame Obsidian not at offices"]
+    },
+    {
+      "id": "cement_evidence",
+      "description": "Some powdered cement was found beside the victim",
+      "type": "physical_evidence",
+      "points_to": ["Rebar used (associated with cement)"]
+    }
+  ],
+  "solution": {
+    "killer": "Chairman Chalk",
+    "weapon": "A Piece of Rebar",
+    "location": "The Offices",
+    "logic_chain": [
+      "Dame Obsidian (shortest) not at ancient ruins",
+      "Neither Midnight III nor Dame Obsidian at offices",
+      "Therefore Chairman Chalk at offices",
+      "Powdered cement found (indicates rebar use)",
+      "Either Chalk had oil drum OR crowbar at derrick",
+      "Since oil drum can't be at ruins (superstition), and cement indicates rebar",
+      "Chairman Chalk used rebar at offices"
+    ]
+  }
+}

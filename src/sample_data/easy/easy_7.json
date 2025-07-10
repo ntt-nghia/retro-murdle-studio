@@ -1,0 +1,128 @@
+{
+  "game_id": "murdle_6",
+  "title": "Murder in the Alley",
+  "difficulty": "easy",
+  "victim": {
+    "name": "Dark Figure",
+    "background": "Unknown person who approached Detective Logico with information about Dame Obsidian",
+    "death_details": "Murdered in dark alley before revealing more information",
+    "case_context": "Connected to Case 1: Murder in Hollywood involving Dame Obsidian framing a magician"
+  },
+  "suspects": [
+    {
+      "name": "General Coffee",
+      "relationship": "Espresso connoisseur",
+      "description": "An espresso connoisseur who once sent his men to die in the jungle to harvest a single bean",
+      "traits": ["6'0\"", "right-handed", "dark brown eyes", "bald"],
+      "motive": "Unknown connection to Hollywood case"
+    },
+    {
+      "name": "Cosmonaut Bluski",
+      "relationship": "Ex-Soviet spaceman",
+      "description": "An ex-Soviet spaceman whose blood flows red. Sure, that's normal, but for him it's patriotic",
+      "traits": ["6'2\"", "left-handed", "dark brown eyes", "black hair"],
+      "motive": "Unknown connection to Hollywood case"
+    },
+    {
+      "name": "Midnight III",
+      "relationship": "Studio advocate",
+      "description": "He argues the studio should focus on murder mysteries again to regain their former glory",
+      "traits": ["5'8\"", "left-handed", "dark brown eyes", "dark brown hair"],
+      "motive": "Studio business interests"
+    }
+  ],
+  "weapons": [
+    {
+      "name": "Piano Wire",
+      "type": "strangulation",
+      "weight": "light-weight",
+      "description": "Somewhere out there, there's a piano missing a wire, and it's about to ruin a concert"
+    },
+    {
+      "name": "A Crowbar",
+      "type": "blunt",
+      "weight": "medium-weight",
+      "description": "Honestly, they're used more often for crime than anything else"
+    },
+    {
+      "name": "A Poisonous Dart",
+      "type": "projectile/poison",
+      "weight": "light-weight",
+      "description": "One stick of this dart and you're dead"
+    }
+  ],
+  "locations": [
+    {
+      "name": "The Metal Fence",
+      "environment": "outdoors",
+      "description": "Your typical chain-link fence. What more do you want?",
+      "significance": "Chain-link pattern evidence found"
+    },
+    {
+      "name": "The Dumpster",
+      "environment": "outdoors",
+      "description": "It does not smell good. No, it does not. It smells awful, actually",
+      "significance": "Source of awful smell around body"
+    },
+    {
+      "name": "The Distracting Graffiti",
+      "environment": "outdoors",
+      "description": "The dragon-riding-a-motorcycle mural really ruins the noir vibes",
+      "significance": "Location of weapon evidence"
+    }
+  ],
+  "clues": [
+    {
+      "id": "fence_pattern",
+      "description": "Midnight III had that familiar chain-link pattern pressed into his face",
+      "type": "physical_evidence",
+      "eliminates": ["Midnight III was not at The Metal Fence"]
+    },
+    {
+      "id": "light_weapon",
+      "description": "Cosmonaut Bluski always packed for outer space: he had a light-weight weapon",
+      "type": "elimination",
+      "eliminates": ["Cosmonaut Bluski did not have crowbar (medium-weight)"]
+    },
+    {
+      "id": "detective_code",
+      "description": "The Detective Club sent Logico a message written in Detective Code: TVMVIZO XLUUVV WRW MLG SZEV GSV XILDYZI",
+      "decoded": "GENERAL COFFEE DID NOT HAVE THE CROWBAR",
+      "type": "elimination",
+      "eliminates": ["General Coffee did not have crowbar"]
+    },
+    {
+      "id": "tone_deaf",
+      "description": "Cosmonaut Bluski did not bring piano wire: he was tone-deaf",
+      "type": "elimination",
+      "eliminates": ["Cosmonaut Bluski did not have piano wire"]
+    },
+    {
+      "id": "graffiti_weapon",
+      "description": "Either a crowbar or a poisonous dart was by the distracting graffiti",
+      "type": "relationship",
+      "points_to": ["Crowbar OR poisonous dart at graffiti location"]
+    },
+    {
+      "id": "awful_smell",
+      "description": "There was an awful smell around the body—even for a body!",
+      "type": "relationship",
+      "points_to": ["Body found near The Dumpster"]
+    }
+  ],
+  "solution": {
+    "killer": "Midnight III",
+    "weapon": "A Poisonous Dart",
+    "location": "The Distracting Graffiti",
+    "logic_chain": [
+      "General Coffee eliminated from crowbar (detective code)",
+      "Cosmonaut Bluski had light-weight weapon (not crowbar)",
+      "Cosmonaut Bluski didn't have piano wire (tone-deaf)",
+      "Therefore Cosmonaut Bluski had poisonous dart",
+      "Crowbar or dart was at graffiti, since Bluski had dart, crowbar must be at graffiti",
+      "Body found near dumpster (awful smell)",
+      "Midnight III had fence pattern on face but wasn't at fence",
+      "By elimination: Midnight III had piano wire at dumpster location"
+    ]
+  }
+}

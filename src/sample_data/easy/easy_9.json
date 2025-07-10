@@ -1,0 +1,118 @@
+{
+  "game_id": "murdle_9",
+  "title": "Hedge Your Bets, The Constable Cried",
+  "difficulty": "easy",
+  "victim": {
+    "name": "Dame Obsidian",
+    "background": "Mystery writer previously suspected in other cases",
+    "death_details": "Found dead beside a blood-splattered map",
+    "case_context": "Logico was reconsidering her innocence when she was murdered"
+  },
+  "suspects": [
+    {
+      "name": "Constable Copper",
+      "relationship": "Police officer, twin of Officer Copper",
+      "description": "The identical twin of Officer Copper. When their parents divorced, she moved across the ocean. But they have so much in common. Same height, same job, same propensity to violence",
+      "traits": ["5'5\"", "right-handed", "blue eyes", "blond hair"],
+      "motive": "Law enforcement connection"
+    },
+    {
+      "name": "Lord Lavender",
+      "relationship": "MP and theater composer",
+      "description": "A politically conservative MP in the House of Lords, as well as the musical theater composer behind such hits as Dogs and Mr. Moses Megastar",
+      "traits": ["5'9\"", "right-handed", "green eyes", "gray hair"],
+      "motive": "Political interests"
+    },
+    {
+      "name": "Miss Saffron",
+      "relationship": "Possibly deceptive beauty",
+      "description": "Gorgeous and stunning, but maybe not all there in the brains department. Or maybe that's what she wants you to think. Or maybe she wants you to think that's what she wants you to think",
+      "traits": ["5'2\"", "left-handed", "hazel eyes", "blond hair"],
+      "motive": "Connected to Earl Grey's tea business"
+    }
+  ],
+  "weapons": [
+    {
+      "name": "A Pair of Gardening Shears",
+      "type": "cutting",
+      "weight": "medium-weight",
+      "description": "They're getting a little rusty, and they might leave screws behind"
+    },
+    {
+      "name": "A Flowerpot",
+      "type": "blunt",
+      "weight": "medium-weight",
+      "description": "If you use this to murder, please re-pot the flowers first"
+    },
+    {
+      "name": "Poisoned Tea",
+      "type": "poison",
+      "weight": "light-weight",
+      "description": "Enjoy a nice sip of tea, followed by a long, long nap"
+    }
+  ],
+  "locations": [
+    {
+      "name": "The Fountain",
+      "environment": "outdoors",
+      "description": "A fountain at the center of the maze, if you can find it",
+      "significance": "Central maze location"
+    },
+    {
+      "name": "The Lookout Tower",
+      "environment": "indoors",
+      "description": "From above the garden, you can see everything. Plus, there's a map on the wall that reveals (some of) the maze's secrets",
+      "significance": "Contains blood-splattered map where body found"
+    },
+    {
+      "name": "The Ancient Ruins",
+      "environment": "outdoors",
+      "description": "These same old ruins again! They were here long before the rest of the maze",
+      "significance": "Excluded location for certain weapons"
+    }
+  ],
+  "clues": [
+    {
+      "id": "poison_location",
+      "description": "Poisoned tea was certainly not in the ancient ruins, nor was it in the fountain",
+      "type": "elimination",
+      "eliminates": ["Poisoned tea not at ancient ruins", "Poisoned tea not at fountain"]
+    },
+    {
+      "id": "height_shears",
+      "description": "The tallest suspect and the person who brought a pair of gardening shears had a history together",
+      "type": "relationship",
+      "points_to": ["Lord Lavender (tallest at 5'9\") connected to person with shears"]
+    },
+    {
+      "id": "flowerpot_location",
+      "description": "A flowerpot was not in the ancient ruins. Or was it? (It wasn't.)",
+      "type": "elimination",
+      "eliminates": ["Flowerpot not at ancient ruins"]
+    },
+    {
+      "id": "saffron_poison",
+      "description": "Miss Saffron was addicted to a product made by a friend of hers, Earl Grey, and she added just a little poison",
+      "type": "relationship",
+      "points_to": ["Miss Saffron had poisoned tea"]
+    },
+    {
+      "id": "map_evidence",
+      "description": "Dame Obsidian's body was found beside a blood-splattered map",
+      "type": "physical_evidence",
+      "points_to": ["Murder occurred at The Lookout Tower (where map is located)"]
+    }
+  ],
+  "solution": {
+    "killer": "Miss Saffron",
+    "weapon": "Poisoned Tea",
+    "location": "The Lookout Tower",
+    "logic_chain": [
+      "Miss Saffron had poisoned tea (direct connection to Earl Grey)",
+      "Poisoned tea not at ancient ruins or fountain, so at lookout tower",
+      "Body found beside blood-splattered map at lookout tower",
+      "Lord Lavender (tallest) had history with person with shears",
+      "By elimination and direct evidence: Miss Saffron killed Dame Obsidian with poisoned tea at the lookout tower"
+    ]
+  }
+}

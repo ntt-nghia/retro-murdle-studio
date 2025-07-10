@@ -1,0 +1,233 @@
+{
+  "easy_difficulty_patterns": {
+    "core_structure": {
+      "grid_dimensions": "3x3x3",
+      "total_combinations": 27,
+      "suspect_count": 3,
+      "weapon_count": 3,
+      "location_count": 3,
+      "clue_count_range": [4, 6],
+      "solution_uniqueness": "exactly_one_valid_solution"
+    },
+
+    "character_trait_systems": {
+      "height_specifications": {
+        "format": "feet_inches",
+        "typical_ranges": ["5'1\"", "5'3\"", "5'4\"", "5'6\"", "5'8\"", "5'9\"", "6'0\"", "6'2\"", "6'4\"", "6'6\"", "7'0\""],
+        "logical_usage": ["tallest_suspect", "shortest_suspect", "second_tallest"],
+        "elimination_patterns": ["height_ranking_clues", "relative_height_deduction"]
+      },
+      "handedness_system": {
+        "options": ["left-handed", "right-handed"],
+        "logical_constraints": ["environmental_access", "tool_usage", "safety_requirements"],
+        "elimination_examples": ["submissions_room_burns_lefties", "right_handed_required_for_location"]
+      },
+      "physical_features": {
+        "eye_colors": ["blue eyes", "green eyes", "dark brown eyes", "light brown eyes", "hazel eyes"],
+        "hair_colors": ["black hair", "blond hair", "gray hair", "white hair", "red hair", "blue hair", "dark brown hair"],
+        "special_traits": ["bald", "silver hair"],
+        "identification_purpose": "character_differentiation"
+      }
+    },
+
+    "clue_classification_system": {
+      "elimination_clues": {
+        "direct_weapon_elimination": "The [WEAPON] was not used",
+        "location_elimination": "The murder did not occur in [LOCATION]",
+        "suspect_elimination": "[SUSPECT] is not the killer",
+        "relationship_elimination": "[SUSPECT] was not in [LOCATION]",
+        "weapon_possession_elimination": "[SUSPECT] did not have [WEAPON]"
+      },
+      "relationship_clues": {
+        "suspect_weapon_connection": "The person who used [WEAPON] was not [SUSPECT]",
+        "suspect_location_connection": "[SUSPECT] was seen in [LOCATION]",
+        "trait_based_connections": "The [TRAIT] suspect was [ACTION/LOCATION]",
+        "historical_connections": "[SUSPECT1] and the person with [WEAPON] had a history"
+      },
+      "conditional_clues": {
+        "either_or_statements": "Either [ELEMENT1] or [ELEMENT2] was [CONDITION]",
+        "if_then_logic": "If [CONDITION] then [RESULT]",
+        "exclusionary_choices": "[ELEMENT] was not at [LOCATION1] or [LOCATION2]"
+      },
+      "physical_evidence_clues": {
+        "sensory_evidence": ["almond_smell_indicates_cyanide", "awful_smell_indicates_dumpster"],
+        "pattern_evidence": ["chain_link_pattern_on_face", "blood_splattered_map"],
+        "material_evidence": ["powdered_cement_beside_victim", "muddy_footprints"],
+        "body_position_evidence": ["slumped_over_control_board", "floating_in_water"]
+      }
+    },
+
+    "encoding_mechanisms": {
+      "cipher_types": {
+        "reverse_alphabet": {
+          "pattern": "A↔Z, B↔Y, C↔X...",
+          "example": "TVMVIZO XLUUVV → GENERAL COFFEE",
+          "difficulty": "easy"
+        },
+        "scrambled_anagram": {
+          "pattern": "word_order_rearrangement",
+          "example": "NIVIROLSE ETH NGDELE → SILVERTON THE LEGEND",
+          "difficulty": "easy_medium"
+        },
+        "next_letter_code": {
+          "pattern": "each_letter_shifted_by_one",
+          "example": "SGD RGNQSDRS → THE SHORTEST",
+          "difficulty": "medium"
+        }
+      },
+      "message_delivery_methods": [
+        "detective_club_official_code",
+        "trusted_confidant_paper_slip",
+        "frantic_fan_scrawled_note",
+        "shaky_hand_message"
+      ]
+    },
+
+    "weapon_categorization": {
+      "weight_classes": {
+        "light_weight": {
+          "examples": ["piano_wire", "poisonous_dart", "yarn", "fountain_pen", "fake_treasure_map"],
+          "characteristics": ["easily_concealed", "requires_precision", "minimal_strength"]
+        },
+        "medium_weight": {
+          "examples": ["crowbar", "gardening_shears", "antique_letter_opener", "ream_of_paper", "bookie_award"],
+          "characteristics": ["moderate_handling", "versatile_usage", "skill_dependent"]
+        },
+        "heavy_weight": {
+          "examples": ["cannon", "antique_typewriter", "giant_stack_of_books", "oil_drum", "scales_of_justice"],
+          "characteristics": ["requires_strength", "difficult_to_move", "obvious_damage"]
+        }
+      },
+      "weapon_theme_consistency": {
+        "pirate_setting": ["cannon", "scimitar", "fake_treasure_map"],
+        "literary_setting": ["antique_typewriter", "stack_of_books", "ream_of_paper"],
+        "legal_setting": ["scales_of_justice", "notary_stamp", "huge_pile_paperwork"],
+        "village_setting": ["gardening_shears", "bottle_of_cyanide", "yarn"]
+      }
+    },
+
+    "location_mechanics": {
+      "environment_types": {
+        "indoors": {
+          "characteristics": ["controlled_access", "private_spaces", "professional_environments"],
+          "examples": ["study", "chapel", "manor_house", "best_office", "judge_chambers"]
+        },
+        "outdoors": {
+          "characteristics": ["public_access", "environmental_factors", "natural_elements"],
+          "examples": ["garden_maze", "ancient_ruins", "pirate_cove", "oil_derrick", "parking_lot"]
+        }
+      },
+      "access_restrictions": {
+        "professional_requirements": "only_authorized_personnel",
+        "physical_requirements": "handedness_safety_constraints",
+        "economic_barriers": "private_suite_affordability",
+        "social_constraints": "balcony_permission_levels"
+      },
+      "thematic_coherence": {
+        "setting_consistency": "all_locations_match_story_theme",
+        "logical_connections": "locations_serve_narrative_purpose",
+        "evidence_placement": "physical_clues_match_environment"
+      }
+    },
+
+    "logical_elimination_patterns": {
+      "height_based_deduction": {
+        "tallest_identification": "systematic_height_comparison",
+        "shortest_elimination": "minimum_height_exclusion",
+        "relative_positioning": "second_tallest_third_shortest_logic"
+      },
+      "trait_constraint_systems": {
+        "handedness_restrictions": "environmental_safety_requirements",
+        "professional_limitations": "skill_based_weapon_access",
+        "personality_constraints": "behavioral_weapon_elimination"
+      },
+      "cross_category_dependencies": {
+        "suspect_weapon_elimination": "trait_incompatibility",
+        "location_weapon_restrictions": "environmental_impossibility",
+        "suspect_location_constraints": "access_permission_logic"
+      }
+    },
+
+    "special_mechanics": {
+      "personality_based_constraints": [
+        "tone_deaf_eliminates_musical_instruments",
+        "tea_empire_owner_never_gardens",
+        "superstition_prevents_weapon_placement",
+        "professional_ethics_restrict_actions"
+      ],
+      "professional_access_logic": [
+        "medical_knowledge_required_for_poison",
+        "military_training_enables_weapon_use",
+        "estate_manager_knows_layout",
+        "administrative_leave_assigns_tasks"
+      ],
+      "environmental_condition_logic": [
+        "outdoor_weather_affects_evidence",
+        "indoor_temperature_preserves_clues",
+        "water_dissolves_materials",
+        "superstitions_restrict_placement"
+      ],
+      "economic_constraint_mechanics": [
+        "wealth_determines_location_access",
+        "poverty_vow_contradicts_luxury",
+        "business_success_enables_options",
+        "salary_limitations_restrict_choices"
+      ],
+      "historical_relationship_logic": [
+        "past_connections_enable_current_access",
+        "shared_backgrounds_create_opportunities",
+        "previous_conflicts_generate_motives",
+        "professional_partnerships_allow_proximity"
+      ]
+    },
+
+    "difficulty_progression_indicators": {
+      "clue_complexity_scaling": {
+        "easy": ["direct_elimination", "simple_relationships"],
+        "progression_toward_medium": ["conditional_statements", "multiple_cipher_types"]
+      },
+      "logical_chain_requirements": {
+        "minimum_steps": 3,
+        "maximum_steps": 6,
+        "cross_reference_dependencies": "moderate",
+        "encoding_integration": "optional_but_helpful"
+      },
+      "red_herring_sophistication": {
+        "obvious_misdirection": "minimal",
+        "plausible_alternatives": "present_but_eliminable",
+        "complexity_indicators": ["height_ranking", "conditional_choices"]
+      }
+    },
+
+    "theme_integration_patterns": {
+      "narrative_consistency": {
+        "character_profession_alignment": "all_suspects_fit_setting",
+        "weapon_environment_matching": "tools_appropriate_to_theme",
+        "location_story_coherence": "places_serve_narrative_function"
+      },
+      "cultural_reference_integration": {
+        "historical_periods": ["victorian", "golden_age", "modern_corporate"],
+        "genre_expectations": ["pirate_adventure", "cozy_mystery", "legal_thriller"],
+        "professional_environments": ["entertainment", "academic", "religious", "military"]
+      }
+    },
+
+    "generation_guidelines": {
+      "constraint_satisfaction": {
+        "unique_solution_requirement": "exactly_one_valid_answer",
+        "logical_consistency": "no_contradictory_clues",
+        "fair_play_guarantee": "all_information_provided"
+      },
+      "balance_requirements": {
+        "suspect_viability": "each_must_appear_plausibly_guilty",
+        "weapon_accessibility": "reasonable_access_for_multiple_suspects",
+        "location_opportunity": "multiple_suspects_could_access_each"
+      },
+      "quality_assurance": {
+        "theme_coherence_check": "all_elements_support_setting",
+        "logical_verification": "solution_path_traceable",
+        "difficulty_calibration": "appropriate_for_target_level"
+      }
+    }
+  }
+}

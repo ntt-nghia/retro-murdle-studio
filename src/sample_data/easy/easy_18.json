@@ -1,0 +1,122 @@
+{
+  "game_id": "murdle_18",
+  "title": "Throw the (Bookie-Winning) Book at Them!",
+  "difficulty": "easy",
+  "victim": {
+    "name": "President of the Bookington Society",
+    "background": "Leader of the prestigious literary awards organization",
+    "death_details": "Found slumped over a control board backstage",
+    "case_context": "Murder at 138th annual Bookington Awards ceremony where Logico was nominated"
+  },
+  "suspects": [
+    {
+      "name": "Philosopher Bone",
+      "relationship": "Award nominee",
+      "description": "A dashing, dark philosopher who pioneered the ethical theory that he is not responsible for his actions, but he should be given",
+      "traits": ["5'1\"", "right-handed", "light brown eyes", "bald"],
+      "motive": "Resentment over award loss"
+    },
+    {
+      "name": "Deductive Logico",
+      "relationship": "Award nominee/protagonist",
+      "description": "He was finally there for the actual murder, which means he's a suspect",
+      "traits": ["6'0\"", "right-handed", "dark brown eyes", "black hair"],
+      "motive": "Nominated for Best Blunt Murder Mystery award"
+    },
+    {
+      "name": "Silverton the Legend",
+      "relationship": "Acclaimed actor",
+      "description": "An acclaimed actor of the Golden Age, now in his golden years",
+      "traits": ["6'4\"", "right-handed", "blue eyes", "silver hair"],
+      "motive": "Entertainment industry rivalry"
+    }
+  ],
+  "weapons": [
+    {
+      "name": "A Bookie",
+      "type": "blunt",
+      "weight": "medium-weight",
+      "description": "The diminutive nickname of the most prestigious award in publishing. The fake gold is flaking off"
+    },
+    {
+      "name": "A Heavy Book",
+      "type": "blunt",
+      "weight": "heavy-weight",
+      "description": "Gainsboro's six-thousand-page dirt book"
+    },
+    {
+      "name": "A Fountain Pen",
+      "type": "stabbing",
+      "weight": "light-weight",
+      "description": "With this, you can sign checks or stab necks. Unfortunately, it leaks ink"
+    }
+  ],
+  "locations": [
+    {
+      "name": "The Stage",
+      "environment": "indoors",
+      "description": "Where you accept your award at the lectern to the deafening applause of dozens of clapping hands",
+      "significance": "Award presentation location"
+    },
+    {
+      "name": "A Nominee Table",
+      "environment": "indoors",
+      "description": "Several of the nominees are seated together (for the sake of drama)",
+      "significance": "Where nominees sit during ceremony"
+    },
+    {
+      "name": "Backstage",
+      "environment": "indoors",
+      "description": "Interns and assistants struggle with the ropes, levers, and control boards",
+      "significance": "Where victim's body was found slumped over control board"
+    }
+  ],
+  "clues": [
+    {
+      "id": "philosopher_hatred",
+      "description": "Philosopher Bone hated the person who won the Bookie",
+      "type": "relationship",
+      "points_to": ["Philosopher Bone had motive against Bookie winner"]
+    },
+    {
+      "id": "fan_scrambled_clue",
+      "description": "A frantic fan gave Deductive Logico a piece of paper she had scrawled a scrambled clue on: NIVIROLSE ETH NGDELE ASW CIPUSISSUO OF HET PENSRO HWO HBTROGU A VHYEA KOBO",
+      "decoded": "SILVERTON THE LEGEND WAS SUSPICIOUS OF THE PERSON WHO BROUGHT A HEAVY BOOK",
+      "type": "relationship",
+      "points_to": ["Silverton suspicious of heavy book bearer"]
+    },
+    {
+      "id": "nominee_table_weapon",
+      "description": "Whoever sat at the nominee table had a medium-weight weapon",
+      "type": "relationship",
+      "points_to": ["Person at nominee table had A Bookie"]
+    },
+    {
+      "id": "silverton_choice",
+      "description": "Either Silverton the Legend brought a heavy book, or Silverton the Legend was behind a lectern",
+      "type": "conditional",
+      "points_to": ["Silverton had heavy book OR was at stage (lectern)"]
+    },
+    {
+      "id": "victim_location",
+      "description": "The victim's body was found slumped over a control board",
+      "type": "physical_evidence",
+      "points_to": ["Murder occurred Backstage"]
+    }
+  ],
+  "solution": {
+    "killer": "Philosopher Bone",
+    "weapon": "A Bookie",
+    "location": "A Nominee Table",
+    "logic_chain": [
+      "Victim found slumped over control board (backstage)",
+      "Silverton suspicious of person with heavy book",
+      "Either Silverton had heavy book OR was behind lectern",
+      "If Silverton had heavy book, he'd be suspicious of himself (illogical)",
+      "Therefore Silverton was behind lectern (at stage)",
+      "Person at nominee table had medium-weight weapon (bookie)",
+      "Philosopher Bone hated bookie winner",
+      "By elimination: Philosopher Bone at nominee table with bookie"
+    ]
+  }
+}
