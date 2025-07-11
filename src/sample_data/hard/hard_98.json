@@ -1,0 +1,186 @@
+{
+  "game_id": "murdle_98",
+  "title": "Stage Fright",
+  "difficulty": "medium",
+  "victim": {
+    "name": "Irratino",
+    "background": "Inspector Irratino, Logico's partner",
+    "death_details": "Killed on locked sound stage during argument about 'Murdle: The Movie'",
+    "case_context": "Pearl, AGE, and Midnight III were arguing about movie ending when murder occurred"
+  },
+  "suspects": [
+    {
+      "name": "Pearl, AGE",
+      "relationship": "Movie editor",
+      "description": "Editor of some of best and highest-grossing movies ever made, though never both at once",
+      "traits": ["5'5\"", "right-handed", "blue eyes", "blond hair", "Aquarius"],
+      "motive": "To protect a secret"
+    },
+    {
+      "name": "Officer Copper",
+      "relationship": "Security guard",
+      "description": "Only non-murdered security guard on the Midnight Movies lot",
+      "traits": ["5'5\"", "right-handed", "blue eyes", "blond hair", "Aries"],
+      "motive": "To get a promotion"
+    },
+    {
+      "name": "Dame Obsidian",
+      "relationship": "Serial killer actress",
+      "description": "Sure, she's murdered a ton of people, but nobody else seems to get punished for killing, so why should she?",
+      "traits": ["5'4\"", "left-handed", "green eyes", "black hair", "Leo"],
+      "motive": "To take over a studio"
+    },
+    {
+      "name": "Midnight III",
+      "relationship": "Studio executive",
+      "description": "Believes that 'Murdle: The Movie' will help restore the studio to its original glory",
+      "traits": ["5'8\"", "left-handed", "dark brown eyes", "dark brown hair", "Libra"],
+      "motive": "To win an award"
+    }
+  ],
+  "weapons": [
+    {
+      "name": "An Oil Drum",
+      "weight": "heavy-weight",
+      "material": "metal & oil",
+      "description": "Really more of a can than a drum: you've never seen a band feature an oil drum solo"
+    },
+    {
+      "name": "A Knife",
+      "weight": "medium-weight",
+      "material": "metal",
+      "description": "You can use this for lots of things, like chopping vegetables, or murder"
+    },
+    {
+      "name": "A Piece of Rebar",
+      "weight": "medium-weight",
+      "material": "metal",
+      "description": "A long piece of metal. If this isn't a weapon, then nothing is. Often found with cement"
+    },
+    {
+      "name": "A Shovel",
+      "weight": "medium-weight",
+      "material": "metal & wood",
+      "description": "The great thing about using a shovel to kill is it can also dig a hole to help hide the body"
+    }
+  ],
+  "locations": [
+    {
+      "name": "A Tarp",
+      "environment": "indoors",
+      "description": "It's covering something huge in the middle of the warehouse"
+    },
+    {
+      "name": "A Large Tank",
+      "environment": "indoors",
+      "description": "Where the oil is stored as it awaits refinement"
+    },
+    {
+      "name": "A Great Machine",
+      "environment": "indoors",
+      "description": "Some kind of refining equipment or separation tank, or maybe something else?"
+    },
+    {
+      "name": "A Pumpjack",
+      "environment": "indoors",
+      "description": "It's working overtime to pump oil out from under the studio"
+    }
+  ],
+  "clues": [
+    {
+      "id": "copper_oil_drum",
+      "description": "Officer Copper brought an oil drum",
+      "type": "character_weapon",
+      "points_to": ["Officer Copper: oil drum"]
+    },
+    {
+      "id": "ancient_blood_knife",
+      "description": "A member of the Ancient Blood of Beasts had the knife",
+      "type": "organization_weapon",
+      "points_to": ["Ancient Blood member: knife"]
+    },
+    {
+      "id": "irratino_cipher_note",
+      "description": "Irratino clutching scrambled note: HET OPNSER IHWT A CEEPI FO ERABR IDD TNO NTWA TO NIW AN WRAAD",
+      "type": "cipher_elimination",
+      "decoded": "THE PERSON WITH A PIECE OF REBAR DID NOT WANT TO WIN AN AWARD",
+      "eliminates": ["Rebar holder: win award motive"]
+    },
+    {
+      "id": "midnight_iii_tarp",
+      "description": "Midnight III was seen examining a mysterious tarp",
+      "type": "character_location",
+      "points_to": ["Midnight III: A Tarp"]
+    },
+    {
+      "id": "ancient_blood_promotion",
+      "description": "A member of the Ancient Blood of Beasts wanted to get a promotion",
+      "type": "organization_motive",
+      "points_to": ["Ancient Blood member: promotion motive"]
+    },
+    {
+      "id": "shovel_pumpjack",
+      "description": "Whoever had the shovel was next to the pumpjack",
+      "type": "weapon_location",
+      "points_to": ["Shovel holder: Pumpjack location"]
+    },
+    {
+      "id": "blue_eyes_ancient_blood",
+      "description": "Only people with blue eyes are allowed to join the Ancient Blood of Beasts",
+      "type": "trait_organization",
+      "points_to": ["Blue eyes: Ancient Blood membership"],
+      "analysis": "Pearl and Officer Copper have blue eyes"
+    },
+    {
+      "id": "pearl_secret_protection",
+      "description": "Pearl, AGE, wanted to protect a secret",
+      "type": "character_motive",
+      "points_to": ["Pearl: protect secret motive"]
+    }
+  ],
+  "statements": [
+    {
+      "speaker": "Pearl, AGE",
+      "statement": "I seem to have noticed that Officer Copper was by a great machine",
+      "truth_value": true,
+      "analysis": "Officer Copper at Great Machine"
+    },
+    {
+      "speaker": "Officer Copper",
+      "statement": "I was not near the tarp",
+      "truth_value": true,
+      "analysis": "Officer Copper not at Tarp"
+    },
+    {
+      "speaker": "Dame Obsidian",
+      "statement": "Midnight III was not by a great machine",
+      "truth_value": true,
+      "analysis": "Midnight III not at Great Machine"
+    },
+    {
+      "speaker": "Midnight III",
+      "statement": "A piece of rebar was not by a great machine",
+      "truth_value": false,
+      "analysis": "THE LIE - Rebar WAS by great machine"
+    }
+  ],
+  "solution": {
+    "killer": "Midnight III",
+    "weapon": "A Piece of Rebar",
+    "location": "A Tarp",
+    "motive": "To win an award",
+    "logic_chain": [
+      "Decode cipher: Person with rebar did NOT want to win award",
+      "Test Midnight III as liar: Rebar WAS by great machine",
+      "Officer Copper at Great Machine + has oil drum + promotion motive",
+      "Blue eyes requirement: Pearl/Copper in Ancient Blood",
+      "Officer Copper (Ancient Blood + promotion) confirms organization-motive link",
+      "Pearl (Ancient Blood) has knife, protect secret motive",
+      "Midnight III at Tarp, wants win award",
+      "Dame Obsidian at Large Tank with shovel",
+      "Contradiction: Midnight III wants award but cipher says rebar holder doesn't",
+      "Resolution: Midnight III is lying about rebar location to hide his guilt",
+      "Midnight III used rebar at Tarp to win award"
+    ]
+  }
+}

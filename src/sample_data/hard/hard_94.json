@@ -1,0 +1,185 @@
+{
+  "game_id": "murdle_94",
+  "title": "A Ritual Killing",
+  "difficulty": "medium",
+  "victim": {
+    "name": "Hollywood Mystery Society Member",
+    "background": "Member killed during magical ritual performance",
+    "death_details": "Murdered during lights-out ritual in secret back room",
+    "case_context": "Five society members took Logico into secret room for ritual when murder occurred"
+  },
+  "suspects": [
+    {
+      "name": "Background Marengo",
+      "relationship": "Forgettable extra and murderer",
+      "description": "You'll never remember her, which makes her a good extra and great murderer",
+      "traits": ["5'5\"", "left-handed", "light brown eyes", "dark brown hair", "Gemini"],
+      "motive": "For thematic reasons"
+    },
+    {
+      "name": "Superfan Smoky",
+      "relationship": "Hollywood location scout",
+      "description": "Knows shooting locations of every Midnight mystery but not how to make friends",
+      "traits": ["5'10\"", "left-handed", "black eyes", "dark brown hair", "Virgo"],
+      "motive": "To promote the occult"
+    },
+    {
+      "name": "Assistant Applegreen",
+      "relationship": "Aspiring filmmaker",
+      "description": "Maybe one day she'll make her father proud again. Or maybe she'll murder someone",
+      "traits": ["5'3\"", "left-handed", "blue eyes", "blond hair", "Virgo"],
+      "motive": "On behalf of the industry"
+    },
+    {
+      "name": "Mx. Tangerine",
+      "relationship": "Non-binary artist and suspect",
+      "description": "Proving non-binary people can be murderers too, they are artist, poet, and suspect",
+      "traits": ["5'5\"", "left-handed", "hazel eyes", "blond hair", "Pisces"],
+      "motive": "To create a diversion"
+    }
+  ],
+  "weapons": [
+    {
+      "name": "A Jug of Whiskey",
+      "weight": "medium-weight",
+      "material": "metal & toxins",
+      "description": "Probably most dangerous weapon in book, long-term effects"
+    },
+    {
+      "name": "A Fake Rose",
+      "weight": "light-weight",
+      "material": "plastic",
+      "description": "Plastic stem strong enough to strangle somebody"
+    },
+    {
+      "name": "A 'Prop' Knife",
+      "weight": "light-weight",
+      "material": "metal & rubber",
+      "description": "Weirdly sharp as real knife. Wait a second—"
+    },
+    {
+      "name": "A Ghost Light",
+      "weight": "heavy-weight",
+      "material": "metal & glass",
+      "description": "Theater superstition says always leave light on. This is that light"
+    }
+  ],
+  "locations": [
+    {
+      "name": "The Audience",
+      "environment": "indoors",
+      "description": "Loud audience that keeps yelling and heckling, seems to be the point"
+    },
+    {
+      "name": "The Lighting Booth",
+      "environment": "indoors",
+      "description": "Single person controls all lights from tiny cramped booth full of knobs and switches"
+    },
+    {
+      "name": "The Stage",
+      "environment": "indoors",
+      "description": "Maestro plays keyboard on one side, hostess serves drinks and gossips with Scriptkeeper on other"
+    },
+    {
+      "name": "The Green Room",
+      "environment": "indoors",
+      "description": "Where actors do makeup and drugs. Single blue bulb lights room, so it's more blue room"
+    }
+  ],
+  "clues": [
+    {
+      "id": "ghost_light_location",
+      "description": "A ghost light was found under a blue light",
+      "type": "weapon_location",
+      "points_to": ["Ghost light in Green Room (blue light)"],
+      "eliminates": ["Ghost light at other locations"]
+    },
+    {
+      "id": "prop_knife_staging",
+      "description": "A 'prop' knife was never taken on stage, which really hurt the case that it was a prop",
+      "type": "weapon_location_elimination",
+      "eliminates": ["Prop knife on The Stage"]
+    },
+    {
+      "id": "saffron_light_weapon",
+      "description": "Miss Saffron had a light-weight weapon",
+      "type": "character_weapon_trait",
+      "points_to": ["Miss Saffron: fake rose or prop knife"],
+      "eliminates": ["Miss Saffron: heavy weapons"]
+    },
+    {
+      "id": "second_tallest_non_member",
+      "description": "The second tallest suspect was the only one who wasn't a member of the Hollywood Mystery Society",
+      "type": "height_membership",
+      "analysis": "Heights: Smoky(5'10\"), Marengo&Tangerine(5'5\"), Applegreen(5'3\")",
+      "points_to": ["One of the 5'5\" suspects isn't society member"]
+    },
+    {
+      "id": "whiskey_diversion_motive",
+      "description": "The person with a jug of whiskey wanted to create a diversion",
+      "type": "weapon_motive",
+      "points_to": ["Whiskey holder: create diversion motive"]
+    },
+    {
+      "id": "occult_hair_color",
+      "description": "Whoever wanted to promote the occult had dark brown hair",
+      "type": "motive_trait",
+      "points_to": ["Promote occult: dark brown hair"],
+      "analysis": "Marengo and Smoky have dark brown hair"
+    },
+    {
+      "id": "society_knob_restriction",
+      "description": "Members of the Hollywood Mystery Society are not allowed to be near knobs",
+      "type": "membership_location",
+      "eliminates": ["Society members in Lighting Booth (knobs/switches)"]
+    },
+    {
+      "id": "industry_audience_location",
+      "description": "The person who wanted to kill on behalf of the industry was in the audience",
+      "type": "motive_location",
+      "points_to": ["Industry motive: The Audience location"]
+    }
+  ],
+  "statements": [
+    {
+      "speaker": "Assistant Applegreen",
+      "statement": "I took notes on this: the tallest suspect was on the stage",
+      "truth_value": false,
+      "analysis": "THE LIE - Superfan Smoky (tallest) was NOT on stage"
+    },
+    {
+      "speaker": "Background Marengo",
+      "statement": "Ooh! I brought a jug of whiskey",
+      "truth_value": true,
+      "analysis": "Marengo brought whiskey for diversion motive"
+    },
+    {
+      "speaker": "Superfan Smoky",
+      "statement": "I did not bring a ghost light",
+      "truth_value": true,
+      "analysis": "Smoky didn't bring ghost light (found in Green Room)"
+    },
+    {
+      "speaker": "Miss Saffron",
+      "statement": "What do I know? Well, Assistant Applegreen was in the audience",
+      "truth_value": true,
+      "analysis": "Applegreen was in audience with industry motive"
+    }
+  ],
+  "solution": {
+    "killer": "Assistant Applegreen",
+    "weapon": "A 'Prop' Knife",
+    "location": "The Audience",
+    "motive": "On behalf of the industry",
+    "logic_chain": [
+      "Test Applegreen as liar: Smoky (tallest) was NOT on stage",
+      "Industry motive in audience + Saffron's truth = Applegreen in audience",
+      "Saffron has light weapon + society member restriction = Saffron has fake rose",
+      "Marengo brought whiskey (her true statement) for diversion motive",
+      "Smoky (dark brown hair) wanted promote occult, wasn't in lighting booth (society member)",
+      "Ghost light found in Green Room = weapon/murder location",
+      "Prop knife never on stage + Applegreen in audience = Applegreen has prop knife",
+      "Applegreen used prop knife to kill in The Audience for industry"
+    ]
+  }
+}

@@ -1,0 +1,186 @@
+{
+  "game_id": "murdle_86",
+  "title": "Murder on Sound Stage B",
+  "difficulty": "medium",
+  "victim": {
+    "name": "Actor Playing Landlord",
+    "background": "Method actor so into character that one of them murdered the landlord actor",
+    "death_details": "Killed on recreation of Logico's office set during filming",
+    "case_context": "Logico found everything recreated perfectly on sound stage, including method actors in character"
+  },
+  "suspects": [
+    {
+      "name": "Cosmonaut Bluski",
+      "relationship": "Method actor",
+      "description": "Not actually Cosmonaut Bluski, but method actor who insists on you addressing him as such",
+      "traits": ["6'2\"", "left-handed", "dark brown eyes", "black hair", "Aries"],
+      "motive": "To win an award"
+    },
+    {
+      "name": "General Coffee",
+      "relationship": "Method actor playing General",
+      "description": "Again, this is an actor, playing a part, but he demands you call him 'General' or he'll quit",
+      "traits": ["6'0\"", "right-handed", "dark brown eyes", "bald", "Sagittarius"],
+      "motive": "To see if they could"
+    },
+    {
+      "name": "The Amazing Aureolin",
+      "relationship": "Actor playing Logico's sidekick",
+      "description": "She has been added to a bunch of the scenes from the movie as sort of Logico's sidekick",
+      "traits": ["5'6\"", "left-handed", "green eyes", "blond hair", "Aries"],
+      "motive": "To get more lines"
+    },
+    {
+      "name": "Dr. Crimson",
+      "relationship": "Actor and actual doctor",
+      "description": "Yeah, she's an actor playing a doctor, but she's also an actual doctor who quit to go into acting",
+      "traits": ["5'9\"", "left-handed", "green eyes", "red hair", "Aquarius"],
+      "motive": "Out of jealousy"
+    }
+  ],
+  "weapons": [
+    {
+      "name": "A Fire Extinguisher",
+      "weight": "heavy-weight",
+      "material": "metal & chemicals",
+      "description": "You can put out a fire or somebody's lights"
+    },
+    {
+      "name": "A Red Herring",
+      "weight": "medium-weight",
+      "material": "fish",
+      "description": "If you hold it by the tail, you can get some real momentum behind it"
+    },
+    {
+      "name": "A Booby-Trapped Fedora",
+      "weight": "medium-weight",
+      "material": "fabric",
+      "description": "Whatever you do, don't try it on"
+    },
+    {
+      "name": "A Vial of Poison",
+      "weight": "light-weight",
+      "material": "glass & toxins",
+      "description": "Your typical vial of poison. Don't underestimate the classics"
+    }
+  ],
+  "locations": [
+    {
+      "name": "The Closet",
+      "environment": "indoors",
+      "description": "All of Logico's prop clothes are sorted by color, instead of alphabetically!"
+    },
+    {
+      "name": "The Waiting Room",
+      "environment": "indoors",
+      "description": "There's an almost identical bell service, and a sign that says WAIT, PLEASE"
+    },
+    {
+      "name": "The Main Office",
+      "environment": "indoors",
+      "description": "A desk, bookshelves filled with prop books, and a view of the... sky? It's supposed to be bricks!"
+    },
+    {
+      "name": "The Balcony",
+      "environment": "fake outdoors",
+      "description": "Logico's fire escape, but it's in front of a matte painting of the sky, and it is not an exit"
+    }
+  ],
+  "clues": [
+    {
+      "id": "award_waiting_room",
+      "description": "The person who wanted to win an award was waiting in the waiting room",
+      "type": "motive_location",
+      "points_to": ["Win award motive: Waiting Room location"]
+    },
+    {
+      "id": "bald_see_if_could",
+      "description": "The bald person wanted to see if they could kill",
+      "type": "trait_motive",
+      "points_to": ["Bald person (General Coffee): see if they could motive"]
+    },
+    {
+      "id": "could_not_unholy",
+      "description": "The suspect who wanted to see if they could was not a member of the Way of Unholy Light",
+      "type": "motive_organization",
+      "eliminates": ["See if they could person in Way of Unholy Light"]
+    },
+    {
+      "id": "green_eyes_unholy",
+      "description": "Every suspect with green eyes was in the Way of Unholy Light",
+      "type": "trait_organization",
+      "points_to": ["Green eyes (Aureolin, Dr. Crimson): Way of Unholy Light"],
+      "eliminates": ["General Coffee, Cosmonaut: Way of Unholy Light"]
+    },
+    {
+      "id": "cipher_cosmonaut_extinguisher",
+      "description": "Logico handed scrambled note by security guard: SCAUOOTMN ISLBUK DHA A JEFR HSGIERTIXNUE",
+      "type": "cipher_character_weapon",
+      "decoded": "COSMONAUT BLUSKI HAD A FIRE EXTINGUISHER",
+      "points_to": ["Cosmonaut Bluski: fire extinguisher"]
+    },
+    {
+      "id": "closet_right_handed",
+      "description": "The clothes in the closet had been handled by a right-handed suspect",
+      "type": "location_trait",
+      "points_to": ["Right-handed person (General Coffee): closet interaction"]
+    },
+    {
+      "id": "sidekick_more_lines",
+      "description": "The actor playing Logico's sidekick wanted to get more lines",
+      "type": "character_motive",
+      "points_to": ["The Amazing Aureolin: more lines motive"]
+    },
+    {
+      "id": "fedora_jealousy",
+      "description": "Anybody with a booby-trapped fedora would kill out of jealousy",
+      "type": "weapon_motive",
+      "points_to": ["Booby-trapped fedora holder: jealousy motive"]
+    }
+  ],
+  "statements": [
+    {
+      "speaker": "Cosmonaut Bluski",
+      "statement": "The second shortest suspect was not in the closet",
+      "truth_value": true,
+      "analysis": "Dr. Crimson (5'9\", second shortest) not in closet"
+    },
+    {
+      "speaker": "General Coffee",
+      "statement": "Ugh... whoever wanted to get more lines was in the main office",
+      "truth_value": true,
+      "analysis": "The Amazing Aureolin (more lines) in main office"
+    },
+    {
+      "speaker": "The Amazing Aureolin",
+      "statement": "A red-haired suspect was on the balcony",
+      "truth_value": true,
+      "analysis": "Dr. Crimson (red hair) on balcony"
+    },
+    {
+      "speaker": "Dr. Crimson",
+      "statement": "As a doctor, trust me: a red herring was in the closet",
+      "truth_value": false,
+      "analysis": "THE LIE - Red herring was NOT in closet"
+    }
+  ],
+  "solution": {
+    "killer": "Dr. Crimson",
+    "weapon": "A Booby-Trapped Fedora",
+    "location": "The Balcony",
+    "motive": "Out of jealousy",
+    "logic_chain": [
+      "Decode cipher: Cosmonaut Bluski had fire extinguisher",
+      "General Coffee (bald) wanted see if they could, not in Way of Unholy Light",
+      "Green eyes (Aureolin, Dr. Crimson) in Way of Unholy Light",
+      "Aureolin (sidekick actor) wanted more lines, in main office",
+      "Cosmonaut (win award motive) in waiting room",
+      "Dr. Crimson (red hair) on balcony",
+      "Booby-trapped fedora holder has jealousy motive → Dr. Crimson",
+      "Test Dr. Crimson as liar: Red herring NOT in closet",
+      "General (right-handed) handled closet clothes, gets red herring",
+      "Aureolin gets vial of poison by elimination",
+      "Dr. Crimson used booby-trapped fedora on balcony out of jealousy"
+    ]
+  }
+}

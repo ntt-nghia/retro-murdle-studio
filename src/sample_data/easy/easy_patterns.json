@@ -1,233 +1,274 @@
 {
-  "easy_difficulty_patterns": {
-    "core_structure": {
-      "grid_dimensions": "3x3x3",
-      "total_combinations": 27,
-      "suspect_count": 3,
-      "weapon_count": 3,
-      "location_count": 3,
-      "clue_count_range": [4, 6],
-      "solution_uniqueness": "exactly_one_valid_solution"
-    },
-
-    "character_trait_systems": {
-      "height_specifications": {
-        "format": "feet_inches",
-        "typical_ranges": ["5'1\"", "5'3\"", "5'4\"", "5'6\"", "5'8\"", "5'9\"", "6'0\"", "6'2\"", "6'4\"", "6'6\"", "7'0\""],
-        "logical_usage": ["tallest_suspect", "shortest_suspect", "second_tallest"],
-        "elimination_patterns": ["height_ranking_clues", "relative_height_deduction"]
-      },
-      "handedness_system": {
-        "options": ["left-handed", "right-handed"],
-        "logical_constraints": ["environmental_access", "tool_usage", "safety_requirements"],
-        "elimination_examples": ["submissions_room_burns_lefties", "right_handed_required_for_location"]
-      },
-      "physical_features": {
-        "eye_colors": ["blue eyes", "green eyes", "dark brown eyes", "light brown eyes", "hazel eyes"],
-        "hair_colors": ["black hair", "blond hair", "gray hair", "white hair", "red hair", "blue hair", "dark brown hair"],
-        "special_traits": ["bald", "silver hair"],
-        "identification_purpose": "character_differentiation"
-      }
-    },
-
-    "clue_classification_system": {
-      "elimination_clues": {
-        "direct_weapon_elimination": "The [WEAPON] was not used",
-        "location_elimination": "The murder did not occur in [LOCATION]",
-        "suspect_elimination": "[SUSPECT] is not the killer",
-        "relationship_elimination": "[SUSPECT] was not in [LOCATION]",
-        "weapon_possession_elimination": "[SUSPECT] did not have [WEAPON]"
-      },
-      "relationship_clues": {
-        "suspect_weapon_connection": "The person who used [WEAPON] was not [SUSPECT]",
-        "suspect_location_connection": "[SUSPECT] was seen in [LOCATION]",
-        "trait_based_connections": "The [TRAIT] suspect was [ACTION/LOCATION]",
-        "historical_connections": "[SUSPECT1] and the person with [WEAPON] had a history"
-      },
-      "conditional_clues": {
-        "either_or_statements": "Either [ELEMENT1] or [ELEMENT2] was [CONDITION]",
-        "if_then_logic": "If [CONDITION] then [RESULT]",
-        "exclusionary_choices": "[ELEMENT] was not at [LOCATION1] or [LOCATION2]"
-      },
-      "physical_evidence_clues": {
-        "sensory_evidence": ["almond_smell_indicates_cyanide", "awful_smell_indicates_dumpster"],
-        "pattern_evidence": ["chain_link_pattern_on_face", "blood_splattered_map"],
-        "material_evidence": ["powdered_cement_beside_victim", "muddy_footprints"],
-        "body_position_evidence": ["slumped_over_control_board", "floating_in_water"]
-      }
-    },
-
-    "encoding_mechanisms": {
-      "cipher_types": {
-        "reverse_alphabet": {
-          "pattern": "A↔Z, B↔Y, C↔X...",
-          "example": "TVMVIZO XLUUVV → GENERAL COFFEE",
-          "difficulty": "easy"
+  "easy_difficulty_generation_patterns": {
+    "core_mechanics": {
+      "basic_elimination_systems": {
+        "direct_elimination": {
+          "weapon_exclusion": "The [WEAPON] was not used",
+          "location_exclusion": "The murder did not occur in [LOCATION]",
+          "suspect_exclusion": "[SUSPECT] is not the killer",
+          "possession_elimination": "[SUSPECT] did not have [WEAPON]"
         },
-        "scrambled_anagram": {
-          "pattern": "word_order_rearrangement",
-          "example": "NIVIROLSE ETH NGDELE → SILVERTON THE LEGEND",
-          "difficulty": "easy_medium"
+        "trait_based_elimination": {
+          "height_ranking_logic": "The tallest/shortest suspect was [CONDITION]",
+          "handedness_constraints": "Left-handed suspects cannot access [LOCATION]",
+          "physical_characteristic_matching": "Blue-eyed suspect seen in [LOCATION]"
+        },
+        "simple_relationship_logic": {
+          "suspect_weapon_pairing": "[SUSPECT] and person with [WEAPON] had history",
+          "location_access_restrictions": "[SUSPECT] was not allowed in [LOCATION]",
+          "professional_constraints": "[PROFESSION] never uses [WEAPON_TYPE]"
+        }
+      },
+      "binary_constraint_satisfaction": {
+        "either_or_statements": "Either [ELEMENT_A] or [ELEMENT_B] was [CONDITION]",
+        "mutually_exclusive_pairs": "[SUSPECT_A] and [SUSPECT_B] cannot both be in same location",
+        "conditional_simple_logic": "If [CONDITION] then [SINGLE_RESULT]",
+        "negation_pairs": "Not [A] means [B] by elimination"
+      },
+      "single_layer_deduction": {
+        "one_step_elimination": "Direct clue immediately rules out possibility",
+        "forced_assignment": "Only one option remains after eliminations",
+        "pattern_completion": "Grid constraints force remaining assignments",
+        "contradiction_detection": "Obvious inconsistencies reveal errors"
+      }
+    },
+    "basic_cipher_mechanics": {
+      "simple_substitution_systems": {
+        "reverse_alphabet": {
+          "pattern": "A↔Z, B↔Y, C↔X systematic reversal",
+          "difficulty": "low",
+          "clue_integration": "Decoded message provides direct elimination",
+          "example_usage": "TVMVIZO XLUUVV → GENERAL COFFEE"
+        },
+        "caesar_shift": {
+          "pattern": "Each letter shifted by fixed amount",
+          "common_shifts": [1, 3, 13],
+          "difficulty": "low_medium",
+          "clue_integration": "Message reveals trait-based constraint"
         },
         "next_letter_code": {
-          "pattern": "each_letter_shifted_by_one",
-          "example": "SGD RGNQSDRS → THE SHORTEST",
-          "difficulty": "medium"
+          "pattern": "Each letter becomes next in alphabet",
+          "example": "SGD → THE",
+          "difficulty": "medium",
+          "clue_integration": "Provides location or weapon elimination"
         }
       },
-      "message_delivery_methods": [
-        "detective_club_official_code",
-        "trusted_confidant_paper_slip",
-        "frantic_fan_scrawled_note",
-        "shaky_hand_message"
-      ]
-    },
-
-    "weapon_categorization": {
-      "weight_classes": {
-        "light_weight": {
-          "examples": ["piano_wire", "poisonous_dart", "yarn", "fountain_pen", "fake_treasure_map"],
-          "characteristics": ["easily_concealed", "requires_precision", "minimal_strength"]
+      "word_scrambling_systems": {
+        "simple_anagrams": {
+          "pattern": "Word order rearrangement within sentences",
+          "difficulty": "low_medium",
+          "example": "EHT SUTSPEC → THE SUSPECT",
+          "clue_integration": "Reveals direct statement about grid element"
         },
-        "medium_weight": {
-          "examples": ["crowbar", "gardening_shears", "antique_letter_opener", "ream_of_paper", "bookie_award"],
-          "characteristics": ["moderate_handling", "versatile_usage", "skill_dependent"]
-        },
-        "heavy_weight": {
-          "examples": ["cannon", "antique_typewriter", "giant_stack_of_books", "oil_drum", "scales_of_justice"],
-          "characteristics": ["requires_strength", "difficult_to_move", "obvious_damage"]
+        "letter_scrambling": {
+          "pattern": "Individual letters rearranged within words",
+          "difficulty": "medium",
+          "verification": "Unscrambled message must make grammatical sense",
+          "clue_integration": "Provides trait-based or location-based clue"
         }
       },
-      "weapon_theme_consistency": {
-        "pirate_setting": ["cannon", "scimitar", "fake_treasure_map"],
-        "literary_setting": ["antique_typewriter", "stack_of_books", "ream_of_paper"],
-        "legal_setting": ["scales_of_justice", "notary_stamp", "huge_pile_paperwork"],
-        "village_setting": ["gardening_shears", "bottle_of_cyanide", "yarn"]
+      "encoding_delivery_methods": {
+        "official_sources": "Detective Club sends coded messages",
+        "informant_notes": "Trusted confidant provides slip of paper",
+        "witness_testimony": "Frantic fan gives scrawled clue",
+        "found_evidence": "Message discovered at crime scene"
       }
     },
-
-    "location_mechanics": {
-      "environment_types": {
-        "indoors": {
-          "characteristics": ["controlled_access", "private_spaces", "professional_environments"],
-          "examples": ["study", "chapel", "manor_house", "best_office", "judge_chambers"]
+    "trait_constraint_systems": {
+      "height_based_logic": {
+        "ranking_system": {
+          "tallest_identification": "Systematic comparison of all heights",
+          "shortest_elimination": "Minimum height exclusion logic",
+          "relative_positioning": "Second tallest, middle height references",
+          "height_grouping": "Tall/medium/short category assignments"
         },
-        "outdoors": {
-          "characteristics": ["public_access", "environmental_factors", "natural_elements"],
-          "examples": ["garden_maze", "ancient_ruins", "pirate_cove", "oil_derrick", "parking_lot"]
+        "height_range_standards": {
+          "short_range": ["5'1\"", "5'2\"", "5'3\"", "5'4\""],
+          "medium_range": ["5'5\"", "5'6\"", "5'8\"", "5'9\""],
+          "tall_range": ["6'0\"", "6'2\"", "6'4\"", "6'6\"", "7'0\""],
+          "distribution_logic": "Ensure clear ranking differences"
         }
       },
-      "access_restrictions": {
-        "professional_requirements": "only_authorized_personnel",
-        "physical_requirements": "handedness_safety_constraints",
-        "economic_barriers": "private_suite_affordability",
-        "social_constraints": "balcony_permission_levels"
+      "handedness_constraint_logic": {
+        "environmental_safety": "Right-handed required to avoid burns/injury",
+        "tool_compatibility": "Certain weapons favor specific handedness",
+        "access_restrictions": "Door handles, controls designed for right-handed",
+        "professional_requirements": "Job tasks require specific hand dominance"
       },
-      "thematic_coherence": {
-        "setting_consistency": "all_locations_match_story_theme",
-        "logical_connections": "locations_serve_narrative_purpose",
-        "evidence_placement": "physical_clues_match_environment"
+      "physical_feature_systems": {
+        "eye_color_standards": ["blue", "green", "brown", "hazel"],
+        "hair_color_options": ["black", "brown", "blond", "gray", "white", "red"],
+        "distinguishing_features": ["bald", "beard", "glasses", "scars"],
+        "identification_purpose": "Character differentiation and trait-based clues"
       }
     },
-
-    "logical_elimination_patterns": {
-      "height_based_deduction": {
-        "tallest_identification": "systematic_height_comparison",
-        "shortest_elimination": "minimum_height_exclusion",
-        "relative_positioning": "second_tallest_third_shortest_logic"
+    "location_access_mechanics": {
+      "environment_type_logic": {
+        "indoor_characteristics": {
+          "controlled_access": "Requires permission or key",
+          "professional_spaces": "Office, courtroom, laboratory access",
+          "private_areas": "Manor house, study, chambers",
+          "public_indoor": "Chapel, lobby, common areas"
+        },
+        "outdoor_characteristics": {
+          "public_access": "Generally available to all suspects",
+          "environmental_hazards": "Weather, terrain, safety concerns",
+          "visibility_factors": "Who can see whom in outdoor spaces",
+          "natural_barriers": "Maze walls, water, cliffs"
+        }
       },
-      "trait_constraint_systems": {
-        "handedness_restrictions": "environmental_safety_requirements",
-        "professional_limitations": "skill_based_weapon_access",
-        "personality_constraints": "behavioral_weapon_elimination"
+      "access_restriction_types": {
+        "permission_based": "Balcony access requires authorization",
+        "skill_requirements": "Technical areas need expertise",
+        "physical_constraints": "Size, strength, mobility limitations",
+        "economic_barriers": "Private suite requires wealth",
+        "social_hierarchies": "Class-based location restrictions"
       },
-      "cross_category_dependencies": {
-        "suspect_weapon_elimination": "trait_incompatibility",
-        "location_weapon_restrictions": "environmental_impossibility",
-        "suspect_location_constraints": "access_permission_logic"
+      "location_evidence_correlation": {
+        "environmental_clues": "Smells, sounds, visual evidence",
+        "material_traces": "Substances found only in specific locations",
+        "witness_sightings": "Who was seen where by whom",
+        "physical_constraints": "What actions are possible in each space"
       }
     },
-
-    "special_mechanics": {
-      "personality_based_constraints": [
-        "tone_deaf_eliminates_musical_instruments",
-        "tea_empire_owner_never_gardens",
-        "superstition_prevents_weapon_placement",
-        "professional_ethics_restrict_actions"
-      ],
-      "professional_access_logic": [
-        "medical_knowledge_required_for_poison",
-        "military_training_enables_weapon_use",
-        "estate_manager_knows_layout",
-        "administrative_leave_assigns_tasks"
-      ],
-      "environmental_condition_logic": [
-        "outdoor_weather_affects_evidence",
-        "indoor_temperature_preserves_clues",
-        "water_dissolves_materials",
-        "superstitions_restrict_placement"
-      ],
-      "economic_constraint_mechanics": [
-        "wealth_determines_location_access",
-        "poverty_vow_contradicts_luxury",
-        "business_success_enables_options",
-        "salary_limitations_restrict_choices"
-      ],
-      "historical_relationship_logic": [
-        "past_connections_enable_current_access",
-        "shared_backgrounds_create_opportunities",
-        "previous_conflicts_generate_motives",
-        "professional_partnerships_allow_proximity"
-      ]
-    },
-
-    "difficulty_progression_indicators": {
-      "clue_complexity_scaling": {
-        "easy": ["direct_elimination", "simple_relationships"],
-        "progression_toward_medium": ["conditional_statements", "multiple_cipher_types"]
+    "weapon_categorization_logic": {
+      "weight_class_system": {
+        "light_weight_weapons": {
+          "characteristics": ["easy_concealment", "requires_precision", "minimal_strength"],
+          "examples": ["piano_wire", "poison_dart", "fountain_pen", "yarn"],
+          "constraint_implications": "Available to all suspects regardless of strength"
+        },
+        "medium_weight_weapons": {
+          "characteristics": ["moderate_handling", "versatile_usage", "some_skill_needed"],
+          "examples": ["crowbar", "letter_opener", "gardening_shears", "ream_paper"],
+          "constraint_implications": "Most suspects can use with reasonable effort"
+        },
+        "heavy_weight_weapons": {
+          "characteristics": ["requires_strength", "difficult_transport", "obvious_damage"],
+          "examples": ["cannon", "typewriter", "stack_books", "oil_drum"],
+          "constraint_implications": "May eliminate physically weaker suspects"
+        }
       },
-      "logical_chain_requirements": {
-        "minimum_steps": 3,
-        "maximum_steps": 6,
-        "cross_reference_dependencies": "moderate",
-        "encoding_integration": "optional_but_helpful"
+      "thematic_weapon_matching": {
+        "setting_appropriateness": "Weapons must logically exist in story environment",
+        "character_access_logic": "Professional/personal reasons for weapon availability",
+        "murder_method_consistency": "Weapon capabilities match victim death",
+        "evidence_trail_logic": "Weapon use leaves appropriate traces"
       },
-      "red_herring_sophistication": {
-        "obvious_misdirection": "minimal",
-        "plausible_alternatives": "present_but_eliminable",
-        "complexity_indicators": ["height_ranking", "conditional_choices"]
+      "weapon_trait_interactions": {
+        "skill_requirements": "Medical knowledge needed for poison use",
+        "strength_prerequisites": "Heavy weapons need physical capability",
+        "access_permissions": "Professional weapons require job access",
+        "personality_constraints": "Character traits eliminate weapon types"
       }
     },
-
-    "theme_integration_patterns": {
-      "narrative_consistency": {
-        "character_profession_alignment": "all_suspects_fit_setting",
-        "weapon_environment_matching": "tools_appropriate_to_theme",
-        "location_story_coherence": "places_serve_narrative_function"
+    "evidence_correlation_systems": {
+      "physical_evidence_types": {
+        "sensory_indicators": {
+          "smell_evidence": "Almond scent indicates cyanide presence",
+          "sound_evidence": "Tone-deaf eliminates musical instrument use",
+          "visual_evidence": "Chain-link pattern shows fence contact",
+          "texture_evidence": "Powdered cement indicates rebar use"
+        },
+        "material_traces": {
+          "substance_residues": "Chemical traces indicate weapon type",
+          "fabric_fibers": "Clothing materials show contact",
+          "biological_evidence": "Blood patterns indicate weapon effects",
+          "environmental_markers": "Mud, water, plant matter show location"
+        },
+        "positional_evidence": {
+          "body_placement": "Where victim found indicates murder location",
+          "object_positioning": "Weapon/evidence location provides clues",
+          "witness_sightings": "Who saw what where provides constraints",
+          "timing_evidence": "When events occurred affects possibilities"
+        }
       },
-      "cultural_reference_integration": {
-        "historical_periods": ["victorian", "golden_age", "modern_corporate"],
-        "genre_expectations": ["pirate_adventure", "cozy_mystery", "legal_thriller"],
-        "professional_environments": ["entertainment", "academic", "religious", "military"]
+      "evidence_weapon_correlation": {
+        "damage_pattern_matching": "Wound type must match weapon capability",
+        "trace_evidence_consistency": "Weapon residue found at appropriate locations",
+        "method_feasibility": "Murder technique possible with available weapon",
+        "cleanup_evidence": "Post-murder actions leave detectable traces"
       }
     },
-
-    "generation_guidelines": {
-      "constraint_satisfaction": {
-        "unique_solution_requirement": "exactly_one_valid_answer",
-        "logical_consistency": "no_contradictory_clues",
-        "fair_play_guarantee": "all_information_provided"
+    "personality_constraint_mechanics": {
+      "behavioral_weapon_elimination": {
+        "professional_ethics": "Doctor won't use medical knowledge for murder",
+        "personal_preferences": "Tea lover never gardens, eliminates shears",
+        "physical_limitations": "Tone-deaf person avoids musical instruments",
+        "moral_constraints": "Religious figure avoids violent methods"
       },
-      "balance_requirements": {
-        "suspect_viability": "each_must_appear_plausibly_guilty",
-        "weapon_accessibility": "reasonable_access_for_multiple_suspects",
-        "location_opportunity": "multiple_suspects_could_access_each"
+      "habit_based_restrictions": {
+        "routine_access": "Daily patterns determine location availability",
+        "skill_applications": "Professional expertise affects weapon choice",
+        "social_interactions": "Relationship patterns influence opportunity",
+        "resource_availability": "Personal wealth affects options"
       },
-      "quality_assurance": {
-        "theme_coherence_check": "all_elements_support_setting",
-        "logical_verification": "solution_path_traceable",
-        "difficulty_calibration": "appropriate_for_target_level"
+      "psychological_profiling": {
+        "risk_tolerance": "Conservative characters avoid obvious weapons",
+        "planning_capability": "Methodical vs. impulsive affects method choice",
+        "stress_response": "How characters react under pressure",
+        "motivation_strength": "Intensity of motive affects murder likelihood"
       }
+    },
+    "thematic_integration_frameworks": {
+      "setting_consistency_requirements": {
+        "period_accuracy": "Victorian mansion has era-appropriate weapons",
+        "professional_authenticity": "Literary agency has publishing-related tools",
+        "geographical_logic": "Pirate setting includes nautical elements",
+        "cultural_appropriateness": "Religious settings respect spiritual context"
+      },
+      "character_archetype_systems": {
+        "professional_roles": ["detective", "doctor", "priest", "soldier", "artist"],
+        "social_classes": ["nobility", "working_class", "professional", "criminal"],
+        "personality_types": ["methodical", "impulsive", "secretive", "aggressive"],
+        "motivation_categories": ["greed", "revenge", "fear", "love", "duty"]
+      },
+      "narrative_coherence_logic": {
+        "backstory_integration": "Character histories support current actions",
+        "relationship_networks": "Connections between characters make sense",
+        "conflict_escalation": "Reasonable progression from tension to murder",
+        "resolution_satisfaction": "Solution feels narratively appropriate"
+      }
+    },
+    "solution_verification_systems": {
+      "uniqueness_guarantee": {
+        "constraint_sufficiency": "Clues eliminate exactly 26 of 27 possibilities",
+        "logical_consistency": "No clue contradicts any other clue",
+        "complete_assignment": "Every suspect/weapon/location assigned exactly once",
+        "elimination_verification": "Each wrong combination ruled out by specific clue"
+      },
+      "deduction_pathway_validation": {
+        "step_count_range": "3-6 logical steps from clues to solution",
+        "branching_prevention": "Multiple valid paths should converge on same answer",
+        "hint_progression": "Clues build from obvious to subtle",
+        "breakthrough_moments": "Key insights feel rewarding to discover"
+      },
+      "player_experience_optimization": {
+        "difficulty_calibration": "Challenging but not frustrating",
+        "fair_play_guarantee": "All information needed is provided",
+        "red_herring_balance": "False leads quickly eliminable",
+        "solution_elegance": "Answer feels inevitable in retrospect"
+      }
+    },
+    "generation_workflow_easy": {
+      "step_1_theme_establishment": "Choose setting and create appropriate character archetypes",
+      "step_2_solution_design": "Select unique killer/weapon/location combination",
+      "step_3_constraint_creation": "Generate 4-6 clues that eliminate other possibilities",
+      "step_4_trait_assignment": "Distribute physical characteristics for logical deduction",
+      "step_5_cipher_integration": "Add 1-2 simple encoded messages if desired",
+      "step_6_evidence_placement": "Include physical clues that support solution",
+      "step_7_personality_constraints": "Add behavior-based eliminations",
+      "step_8_verification_testing": "Ensure exactly one solution satisfies all clues",
+      "step_9_narrative_polish": "Refine story for thematic consistency",
+      "step_10_difficulty_calibration": "Adjust clue complexity for target difficulty"
+    },
+    "difficulty_calibration_metrics": {
+      "constraint_density": "4-6 active constraints affecting solution",
+      "intersection_complexity": "Each element constrained by 2-3 different clues",
+      "deduction_chain_length": "3-6 logical steps from clues to solution",
+      "misdirection_simplicity": "1-2 obvious red herrings easily eliminated",
+      "cipher_integration_level": "0-2 simple encoded messages with direct clues",
+      "trait_dependency_depth": "Height/handedness used for 1-2 key eliminations"
     }
   }
 }

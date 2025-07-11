@@ -1,0 +1,191 @@
+{
+  "game_id": "murdle_78",
+  "title": "Plenty of Kills in the Sea",
+  "difficulty": "medium",
+  "victim": {
+    "name": "Sushi Chef",
+    "background": "Chef at beachfront sushi restaurant built atop a pier",
+    "death_details": "Killed at the restaurant, creating suspicious circumstances",
+    "case_context": "Logico's meeting location turned into crime scene"
+  },
+  "suspects": [
+    {
+      "name": "Boss Charcoal",
+      "relationship": "Mob boss from the good ol' days",
+      "description": "A mob boss from when being a mob boss meant something",
+      "traits": ["5'11\"", "right-handed", "dark brown eyes", "black hair", "Taurus"],
+      "motive": "To prove they're tough"
+    },
+    {
+      "name": "Secretary Celadon",
+      "relationship": "Secretary of Defense",
+      "description": "Personally responsible for climate disasters named after her easters",
+      "traits": ["5'6\"", "left-handed", "green eyes", "light brown hair", "Leo"],
+      "motive": "To create a diversion"
+    },
+    {
+      "name": "Grandmaster Rose",
+      "relationship": "Chess grandmaster",
+      "description": "Always plotting next move, including how to cheat (3. Qxe5#)",
+      "traits": ["5'7\"", "left-handed", "dark brown eyes", "dark brown hair", "Scorpio"],
+      "motive": "Out of frustration"
+    },
+    {
+      "name": "Silverton the Legend",
+      "relationship": "Golden Age actor",
+      "description": "Acclaimed actor now in his golden years",
+      "traits": ["6'4\"", "right-handed", "blue eyes", "silver hair", "Leo"],
+      "motive": "To inherit a fortune"
+    }
+  ],
+  "weapons": [
+    {
+      "name": "An Award",
+      "weight": "medium-weight",
+      "material": "metal",
+      "description": "The same prestigious award again"
+    },
+    {
+      "name": "A Red Herring",
+      "weight": "medium-weight",
+      "material": "fish",
+      "description": "Hold by tail for momentum - literally and figuratively misleading"
+    },
+    {
+      "name": "A Fancy Plate",
+      "weight": "medium-weight",
+      "material": "ceramic",
+      "description": "Worth more than your head"
+    },
+    {
+      "name": "Chopsticks",
+      "weight": "light-weight",
+      "material": "wood",
+      "description": "Two weapons for the price of one"
+    }
+  ],
+  "locations": [
+    {
+      "name": "The Bar",
+      "environment": "indoors",
+      "description": "Cheapest cocktail costs $150, served in thimble",
+      "accessibility": "Premium pricing barrier"
+    },
+    {
+      "name": "The Valet Stand",
+      "environment": "outdoors",
+      "description": "Leave classic car with untipped attendant",
+      "accessibility": "Car owners only"
+    },
+    {
+      "name": "The Corner Booth",
+      "environment": "indoors",
+      "description": "Reserved for celebrity who came once three years ago",
+      "accessibility": "Celebrity status required"
+    },
+    {
+      "name": "A Table by the Dumpster",
+      "environment": "outdoors",
+      "description": "Where they put has-beens and walk-ins",
+      "accessibility": "Low-status seating"
+    }
+  ],
+  "clues": [
+    {
+      "id": "encrypted_note_1",
+      "description": "Bartender gave scrambled note: EHT UPCSSTE AT TEH ARB HDA IRVESL AHRI",
+      "type": "cipher_elimination",
+      "decoded": "THE SUSPECT AT THE BAR HAD SILVER HAIR",
+      "points_to": ["Silverton at The Bar"],
+      "eliminates": ["Other suspects at The Bar"]
+    },
+    {
+      "id": "award_location",
+      "description": "An award was found where they put the has-beens",
+      "type": "weapon_location",
+      "points_to": ["Award at Table by Dumpster"],
+      "eliminates": ["Award at other locations"]
+    },
+    {
+      "id": "boss_motive",
+      "description": "As old-school mob boss, Boss Charcoal always wanted to prove he was tough",
+      "type": "motive_assignment",
+      "points_to": ["Boss Charcoal: prove tough"],
+      "eliminates": ["Boss Charcoal: other motives"]
+    },
+    {
+      "id": "valet_hair_color",
+      "description": "The suspect at the valet stand had dark brown hair",
+      "type": "trait_location",
+      "points_to": ["Grandmaster Rose at Valet Stand"],
+      "eliminates": ["Other suspects at Valet Stand"]
+    },
+    {
+      "id": "encrypted_report",
+      "description": "Scrambled government report: REESCRYTA ENDOLAC DDI OTN WANT TO LILK OUT FO TTOSUNRFIAR",
+      "type": "cipher_elimination",
+      "decoded": "SECRETARY CELADON DID NOT WANT TO KILL OUT OF FRUSTRATION",
+      "eliminates": ["Secretary Celadon: frustration motive"]
+    },
+    {
+      "id": "taurus_weapon",
+      "description": "The Taurus brought a red herring. So typical of a Taurus",
+      "type": "zodiac_weapon",
+      "points_to": ["Boss Charcoal (Taurus): red herring"],
+      "eliminates": ["Boss Charcoal: other weapons"]
+    },
+    {
+      "id": "expensive_weapon_motive",
+      "description": "Person with weapon worth more than your head wanted to inherit fortune",
+      "type": "weapon_motive_link",
+      "points_to": ["Fancy plate holder: inherit fortune"],
+      "eliminates": ["Fancy plate holder: other motives"]
+    }
+  ],
+  "statements": [
+    {
+      "speaker": "Boss Charcoal",
+      "statement": "Look here: chopsticks were at the valet stand",
+      "truth_value": true,
+      "analysis": "Grandmaster Rose was at valet stand with chopsticks"
+    },
+    {
+      "speaker": "Secretary Celadon",
+      "statement": "I was not in the corner booth",
+      "truth_value": false,
+      "analysis": "THE LIE - Secretary Celadon WAS in the corner booth"
+    },
+    {
+      "speaker": "Grandmaster Rose",
+      "statement": "Don't neglect your theory: Secretary Celadon brought an award",
+      "truth_value": true,
+      "analysis": "Secretary Celadon did bring the award used in murder"
+    },
+    {
+      "speaker": "Silverton the Legend",
+      "statement": "Boss Charcoal did not bring a fancy plate",
+      "truth_value": true,
+      "analysis": "Boss Charcoal brought red herring, not fancy plate"
+    }
+  ],
+  "solution": {
+    "killer": "Secretary Celadon",
+    "weapon": "An Award",
+    "location": "A Table by the Dumpster",
+    "motive": "To create a diversion",
+    "logic_chain": [
+      "Decode cipher 1: Silverton (silver hair) at The Bar",
+      "Clue 4: Grandmaster Rose (dark brown hair) at Valet Stand",
+      "Remaining locations: Corner Booth and Table by Dumpster for Boss/Secretary",
+      "Test Secretary Celadon as liar: She WAS in corner booth (opposite of statement)",
+      "Boss Charcoal at Table by Dumpster by elimination",
+      "Boss Charcoal (Taurus) brought red herring (clue 6)",
+      "Grandmaster Rose brought chopsticks (Boss's true statement about valet stand)",
+      "Secretary Celadon brought award (Grandmaster's true statement)",
+      "Silverton brought fancy plate (elimination + worth more than head)",
+      "Award found at Table by Dumpster = murder location (clue 2)",
+      "Secretary Celadon used award she brought to kill at Table by Dumpster",
+      "Motive: Create diversion (elimination after other motives assigned)"
+    ]
+  }
+}

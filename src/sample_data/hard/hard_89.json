@@ -1,0 +1,165 @@
+{
+  "game_id": "murdle_89",
+  "title": "The Post-Production Process",
+  "difficulty": "medium",
+  "victim": {
+    "name": "Assistant Editor",
+    "background": "Film editor working on post-production",
+    "death_details": "Murdered during editing process after filming completed",
+    "case_context": "After filming entire movie, work just beginning with editing, scoring, sound mix, color correction"
+  },
+  "suspects": [
+    {
+      "name": "A-List Abalone",
+      "relationship": "A-list actress",
+      "description": "When on A-list, committing occasional murder won't keep you from finishing a film",
+      "traits": ["5'6\"", "right-handed", "hazel eyes", "red hair", "Libra"],
+      "motive": "To avenge their father"
+    },
+    {
+      "name": "Lord Lavender",
+      "relationship": "Conservative MP and musical theater composer",
+      "description": "Politically conservative MP in House of Lords, musical theater composer with many hits but nothing compares to Dogs",
+      "traits": ["5'9\"", "right-handed", "green eyes", "gray hair", "Virgo"],
+      "motive": "For political purposes"
+    },
+    {
+      "name": "Director Dusty",
+      "relationship": "True filmmaker",
+      "description": "True filmmaker who wants to make masterpiece. To do that, he might have to make a murder",
+      "traits": ["5'10\"", "left-handed", "hazel eyes", "bald", "Pisces"],
+      "motive": "To save face"
+    },
+    {
+      "name": "Pearl, AGE",
+      "relationship": "Movie editor",
+      "description": "Editor of some of best and highest-grossing movies ever made, though never both at once",
+      "traits": ["5'5\"", "right-handed", "blue eyes", "blond hair", "Aquarius"],
+      "motive": "To get out of a bad movie"
+    }
+  ],
+  "weapons": [
+    {
+      "name": "A Film Strip",
+      "weight": "light-weight",
+      "material": "plastic",
+      "description": "Ironically, this film strip depicts a man being strangled"
+    },
+    {
+      "name": "A Toxic Blowfish",
+      "weight": "medium-weight",
+      "material": "fish",
+      "description": "Prepared carefully, it's safe to eat. Prepared even more carefully, it can kill"
+    },
+    {
+      "name": "A Golf Cart",
+      "weight": "heavy-weight",
+      "material": "metal, plastic & rubber",
+      "description": "For getting around a studio or running somebody over"
+    },
+    {
+      "name": "An ADR Microphone",
+      "weight": "medium-weight",
+      "material": "metal",
+      "description": "For dubbing. Also, for hitting people over the head"
+    }
+  ],
+  "locations": [
+    {
+      "name": "The Water Tower",
+      "environment": "outdoors",
+      "description": "Famous and empty, like the heads of their stars"
+    },
+    {
+      "name": "The Scoring Stage",
+      "environment": "indoors",
+      "description": "Where they score the movies. There's usually an orchestra or a DJ here"
+    },
+    {
+      "name": "The Post-Production Lab",
+      "environment": "indoors",
+      "description": "Where the movies are saved from their incompetent directors"
+    },
+    {
+      "name": "The Water Tower Bar & Grill",
+      "environment": "indoors",
+      "description": "A themed restaurant that serves drinks in glasses in the shape of the tower"
+    }
+  ],
+  "clues": [
+    {
+      "id": "bad_movie_not_bar",
+      "description": "The person who wanted to get out of a bad movie was not at the Water Tower Bar & Grill",
+      "type": "motive_location_elimination",
+      "eliminates": ["Bad movie motive at Water Tower Bar & Grill"]
+    },
+    {
+      "id": "film_strip_father",
+      "description": "The person with a film strip wanted to avenge their father",
+      "type": "weapon_motive",
+      "points_to": ["Film strip holder: avenge father motive"]
+    },
+    {
+      "id": "tallest_post_production",
+      "description": "The tallest suspect was seen in the post-production lab",
+      "type": "height_location",
+      "points_to": ["Director Dusty (5'10\"): Post-Production Lab"],
+      "analysis": "Heights: Dusty(5'10\"), Lavender(5'9\"), Abalone(5'6\"), Pearl(5'5\")"
+    },
+    {
+      "id": "blowfish_save_face",
+      "description": "The person with a toxic blowfish wanted to save face",
+      "type": "weapon_motive",
+      "points_to": ["Toxic blowfish holder: save face motive"]
+    },
+    {
+      "id": "lavender_golf_cart",
+      "description": "Lord Lavender brought a golf cart",
+      "type": "character_weapon",
+      "points_to": ["Lord Lavender: golf cart"]
+    }
+  ],
+  "statements": [
+    {
+      "speaker": "A-List Abalone",
+      "statement": "Talk to my agent, but privately, a film strip was in the water tower",
+      "truth_value": true,
+      "analysis": "Film strip found in water tower location"
+    },
+    {
+      "speaker": "Lord Lavender",
+      "statement": "Whoever wanted to save face was in the water tower",
+      "truth_value": false,
+      "analysis": "THE LIE - Save face person was NOT in water tower"
+    },
+    {
+      "speaker": "Director Dusty",
+      "statement": "I'm very busy, but Pearl, AGE, had a motive to kill for political purposes",
+      "truth_value": true,
+      "analysis": "Pearl has political purposes motive"
+    },
+    {
+      "speaker": "Pearl, AGE",
+      "statement": "I seem to have noticed that A-List Abalone brought a film strip",
+      "truth_value": true,
+      "analysis": "A-List Abalone brought film strip"
+    }
+  ],
+  "solution": {
+    "killer": "Director Dusty",
+    "weapon": "A Toxic Blowfish",
+    "location": "The Post-Production Lab",
+    "motive": "To save face",
+    "logic_chain": [
+      "Test Lord Lavender as liar: Save face person was NOT in water tower",
+      "A-List brought film strip (Pearl's truth) → avenge father motive",
+      "Film strip found in water tower (A-List's truth) but A-List used it elsewhere",
+      "Director Dusty (tallest) in Post-Production Lab",
+      "Pearl has political purposes motive (Dusty's truth)",
+      "Toxic blowfish holder wants save face + not in water tower = Director Dusty",
+      "Lord Lavender brought golf cart, A-List brought film strip",
+      "Pearl gets ADR microphone by elimination",
+      "Director Dusty used toxic blowfish in Post-Production Lab to save face"
+    ]
+  }
+}

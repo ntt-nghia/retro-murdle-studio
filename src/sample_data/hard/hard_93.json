@@ -1,0 +1,195 @@
+{
+  "game_id": "murdle_93",
+  "title": "Death in the Magick Shoppe",
+  "difficulty": "medium",
+  "victim": {
+    "name": "Store Clerk",
+    "background": "Employee of Hollywood Mystery Shoppe movie-magic emporium",
+    "death_details": "Killed in shop, left scrambled dying message",
+    "case_context": "Logico found the shop tucked in corner - everything needed for movies including dead clerk"
+  },
+  "suspects": [
+    {
+      "name": "Bishop Azure",
+      "relationship": "Local church bishop",
+      "description": "Known to pray for both friends and enemies, asking for different things",
+      "traits": ["5'4\"", "right-handed", "light brown eyes", "dark brown hair", "Gemini"],
+      "motive": "To help sell a script"
+    },
+    {
+      "name": "Director Dusty",
+      "relationship": "True filmmaker",
+      "description": "Wants to make masterpiece. To do that, he might have to make a murder",
+      "traits": ["5'10\"", "left-handed", "hazel eyes", "bald", "Pisces"],
+      "motive": "To promote the occult"
+    },
+    {
+      "name": "Comrade Champagne",
+      "relationship": "Communist socialite",
+      "description": "Likes nothing more than to protect the world, sharing communism while sipping finest sparkling wines",
+      "traits": ["5'11\"", "left-handed", "hazel eyes", "blond hair", "Capricorn"],
+      "motive": "To steal a crystal"
+    },
+    {
+      "name": "Uncle Midnight",
+      "relationship": "Wealthy retiree",
+      "description": "When his dad died, he bought desert mansion with pool and retired. He was seventeen",
+      "traits": ["5'8\"", "left-handed", "blue eyes", "dark brown hair", "Sagittarius"],
+      "motive": "On behalf of the industry"
+    }
+  ],
+  "weapons": [
+    {
+      "name": "A Crystal Ball",
+      "weight": "heavy-weight",
+      "material": "crystal",
+      "description": "If you look into it, will tell your future, so long as your future is a crystal ball"
+    },
+    {
+      "name": "An Award",
+      "weight": "medium-weight",
+      "material": "metal",
+      "description": "One of most commonplace items in all of Hollywood, it seems"
+    },
+    {
+      "name": "A Sword Cane",
+      "weight": "medium-weight",
+      "material": "metal",
+      "description": "Sharp and hidden. Looks like ordinary cane"
+    },
+    {
+      "name": "A Cursed Dagger",
+      "weight": "medium-weight",
+      "material": "metal & jewels",
+      "description": "Dying duchess cursed this dagger when she used it to end her own life"
+    }
+  ],
+  "locations": [
+    {
+      "name": "The Secret Room",
+      "environment": "indoors",
+      "description": "Secret room used for conducting magick rituals and photo shoots"
+    },
+    {
+      "name": "The Back Office",
+      "environment": "indoors",
+      "description": "Where proprietor—a Hollywood mystery writer—does most of his writing"
+    },
+    {
+      "name": "The Front Porch",
+      "environment": "outdoors",
+      "description": "Inviting sign offering supplies for 'all your magickal mystery needs'"
+    },
+    {
+      "name": "The Main Room",
+      "environment": "indoors",
+      "description": "You can buy all sorts of magick supplies, mystery books, and more"
+    }
+  ],
+  "clues": [
+    {
+      "id": "crystal_ball_hair",
+      "description": "The suspect with the crystal ball had blond hair",
+      "type": "weapon_trait",
+      "points_to": ["Comrade Champagne: crystal ball"],
+      "analysis": "Only Champagne has blond hair"
+    },
+    {
+      "id": "second_shortest_cult",
+      "description": "The second shortest suspect was in the Cult of the Black Cow",
+      "type": "height_organization",
+      "points_to": ["Uncle Midnight (5'8\") in Cult of Black Cow"],
+      "analysis": "Heights: Azure(5'4\"), Midnight(5'8\"), Dusty(5'10\"), Champagne(5'11\")"
+    },
+    {
+      "id": "main_room_handedness",
+      "description": "Whoever was in the main room was right-handed",
+      "type": "location_trait",
+      "points_to": ["Bishop Azure in Main Room"],
+      "analysis": "Only Azure is right-handed"
+    },
+    {
+      "id": "crystal_theft_office",
+      "description": "The person who wanted to steal a crystal was in the back office",
+      "type": "motive_location",
+      "points_to": ["Crystal theft motive: Back Office"]
+    },
+    {
+      "id": "high_order_dagger",
+      "description": "A member of the High Order of the Dark Rain brought a cursed dagger",
+      "type": "organization_weapon",
+      "points_to": ["High Order member: cursed dagger"]
+    },
+    {
+      "id": "dying_message_cipher",
+      "description": "Dead clerk scrambled note: EWVEORH AHD NA RAADW WSA ITHRG-EDDAHN",
+      "type": "cipher_weapon_trait",
+      "decoded": "WHOEVER HAD AN AWARD WAS RIGHT-HANDED",
+      "points_to": ["Bishop Azure: award"],
+      "analysis": "Only Azure is right-handed"
+    },
+    {
+      "id": "dusty_photo_location",
+      "description": "Director Dusty was in a room he had previously used for photo shoots",
+      "type": "character_location_history",
+      "points_to": ["Director Dusty: Secret Room"],
+      "analysis": "Secret room description mentions photo shoots"
+    },
+    {
+      "id": "sword_cane_industry",
+      "description": "The person with a sword cane wanted to kill on behalf of the Industry",
+      "type": "weapon_motive",
+      "points_to": ["Sword cane holder: industry motive"]
+    },
+    {
+      "id": "rival_organizations",
+      "description": "Nobody in the Cult of the Black Cow was also in the High Order of the Dark Rain: they were rivals",
+      "type": "organization_exclusion",
+      "eliminates": ["Cult members in High Order"]
+    }
+  ],
+  "statements": [
+    {
+      "speaker": "Bishop Azure",
+      "statement": "Whoever had the cursed dagger wanted to help sell a script",
+      "truth_value": false,
+      "analysis": "THE LIE - Director Dusty has cursed dagger but wanted to promote occult"
+    },
+    {
+      "speaker": "Director Dusty",
+      "statement": "I was not in the back office",
+      "truth_value": true,
+      "analysis": "Dusty was in Secret Room for photo shoots"
+    },
+    {
+      "speaker": "Comrade Champagne",
+      "statement": "I was not in the main room",
+      "truth_value": true,
+      "analysis": "Champagne was in Back Office (crystal theft motive)"
+    },
+    {
+      "speaker": "Uncle Midnight",
+      "statement": "Hey now, Director Dusty was in the secret room",
+      "truth_value": true,
+      "analysis": "Confirms Dusty's photo shoot location"
+    }
+  ],
+  "solution": {
+    "killer": "Bishop Azure",
+    "weapon": "An Award",
+    "location": "The Main Room",
+    "motive": "To help sell a script",
+    "logic_chain": [
+      "Decode dying message: 'Whoever had an award was right-handed'",
+      "Only Bishop Azure is right-handed → Azure has award",
+      "Main room requires right-handed person → Azure in Main Room",
+      "Test Azure as liar: Dusty (cursed dagger) did NOT want help sell script",
+      "Heights determine Uncle Midnight (5'8\") in Cult of Black Cow",
+      "Cult/High Order rivalry → Midnight can't have cursed dagger",
+      "Director Dusty in Secret Room (photo shoots) with cursed dagger → High Order member",
+      "Champagne (blond hair) has crystal ball, wants steal crystal → Back Office",
+      "Midnight gets sword cane by elimination, industry motive → Front Porch",
+      "Azure used award to kill in Main Room for script-selling motive"
+    ]
+  }
+}
