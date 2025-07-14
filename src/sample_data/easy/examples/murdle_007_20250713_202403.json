@@ -1,0 +1,78 @@
+{
+  "gameId": "murdle_007",
+  "title": "A QUAINT LITTLE VILLAGE SLAYING",
+  "description": "Deductive Logico traveled to Dame Obsidian's quaint little village, and immediately, Logico learned a new word: \"vicar.\" He didn't know what it meant, but he knew how to use it in a sentence, like, \"The vicar has been murdered, and I'm going to find whodunit.\"",
+  "suspects": [
+    {
+      "name": "DAME OBSIDIAN",
+      "description": "One of her most famous books is about a mystery writer who frames an innocent magician. Suspicious!",
+      "traits": [
+        "5'4\"",
+        "LEFT-HANDED",
+        "GREEN EYES",
+        "BLACK HAIR"
+      ]
+    },
+    {
+      "name": "DEACON VERDIGRIS",
+      "description": "A deacon in the church. She handles the parishioners' donations and, sometimes, their secrets.",
+      "traits": [
+        "5'3\"",
+        "LEFT-HANDED",
+        "BLUE EYES",
+        "GRAY HAIR"
+      ]
+    },
+    {
+      "name": "EARL GREY",
+      "description": "He comes from a long line of Earl Greys. Yes, of the tea. No, he doesn't sign autographs. But he'll give you a free bag if you ask.",
+      "traits": [
+        "5'9\"",
+        "RIGHT-HANDED",
+        "LIGHT BROWN EYES",
+        "WHITE HAIR"
+      ]
+    }
+  ],
+  "weapons": [
+    {
+      "name": "A BOTTLE OF CYANIDE",
+      "description": "It's almond-scented poison, but it can also get rid of headaches (like your husband).",
+      "specs": "LIGHT-WEIGHT"
+    },
+    {
+      "name": "A PAIR OF GARDENING SHEARS",
+      "description": "Gardening is a great hobby. But honestly, it's easier to get good tomatoes by killing for them.",
+      "specs": "MEDIUM-WEIGHT"
+    },
+    {
+      "name": "YARN",
+      "description": "Sometimes, when you realize you've missed a stitch, you could just strangle somebody.",
+      "specs": "LIGHT-WEIGHT"
+    }
+  ],
+  "locations": [
+    {
+      "name": "THE MANOR HOUSE",
+      "description": "The dame's. It's filled with giant portraits of many generations of dead rich white guys.",
+      "type": "INDOORS"
+    },
+    {
+      "name": "THE CHAPEL",
+      "description": "A tiny church filled with stained-glass windows and secrets.",
+      "type": "INDOORS"
+    },
+    {
+      "name": "THE ANCIENT RUINS",
+      "description": "These same standing stones again! Each of them has a strange labyrinth carved on its side.",
+      "type": "OUTDOORS"
+    }
+  ],
+  "clues": [
+    "Logico smelled almonds beneath a stained-glass window.",
+    "Dame Obsidian was not in her manor house. Or any manor house, for that matter.",
+    "Yes, he owned a tea empire, but Earl Grey never gardened, and he wouldn't be caught dead holding a pair of shears.",
+    "Deacon Verdigris was visiting the ancient ruins to research an article he was writing about the local pagan practices prior to the arrival of the church.",
+    "The vicar was strangled—most embarrassingly—by a roll of yarn."
+  ]
+}

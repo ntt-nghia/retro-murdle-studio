@@ -1,0 +1,92 @@
+{
+  "gameId": "murdle_032",
+  "title": "THE CASE OF THE LAB WITH LEGAL ISSUES",
+  "description": "Next, the Investigation Institute sent Deductive Logico to a literal mad scientist's laboratory. To clarify, the scientist wasn't crazy: he was furious. His assistant had been killed, and his research had stalled.",
+  "suspects": [
+    {
+      "name": "VICE PRESIDENT MAUVE",
+      "description": "A vice president of TekCo Futures. If she asks you to step into her metaverse, get out now!",
+      "traits": [
+        "5'8\"",
+        "RIGHT-HANDED",
+        "DARK BROWN EYES",
+        "BLACK HAIR",
+        "TAURUS"
+      ]
+    },
+    {
+      "name": "PRINCIPAL APPLEGREEN",
+      "description": "A strict principal about everything except getting away with murder. His hands are always covered in chalk.",
+      "traits": [
+        "5'11\"",
+        "RIGHT-HANDED",
+        "BLUE EYES",
+        "BLOND HAIR",
+        "LIBRA"
+      ]
+    },
+    {
+      "name": "CAPTAIN SLATE",
+      "description": "A real-life astronaut. The first woman to travel around the dark side of the moon, and also the first to be suspected of murdering her copilot.",
+      "traits": [
+        "5'5\"",
+        "LEFT-HANDED",
+        "DARK BROWN EYES",
+        "DARK BROWN HAIR",
+        "AQUARIUS"
+      ]
+    }
+  ],
+  "weapons": [
+    {
+      "name": "A BRAIN IN A JAR",
+      "description": "The worst part is, it's oozing everywhere.",
+      "specs": "HEAVY-WEIGHT"
+    },
+    {
+      "name": "A GIANT MAGNET",
+      "description": "Keep it away from any fillings. It generates a powerful electromagnetic field.",
+      "specs": "MEDIUM-WEIGHT"
+    },
+    {
+      "name": "A SOUP LADLE",
+      "description": "Even a mad scientist loves soup. Particularly tomato bisque.",
+      "specs": "LIGHT-WEIGHT"
+    }
+  ],
+  "locations": [
+    {
+      "name": "THE ROOFTOP",
+      "description": "A giant lightning rod is connected to millions of loose wires.",
+      "type": "OUTDOORS"
+    },
+    {
+      "name": "THE GIANT LEVER",
+      "description": "All mad scientist laboratories have a giant lever you can flip from \"OFF\" to \"ON.\"",
+      "type": "INDOORS"
+    },
+    {
+      "name": "THE OPERATING TABLE",
+      "description": "Leather straps could restrain a person here, or a monster.",
+      "type": "INDOORS"
+    }
+  ],
+  "clues": [
+    "The shortest suspect was seen hanging around beneath a sign that says \"OFF.\"",
+    "Vice President Mauve never got near the operating table."
+  ],
+  "statements": [
+    {
+      "speaker": "Vice President Mauve",
+      "statement": "Captain Slate brought a giant magnet."
+    },
+    {
+      "speaker": "Principal Applegreen",
+      "statement": "A brain in a jar was not on the rooftop."
+    },
+    {
+      "speaker": "Captain Slate",
+      "statement": "It's as clear as the moon: Principal Applegreen brought a brain in a jar."
+    }
+  ]
+}

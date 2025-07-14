@@ -1,0 +1,78 @@
+{
+  "gameId": "murdle_010",
+  "title": "EAT, DRINK, AND BE MERRY, FOR A JERK JUST DIED",
+  "description": "Because of a mistake he made with time zones (the hardest problem in all of deductive analysis), Logico missed his flight home. So he went to the village pub, where everyone was celebrating the death of a loud-mouthed jerk. They all wanted to know whodunit (so they could buy him drinks), and Logico was happy to oblige.",
+  "suspects": [
+    {
+      "name": "BROTHER BROWNSTONE",
+      "description": "A monk who has dedicated his life to the church, specifically to making money for it.",
+      "traits": [
+        "5'4\"",
+        "LEFT-HANDED",
+        "DARK BROWN EYES",
+        "DARK BROWN HAIR"
+      ]
+    },
+    {
+      "name": "COMRADE CHAMPAGNE",
+      "description": "A communist and a rich one. Comrade Champagne likes nothing more than to travel the world, sharing the message of communism with his fellow vacationers.",
+      "traits": [
+        "5'11\"",
+        "LEFT-HANDED",
+        "HAZEL EYES",
+        "BLOND HAIR"
+      ]
+    },
+    {
+      "name": "GRANDMASTER ROSE",
+      "description": "A chess grand master who is always plotting his next move. Like how to bump off his next opponent! (1. e4)",
+      "traits": [
+        "5'7\"",
+        "LEFT-HANDED",
+        "DARK BROWN EYES",
+        "DARK BROWN HAIR"
+      ]
+    }
+  ],
+  "weapons": [
+    {
+      "name": "A CORKSCREW",
+      "description": "Once Logico started looking, he saw weapons everywhere.",
+      "specs": "LIGHT-WEIGHT"
+    },
+    {
+      "name": "A BOTTLE OF WINE",
+      "description": "Watch out for stains, because the red doesn't come out.",
+      "specs": "MEDIUM-WEIGHT"
+    },
+    {
+      "name": "A CRYSTAL BALL",
+      "description": "If you look into it, it will tell you your future, so long as your future is a crystal ball.",
+      "specs": "HEAVY-WEIGHT"
+    }
+  ],
+  "locations": [
+    {
+      "name": "THE CENTER BAR",
+      "description": "They're giving out free drinks to celebrate the jerk being dead.",
+      "type": "INDOORS"
+    },
+    {
+      "name": "THE CORNER BOOTH",
+      "description": "Shrouded in shadow, you sit at this booth if you don't want to be seen.",
+      "type": "INDOORS"
+    },
+    {
+      "name": "THE CRAMPED BATHROOM",
+      "description": "So small it seems like it was designed for a discount airplane.",
+      "type": "INDOORS"
+    }
+  ],
+  "clues": [
+    "A red stain was found in a teeny, tiny space.",
+    "The chess player was suspicious of the person who brought a bottle of wine.",
+    "A corkscrew was certainly not in the center bar.",
+    "The suspect with the corkscrew had blond hair.",
+    "They were giving out free drinks right over the jerk's still-warm body!"
+  ]
+}

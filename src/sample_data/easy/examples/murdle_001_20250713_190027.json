@@ -1,0 +1,78 @@
+{
+  "gameId": "murdle_001",
+  "title": "MURDER IN HOLLYWOOD",
+  "description": "When Deductive Logico was invited to a fancy dinner party at a mansion in the Hollywood Hills, he thought he had finally made it. Unfortunately, he was not the guest of honor: he was there to solve the murder of the guest of honor.",
+  "suspects": [
+    {
+      "name": "THE AMAZING AUREOLIN",
+      "description": "A magician who perfected the sawing-your-husband-in-two routine. Then, she made his body disappear.",
+      "traits": [
+        "5'6\"",
+        "LEFT-HANDED",
+        "GREEN EYES",
+        "BLOND HAIR"
+      ]
+    },
+    {
+      "name": "MIDNIGHT III",
+      "description": "The grandson of the founder of Midnight Movies and a self-described self-made man.",
+      "traits": [
+        "5'8\"",
+        "LEFT-HANDED",
+        "DARK BROWN EYES",
+        "DARK BROWN HAIR"
+      ]
+    },
+    {
+      "name": "DAME OBSIDIAN",
+      "description": "A mystery writer whose books have sold more copies than the Bible and Shakespeare combined.",
+      "traits": [
+        "5'4\"",
+        "LEFT-HANDED",
+        "GREEN EYES",
+        "BLACK HAIR"
+      ]
+    }
+  ],
+  "weapons": [
+    {
+      "name": "A FORK",
+      "description": "Actually a lot more gruesome than a knife, if you think about it.",
+      "specs": "LIGHT-WEIGHT"
+    },
+    {
+      "name": "AN ALUMINUM PIPE",
+      "description": "Safer than lead, unless it hits you in the head.",
+      "specs": "MEDIUM-WEIGHT"
+    },
+    {
+      "name": "A HEAVY CANDLE",
+      "description": "Heavy enough to kill, and yet it light-ens the room.",
+      "specs": "MEDIUM-WEIGHT"
+    }
+  ],
+  "locations": [
+    {
+      "name": "THE ENORMOUS BATHROOM",
+      "description": "A bathroom that is bigger than Deductive Logico's house.",
+      "type": "INDOORS"
+    },
+    {
+      "name": "THE BEDROOM",
+      "description": "A California king-sized bed, unmade, stands in a spotless white room.",
+      "type": "INDOORS"
+    },
+    {
+      "name": "THE SCREENING ROOM",
+      "description": "Red velvet seats and a popcorn machine make this the ultimate screening experience.",
+      "type": "INDOORS"
+    }
+  ],
+  "clues": [
+    "The Amazing Aureolin trusted the suspect who brought a fork.",
+    "Midnight III was still brandishing an aluminum pipe when Logico arrived.",
+    "A heavy candle was not found in the bedroom.",
+    "Dame Obsidian was found hiding beneath red velvet seats.",
+    "The body was found inside a marble tub."
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "gameId": "murdle_059",
+  "title": "I YACHT TO KILL YOU FOR THIS",
+  "description": "Detective Logico was invited back onto the yacht to have a talk with Chairman Chalk about his book sales. They were selling, but they weren't selling enough. \"If only,\" the Chairman said, \"we had some way of getting publicity. Oh! One of my sailors was murdered! You could solve that!\"",
+  "suspects": [
+    {
+      "name": "BOOKIE-WINNER GAINSBORO",
+      "description": "He won the Bookington Award for his novel, which he will tell you within two minutes of meeting you. The book is six thousand pages long, and it's about dirt.",
+      "traits": [
+        "6'0\"",
+        "LEFT-HANDED",
+        "HAZEL EYES",
+        "LIGHT BROWN HAIR",
+        "GEMINI"
+      ]
+    },
+    {
+      "name": "CHAIRMAN CHALK",
+      "description": "He figured out the publishing business years ago and never looked back. He called ebooks a \"fad\" and still owns a rotary phone. He is worth a billion dollars.",
+      "traits": [
+        "5'9\"",
+        "RIGHT-HANDED",
+        "BLUE EYES",
+        "WHITE HAIR",
+        "SAGITTARIUS"
+      ]
+    },
+    {
+      "name": "EDITOR IVORY",
+      "description": "The greatest romance editor of all time. She invented the enemies-to-lovers genre, and she was the first person to put a naked man on the cover of a book.",
+      "traits": [
+        "5'6\"",
+        "LEFT-HANDED",
+        "LIGHT BROWN EYES",
+        "GRAY HAIR",
+        "SCORPIO"
+      ]
+    },
+    {
+      "name": "AGENT INK",
+      "description": "An agent with a heart of gold, but a mind for gold, too. She sells more books than Amazon.",
+      "traits": [
+        "5'5\"",
+        "RIGHT-HANDED",
+        "DARK BROWN EYES",
+        "BLACK HAIR",
+        "VIRGO"
+      ]
+    }
+  ],
+  "weapons": [
+    {
+      "name": "A COMMEMORATIVE PEN",
+      "description": "To commemorate that special event... whatever it was. It leaks expensive ink.",
+      "specs": "LIGHTWEIGHT & MADE OF METAL & INK"
+    },
+    {
+      "name": "CONFUSING CONTRACTS",
+      "description": "Legalese so impenetrable it could give you an aneurysm.",
+      "specs": "LIGHTWEIGHT & MADE OF PAPER"
+    },
+    {
+      "name": "A TOTE BAG",
+      "description": "Bibliophile mafiosos use these canvas bags for hits. You can also carry books in them.",
+      "specs": "MEDIUM-WEIGHT & MADE OF CANVAS"
+    },
+    {
+      "name": "AN ANTIQUE ANCHOR",
+      "description": "It's covered in moss and the chain is rusty; it looks awesome.",
+      "specs": "HEAVY-WEIGHT & MADE OF METAL"
+    }
+  ],
+  "locations": [
+    {
+      "name": "THE ENGINE ROOM",
+      "description": "This is a green yacht; it's powered by a nuclear reactor. When the uranium rods are spent, just toss them into the ocean.",
+      "type": "INDOORS"
+    },
+    {
+      "name": "THE DECK",
+      "description": "Look out over the ocean, but not too far or someone might push you-",
+      "type": "OUTDOORS"
+    },
+    {
+      "name": "OVERBOARD",
+      "description": "The open ocean. Home of some of history's favorite drowning victims.",
+      "type": "OUTDOORS"
+    },
+    {
+      "name": "THE DINING HALL",
+      "description": "They've got an award-winning chef because he's banned from working on land.",
+      "type": "INDOORS"
+    }
+  ],
+  "motives": [
+    "BY THE ORDER OF A CULT",
+    "TO STEAL A PRIZED BOOK",
+    "TO COMFORT LOGICO",
+    "TO IMPROVE BOOK SALES"
+  ],
+  "clues": [
+    "Impenetrable legalese was discovered on the deck.",
+    "Logico received a message written by an obviously seasick tipster: ORIETD OYVRI EWNATD TO LAETS A PEDRZI KOOB.",
+    "The person with a commemorative pen wanted to improve book sales.",
+    "A rusty chain was found next to a nuclear reactor. Is that a safety hazard?",
+    "Bookie-Winner Gainsboro wanted to kill by the order of a cult.",
+    "Chairman Chalk did not want to comfort Logico.",
+    "Editor Ivory had not been on the deck.",
+    "Agent Ink was swimming around in a vast, uncaring ocean.",
+    "The sailor was found face down in award-winning food."
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "gameId": "murdle_006",
+  "title": "6. MURDER IN THE ALLEY",
+  "description": "While Deductive Logico was walking home, he was stopped in a dark alley by a dark figure who said that Dame Obsidian was guilty: she'd framed a semi-innocent magician (see Case 1: Murder in Hollywood). Before the dark figure could say more, he was murdered.",
+  "suspects": [
+    {
+      "name": "GENERAL COFFEE",
+      "description": "An espresso connoisseur who once sent his men to die in the jungle to harvest a single bean.",
+      "traits": [
+        "6'0\"",
+        "RIGHT-HANDED",
+        "DARK BROWN EYES",
+        "BALD"
+      ]
+    },
+    {
+      "name": "COSMONAUT BLUSKI",
+      "description": "An ex-Soviet spaceman whose blood flows red. Sure, that's normal, but for him it's patriotic.",
+      "traits": [
+        "6'2\"",
+        "LEFT-HANDED",
+        "DARK BROWN EYES",
+        "BLACK HAIR"
+      ]
+    },
+    {
+      "name": "MIDNIGHT III",
+      "description": "He argues the studio should focus on murder mysteries again to regain their former glory.",
+      "traits": [
+        "5'8\"",
+        "LEFT-HANDED",
+        "DARK BROWN EYES",
+        "DARK BROWN HAIR"
+      ]
+    }
+  ],
+  "weapons": [
+    {
+      "name": "PIANO WIRE",
+      "description": "Somewhere out there, there's a piano missing a wire, and it's about to ruin a concert.",
+      "specs": "LIGHT-WEIGHT"
+    },
+    {
+      "name": "A CROWBAR",
+      "description": "Honestly, they're used more often for crime than anything else.",
+      "specs": "MEDIUM-WEIGHT"
+    },
+    {
+      "name": "A POISONOUS DART",
+      "description": "One stick of this dart and you're dead.",
+      "specs": "LIGHT-WEIGHT"
+    }
+  ],
+  "locations": [
+    {
+      "name": "THE METAL FENCE",
+      "description": "Your typical chain-link fence. What more do you want?",
+      "type": "OUTDOORS"
+    },
+    {
+      "name": "THE DUMPSTER",
+      "description": "It does not smell good. No, it does not. It smells awful, actually.",
+      "type": "OUTDOORS"
+    },
+    {
+      "name": "THE DISTRACTING GRAFFITI",
+      "description": "The dragon-riding-a-motorcycle mural really ruins the noir vibes.",
+      "type": "OUTDOORS"
+    }
+  ],
+  "motives": [],
+  "clues": [
+    "Midnight III had that familiar chain-link pattern pressed into his face.",
+    "Cosmonaut Bluski always packed for outer space: he had a light-weight weapon.",
+    "The Detective Club sent Logico a message written in Detective Code: TVMVIZO XLUUVV WRW MLG SZEV GSV XILDYZI. (See Exhibit A.)",
+    "Cosmonaut Bluski did not bring piano wire: he was tone-deaf.",
+    "Either a crowbar or a poisonous dart was by the distracting graffiti.",
+    "There was an awful smell around the body—even for a body!"
+  ],
+  "statements": []
+}

@@ -1,0 +1,111 @@
+{
+  "gameId": "murdle_056",
+  "title": "THE RUINS OF A VILLAGE",
+  "description": "Detective Logico returned to the quaint little village where he had first followed Dame Obsidian. Now, half the houses were for sale. The other half were empty. A mysterious figure was running around the town, and nobody knew where the shopkeep was. Then Logico found a murder weapon, and he knew what had happened to the shopkeep.",
+  "suspects": [
+    {
+      "name": "MISTER SHADOW",
+      "description": "A silhouette in shadow. He moves like the wind and he looks like the night.",
+      "traits": [
+        "LEFT-HANDED",
+        "GREEN EYES",
+        "AQUARIUS"
+      ]
+    },
+    {
+      "name": "FATHER MANGO",
+      "description": "He has taken a vow of poverty, but he drives a BMW. He's taken a vow of obedience, but he has a staff of twenty-five. He's taken a vow of chastity, too, which is why he's on vacation.",
+      "traits": [
+        "5'10\"",
+        "LEFT-HANDED",
+        "DARK BROWN EYES",
+        "BALD",
+        "TAURUS"
+      ]
+    },
+    {
+      "name": "LORD LAVENDER",
+      "description": "A politically conservative MP in the House of Lords, as well as the musical theater composer behind such hits as The Shadow of the Orchestra: Everything Dies.",
+      "traits": [
+        "5'9\"",
+        "RIGHT-HANDED",
+        "GREEN EYES",
+        "GRAY HAIR",
+        "VIRGO"
+      ]
+    },
+    {
+      "name": "OFFICER COPPER",
+      "description": "The best part of being a policewoman criminal is that you can cut out the middleman and fail to investigate your own crimes.",
+      "traits": [
+        "5'5\"",
+        "RIGHT-HANDED",
+        "BLUE EYES",
+        "BLOND HAIR",
+        "ARIES"
+      ]
+    }
+  ],
+  "weapons": [
+    {
+      "name": "YARN",
+      "description": "Sometimes, when you realize you've missed a stitch, you could just strangle somebody.",
+      "specs": "LIGHT-WEIGHT & MADE OF WOOL"
+    },
+    {
+      "name": "AN ANTIQUE FLINTLOCK",
+      "description": "It takes only twenty-five minutes to load this.",
+      "specs": "MEDIUM-WEIGHT & MADE OF METAL"
+    },
+    {
+      "name": "A KNITTING NEEDLE",
+      "description": "You could knit a sweater or a garrote.",
+      "specs": "LIGHT-WEIGHT & MADE OF METAL"
+    },
+    {
+      "name": "A BOTTLE OF CYANIDE",
+      "description": "Almond-scented poison in a quaint little bottle.",
+      "specs": "NON-WEIGHTED & MADE OF LIQUID/CHEMICAL"
+    }
+  ],
+  "locations": [
+    {
+      "name": "THE NEW DEVELOPMENT",
+      "description": "This new development will either revitalize the community or ruin it, depending on who you ask.",
+      "type": "OUTDOORS"
+    },
+    {
+      "name": "THE ANCIENT RUINS",
+      "description": "Is it possible they were some kind of beacon?",
+      "type": "OUTDOORS"
+    },
+    {
+      "name": "THE CHAPEL",
+      "description": "A tiny church with stained-glass windows and secrets.",
+      "type": "INDOORS"
+    },
+    {
+      "name": "THE QUAINT GARDEN",
+      "description": "A quaint little garden for growing herbs and flowers. But there might have been some new mounds of dirt lately, of a suspicious size and shape.",
+      "type": "OUTDOORS"
+    }
+  ],
+  "motives": [
+    "TO STEAL AN IDEA",
+    "AS PART OF A REAL ESTATE SCAM",
+    "TO STEAL A BODY",
+    "TO SCARE A BEAR AWAY"
+  ],
+  "clues": [
+    "Whoever had yarn was right-handed.",
+    "Lord Lavender had not been in the quaint garden.",
+    "Whoever wanted to steal an idea had green eyes.",
+    "Father Mango was seen hanging around beneath a stained-glass window.",
+    "The person who wanted to steal a body was in the ancient ruins.",
+    "Whoever was in the new development had a medium-weight weapon.",
+    "Whoever might kill as part of a real estate scam was an Aquarius.",
+    "If you are going to scare a bear away, you are going to need a weapon made of metal.",
+    "Logico found a knitting needle that was covered in blood."
+  ],
+  "statements": []
+}

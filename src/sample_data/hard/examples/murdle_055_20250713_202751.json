@@ -1,0 +1,112 @@
+{
+  "gameId": "murdle_055",
+  "title": "UNUSUAL WEBBING, UNNATURAL CRIMES",
+  "description": "Camping alone in a national park, Detective Logico dreamt about ancient ruins and a park ranger being murdered. When he woke up, he saw the dream had come true.",
+  "suspects": [
+    {
+      "name": "MAYOR HONEY",
+      "description": "He's on a retreat in the woods to reevaluate his political prospects in the wake of the latest scandal (murder).",
+      "traits": [
+        "6'0\"",
+        "LEFT-HANDED",
+        "HAZEL EYES",
+        "BROWN HAIR",
+        "SCORPIO"
+      ]
+    },
+    {
+      "name": "PRINCIPAL APPLEGREEN",
+      "description": "A strict principal about everything except getting away with murder. His hands are always covered in chalk.",
+      "traits": [
+        "5'11\"",
+        "RIGHT-HANDED",
+        "BLUE EYES",
+        "BLOND HAIR",
+        "LIBRA"
+      ]
+    },
+    {
+      "name": "COACH RASPBERRY",
+      "description": "One of the best coaches this side of the Mississippi, regardless of which side you're on.",
+      "traits": [
+        "6'0\"",
+        "LEFT-HANDED",
+        "BLUE EYES",
+        "BLOND HAIR",
+        "ARIES"
+      ]
+    },
+    {
+      "name": "CHANCELLOR TUSCANY",
+      "description": "As the head of Deduction College, she has deduced the best way to play the game of academic power politics: reward your allies, punish your enemies, and don't be afraid to kill.",
+      "traits": [
+        "5'5\"",
+        "LEFT-HANDED",
+        "GREEN EYES",
+        "GRAY HAIR",
+        "LIBRA"
+      ]
+    }
+  ],
+  "weapons": [
+    {
+      "name": "A POISONOUS SPIDER",
+      "description": "Definitely not an accident: its unusual webbing shows that this spider is not native to these woods.",
+      "specs": "LIGHTWEIGHT • MADE OF A LIVE ANIMAL"
+    },
+    {
+      "name": "A PAIR OF GARDENING SHEARS",
+      "description": "Rusty, heavy, and dangerous. You could trim a hedge or years off someone's life.",
+      "specs": "MEDIUM-WEIGHT • MADE OF METAL"
+    },
+    {
+      "name": "A BOW AND ARROW",
+      "description": "Look at this thing: what a beauty! Look at the feathers on the arrows as they fly toward your head.",
+      "specs": "MEDIUM-WEIGHT • MADE OF ORGANIC, LINEN, & FEATHERS"
+    },
+    {
+      "name": "A CLIMBING AXE",
+      "description": "You could climb up a cliff and behold the beauty of the natu-ral landscape. Or kill someone.",
+      "specs": "HEAVY-WEIGHT • MADE OF METAL & WOOD"
+    }
+  ],
+  "locations": [
+    {
+      "name": "THE ANCIENT RUINS",
+      "description": "Maybe they are some kind of marker to tell aliens locations of interest?",
+      "type": "OUTDOORS"
+    },
+    {
+      "name": "THE HOT SPRINGS SPA",
+      "description": "People travel from hundreds of miles to take pictures of them-selves in these hot springs.",
+      "type": "INDOORS"
+    },
+    {
+      "name": "THE PARTY LAKE",
+      "description": "People have been known to drown in this lake, so people have been known to hide bod-ies in its ice-cold waters, too.",
+      "type": "OUTDOORS"
+    },
+    {
+      "name": "THE ENTRANCE GATE",
+      "description": "A huge gate that advertises a place where you can disconnect from the modern world, for a price.",
+      "type": "OUTDOORS"
+    }
+  ],
+  "motives": [
+    "TO ROB THE VICTIM",
+    "AS PART OF A REAL ESTATE SCAM",
+    "TO SEE IF THEY COULD",
+    "TO ESCAPE BLACKMAIL"
+  ],
+  "clues": [
+    "Logico had seen poisoned spiders used before, but only ever as part of a real estate scam.",
+    "Principal Applegreen was not at the entrance gate.",
+    "The shortest suspect had a climbing axe.",
+    "Traces of a weapon made of a live animal were found in the ancient ruins.",
+    "The suspect who wanted to see if they could had a weapon made at least partially of ceramic.",
+    "Coach Raspberry was seen swimming in ice-cold water.",
+    "The gardening shears were right-handed.",
+    "The suspect who wanted to escape blackmail was seen outdoors.",
+    "Some unusual webbing was found beside the forest ranger."
+  ]
+}

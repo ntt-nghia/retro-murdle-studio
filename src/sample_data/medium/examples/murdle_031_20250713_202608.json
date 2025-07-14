@@ -1,0 +1,93 @@
+{
+  "gameId": "murdle_031",
+  "title": "THE NEW MOON MURDER",
+  "description": "On his first case with the Investigation Institute, they sent Deductive Logico to the darkest woods he'd never seen. From the shadows, he watched a witches' sabbath, thinking he was totally hidden. So he was shocked when three witches stopped the ceremony, walked over to him, and asked him to solve the murder of their sister witch.",
+  "suspects": [
+    {
+      "name": "LADY VIOLET",
+      "description": "The heiress of the Violet Isles, the largest extra-judicial territory in the world.",
+      "traits": [
+        "5'0\"",
+        "RIGHT-HANDED",
+        "BLUE EYES",
+        "BLOND HAIR",
+        "VIRGO"
+      ]
+    },
+    {
+      "name": "VICE PRESIDENT MAUVE",
+      "description": "A vice president of TekCo Futures. If she asks you to step into her metaverse, run.",
+      "traits": [
+        "5'8\"",
+        "RIGHT-HANDED",
+        "DARK BROWN EYES",
+        "BLACK HAIR",
+        "TAURUS"
+      ]
+    },
+    {
+      "name": "THE DUCHESS OF VERMILLION",
+      "description": "A tall, old woman with tall, old secrets. If she is the murderer, it certainly wouldn't be the first time.",
+      "traits": [
+        "5'9\"",
+        "LEFT-HANDED",
+        "GRAY EYES",
+        "WHITE HAIR",
+        "PISCES"
+      ]
+    }
+  ],
+  "weapons": [
+    {
+      "name": "A CAULDRON",
+      "description": "If you can pick it up, you could hit someone with it. Or you can just give them a sip.",
+      "specs": "HEAVY-WEIGHT"
+    },
+    {
+      "name": "A LOG",
+      "description": "A big, heavy oak log. Somebody killed the tree so that the tree could kill somebody.",
+      "specs": "HEAVY-WEIGHT"
+    },
+    {
+      "name": "A BROOM",
+      "description": "People say that witches fly on these, but Logico's only swept with them.",
+      "specs": "MEDIUM-WEIGHT"
+    }
+  ],
+  "locations": [
+    {
+      "name": "THE CENTRAL FIRE",
+      "description": "Scry the pyre fire, friar. Say that three times fast.",
+      "type": "OUTDOORS"
+    },
+    {
+      "name": "THE ANCIENT RUINS",
+      "description": "Covered in moss, but still recognizably those same ruins.",
+      "type": "OUTDOORS"
+    },
+    {
+      "name": "THE THICK FOREST",
+      "description": "The woods are lovely, dark, and deep, but an owl finds it all a hoot.",
+      "type": "OUTDOORS"
+    }
+  ],
+  "motives": [],
+  "clues": [
+    "A Virgo was standing beneath an owl, probably organizing something, because that's how they are.",
+    "Surprisingly, a cauldron was not in the central fire."
+  ],
+  "statements": [
+    {
+      "speaker": "Lady Violet",
+      "statement": "Don't believe the commoners: the Duchess of Vermillion brought a broom."
+    },
+    {
+      "speaker": "Vice President Mauve",
+      "statement": "Well, I didn't bring a broom."
+    },
+    {
+      "speaker": "The Duchess of Vermillion",
+      "statement": "And I didn't bring a log."
+    }
+  ]
+}

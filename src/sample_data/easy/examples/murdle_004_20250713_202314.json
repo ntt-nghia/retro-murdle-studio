@@ -1,0 +1,78 @@
+{
+  "gameId": "murdle_004",
+  "title": "THE LAST TRAIN TO MURDER",
+  "description": "Once he got back to the mainland, Deductive Logico took a train. Unfortunately, somebody else took the life of the conductor. Now, the train was racing down the tracks, and nobody knew what to do except Logico: he knew he had to crack the case.",
+  "suspects": [
+    {
+      "name": "VICE PRESIDENT MAUVE",
+      "description": "A vice president of TekCo Futures. If she asks you to step into her metaverse, politely decline.",
+      "traits": [
+        "5'8\"",
+        "RIGHT-HANDED",
+        "DARK BROWN EYES",
+        "BLACK HAIR"
+      ]
+    },
+    {
+      "name": "CHEF AUBERGINE",
+      "description": "It is said that she once killed her husband, cooked him, and then served him at her restaurant. It's not true, but just the fact that it's said about her tells you something.",
+      "traits": [
+        "5'2\"",
+        "RIGHT-HANDED",
+        "BLUE EYES",
+        "BLOND HAIR"
+      ]
+    },
+    {
+      "name": "PHILOSOPHER BONE",
+      "description": "A dashing, dark philosopher who pioneered the ethical theory that he is not responsible for his actions, but he should be paid for them.",
+      "traits": [
+        "5'1\"",
+        "RIGHT-HANDED",
+        "LIGHT BROWN EYES",
+        "BALD"
+      ]
+    }
+  ],
+  "weapons": [
+    {
+      "name": "AN IMPORTED ITALIAN KNIFE",
+      "description": "It looks priceless, and that's technically true, because it's worthless.",
+      "specs": "LIGHT-WEIGHT"
+    },
+    {
+      "name": "LEATHER LUGGAGE",
+      "description": "This luggage is hideous. The leather looked way better on the cow.",
+      "specs": "HEAVY WEIGHT"
+    },
+    {
+      "name": "A ROLLED-UP NEWSPAPER (WITH A CROWBAR INSIDE)",
+      "description": "You think, that's just a newspaper! But then...wham!",
+      "specs": "MEDIUM-WEIGHT"
+    }
+  ],
+  "locations": [
+    {
+      "name": "THE LOCOMOTIVE",
+      "description": "The deafening sound of the steam engine prevents Deductive Logico from being able to think.",
+      "type": "INDOORS"
+    },
+    {
+      "name": "THE CABOOSE",
+      "description": "The back of the train lets you see where you're leaving, and what you're leaving behind...",
+      "type": "INDOORS"
+    },
+    {
+      "name": "THE ROOF",
+      "description": "What with the wind and the smoke from the smokestack, it's hard to get your bearings up here.",
+      "type": "OUTDOORS"
+    }
+  ],
+  "clues": [
+    "A page from the classifieds was found near the heat of a steam engine.",
+    "Chef Aubergine and the person who brought leather luggage had a history together.",
+    "The tallest suspect never set foot in the caboose.",
+    "Philosopher Bone was seen wandering around outdoors.",
+    "The conductor had been stabbed to death."
+  ]
+}

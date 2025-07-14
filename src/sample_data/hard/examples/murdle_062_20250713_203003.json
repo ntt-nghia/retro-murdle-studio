@@ -1,0 +1,113 @@
+{
+  "gameId": "murdle_062",
+  "title": "YOU CAN GO HOME AGAIN",
+  "description": "Detective Logico thought about giving up, moving back home, and becoming an insurance adjuster. And actually, there was a job opening in town: an insurance adjuster had just been killed. Logico thought about whether he wanted the job while he investigated.",
+  "suspects": [
+    {
+      "name": "FORMER MAYOR HONEY",
+      "description": "Yes, when he was mayor, he murdered somebody, but once he resigned all blew over.",
+      "traits": [
+        "6'0\"",
+        "LEFT-HANDED",
+        "HAZEL EYES",
+        "LIGHT BROWN HAIR",
+        "SCORPIO"
+      ]
+    },
+    {
+      "name": "OFFICER COPPER",
+      "description": "Ever since she killed that person, her employability as a cop has been mildly reduced.",
+      "traits": [
+        "5'8\"",
+        "RIGHT-HANDED",
+        "BLUE EYES",
+        "BLOND HAIR",
+        "ARIES"
+      ]
+    },
+    {
+      "name": "MR. ORDINARY BLUE SKY",
+      "description": "Totally ordinary American man with thick Russian accent. Pay no mind.",
+      "traits": [
+        "6'2\"",
+        "LEFT-HANDED",
+        "DARK BROWN EYES",
+        "BLACK HAIR",
+        "ARIES"
+      ]
+    },
+    {
+      "name": "DR. CRIMSON",
+      "description": "She's the smartest doctor she's ever met, according to her, and she's probably right. But as a murderer, even she can't figure out a way to get a job somewhere else.",
+      "traits": [
+        "5'9\"",
+        "LEFT-HANDED",
+        "GREEN EYES",
+        "RED HAIR",
+        "AQUARIUS"
+      ]
+    }
+  ],
+  "weapons": [
+    {
+      "name": "A FORK",
+      "description": "A lot more gruesome than a knife, if you think about it.",
+      "specs": "LIGHT-WEIGHT & MADE OF METAL"
+    },
+    {
+      "name": "AN ANTIQUE ANCHOR",
+      "description": "It's covered in moss and the chain is rusty. It looks pretty cool.",
+      "specs": "HEAVY-WEIGHT & MADE OF METAL"
+    },
+    {
+      "name": "AN ALUMINUM PIPE",
+      "description": "Safer than lead, unless it hits you in the head.",
+      "specs": "HEAVY-WEIGHT & MADE OF METAL"
+    },
+    {
+      "name": "AN ORDINARY BRICK",
+      "description": "Just a regular, ordinary brick. Nothing special. Just a brick.",
+      "specs": "MEDIUM-WEIGHT & MADE OF BRICK"
+    }
+  ],
+  "locations": [
+    {
+      "name": "A USED CAR LOT",
+      "description": "The salesman tells you the cars will not explode, and that they're also sold as is.",
+      "type": "OUTDOORS"
+    },
+    {
+      "name": "THE RUN-DOWN MALL",
+      "description": "The fountain is dry and only two stores are open: a payday loan company and one that buys gold.",
+      "type": "INDOORS"
+    },
+    {
+      "name": "THE OLD FACTORY",
+      "description": "They used to build gadgets and gizmos, but now the gadgets and gizmos are all apps.",
+      "type": "INDOORS"
+    },
+    {
+      "name": "A SECONDHAND SHOP",
+      "description": "Most of the stuff in here looks third-hand, even the moths.",
+      "type": "INDOORS"
+    }
+  ],
+  "motives": [
+    "FOR MONEY",
+    "TO PROTECT A SECRET",
+    "TO RETURN AN INSULT",
+    "WHILE BLACKED OUT"
+  ],
+  "clues": [
+    "Mr. Ordinary Blue Sky wanted to protect a secret. But what could his secret be?",
+    "The suspect in the run-down mall was a member of the Underground Power.",
+    "Whoever had an ordinary brick was right-handed. (It was a right-handed brick.)",
+    "A Scorpio had the fork. Scorpios collect forks.",
+    "An Aquarius was beside a vehicle they had been assured would not explode.",
+    "The brick had clearly been in the old factory.",
+    "Members of the Underground Power were not allowed to touch aluminum.",
+    "The person with an antique anchor wanted to return an insult.",
+    "Whoever might have killed while blacked out was right-handed.",
+    "The body of the insurance adjuster was covered in moths."
+  ]
+}

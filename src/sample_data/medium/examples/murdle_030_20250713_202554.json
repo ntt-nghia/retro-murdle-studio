@@ -1,0 +1,93 @@
+{
+  "gameId": "murdle_030",
+  "title": "THE CASE OF THE DEFINITELY DEAD PRESIDENT",
+  "description": "Deductive Logico went to the president's office and said, \"I'm here to meet with the president.\" Unfortunately, they said, \"The president's dead.\" But nobody had left the room. So instead of meeting with the president, he worked to solve his murder.",
+  "suspects": [
+    {
+      "name": "NUMEROLOGIST NIGHT",
+      "description": "A mathematical and esoteric prodigy. Not only do they know the value of Z, they know the meaning of Z.",
+      "traits": [
+        "5'9\"",
+        "LEFT-HANDED",
+        "BLUE EYES",
+        "DARK BROWN HAIR",
+        "PISCES"
+      ]
+    },
+    {
+      "name": "HERBALIST ONYX",
+      "description": "In her greenhouse, she's grown every kind of plant required in the culinary, magick, and poisoning arts.",
+      "traits": [
+        "5'0\"",
+        "RIGHT-HANDED",
+        "DARK BROWN EYES",
+        "BLACK HAIR",
+        "VIRGO"
+      ]
+    },
+    {
+      "name": "HIGH ALCHEMIST RAVEN",
+      "description": "There's an old joke that all alchemists are high alchemists. Raven hates it.",
+      "traits": [
+        "5'8\"",
+        "RIGHT-HANDED",
+        "LIGHT BROWN EYES",
+        "DARK BROWN HAIR",
+        "PISCES"
+      ]
+    }
+  ],
+  "weapons": [
+    {
+      "name": "A HYPNOTIC POCKET WATCH",
+      "description": "If you look deeply into this watch, you can tell the time.",
+      "specs": "LIGHT-WEIGHT"
+    },
+    {
+      "name": "A DECK OF MAROT CARDS",
+      "description": "You can use these murder-themed tarot cards to tell your fortune.",
+      "specs": "LIGHT-WEIGHT"
+    },
+    {
+      "name": "A PSEUDO-SCIENTIFIC APPARATUS",
+      "description": "It measures quantonic currents to evaluate your inner blaxons.",
+      "specs": "HEAVY-WEIGHT"
+    }
+  ],
+  "locations": [
+    {
+      "name": "THE BOOK LADDER",
+      "description": "Climb up and grab a book, or just slide around the room yelling, \"Wahoo!\"",
+      "type": "INDOORS"
+    },
+    {
+      "name": "THE COUCH",
+      "description": "A faux-leather couch, great for dozing off in the middle of the day.",
+      "type": "INDOORS"
+    },
+    {
+      "name": "THE DESK",
+      "description": "Topped with lots of important paperwork and a computer from the eighties.",
+      "type": "INDOORS"
+    }
+  ],
+  "motives": [],
+  "clues": [
+    "The suspect with the pseudo-scientific apparatus was born on September 7. (See Exhibit B.)",
+    "A careful search revealed a fortune-telling card wedged between two faux-leather seat cushions."
+  ],
+  "statements": [
+    {
+      "speaker": "Numerologist Night",
+      "statement": "High Alchemist Raven was behind his desk."
+    },
+    {
+      "speaker": "Herbalist Onyx",
+      "statement": "Numerologist Night was on the book ladder."
+    },
+    {
+      "speaker": "High Alchemist Raven",
+      "statement": "Alchemically speaking, a pseudo-scientific apparatus was on the book ladder."
+    }
+  ]
+}

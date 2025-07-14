@@ -1,0 +1,78 @@
+{
+  "gameId": "murdle_009",
+  "title": "HEDGE YOUR BETS, THE CONSTABLE CRIED",
+  "description": "While Logico was wondering if it were possible Dame Obsidian was actually innocent, he heard a scream from her hedge maze. He ran into it, got lost, figured it out, and then found Dame Obsidian, who he was now certain was innocent, on account of she was dead.",
+  "suspects": [
+    {
+      "name": "CONSTABLE COPPER",
+      "description": "The identical twin of Officer Copper. When their parents divorced, she moved across the ocean. But they have so much in common. Same height, same job, same propensity to violence.",
+      "traits": [
+        "5'5\"",
+        "RIGHT-HANDED",
+        "BLUE EYES",
+        "BLOND HAIR"
+      ]
+    },
+    {
+      "name": "LORD LAVENDER",
+      "description": "A politically conservative MP in the House of Lords, as well as the musical theater composer behind such hits as Dogs and Mr. Moses Megastar.",
+      "traits": [
+        "5'9\"",
+        "RIGHT-HANDED",
+        "GREEN EYES",
+        "GRAY HAIR"
+      ]
+    },
+    {
+      "name": "MISS SAFFRON",
+      "description": "Gorgeous and stunning, but maybe not all there in the brains department. Or maybe that's what she wants you to think. Or maybe she wants you to think that's what she wants you to think.",
+      "traits": [
+        "5'2\"",
+        "LEFT-HANDED",
+        "HAZEL EYES",
+        "BLOND HAIR"
+      ]
+    }
+  ],
+  "weapons": [
+    {
+      "name": "A PAIR OF GARDENING SHEARS",
+      "description": "They're getting a little rusty, and they might leave screws behind.",
+      "specs": "MEDIUM-WEIGHT"
+    },
+    {
+      "name": "A FLOWERPOT",
+      "description": "If you use this to murder, please repot the flowers first.",
+      "specs": "MEDIUM-WEIGHT"
+    },
+    {
+      "name": "POISONED TEA",
+      "description": "Enjoy a nice sip of tea, followed by a long, long nap.",
+      "specs": "LIGHT-WEIGHT"
+    }
+  ],
+  "locations": [
+    {
+      "name": "THE FOUNTAIN",
+      "description": "A fountain at the center of the maze, if you can find it.",
+      "type": "OUTDOORS"
+    },
+    {
+      "name": "THE LOOKOUT TOWER",
+      "description": "From above the garden, you can see everything. Plus, there's a map on the wall that reveals (some of) the maze's secrets.",
+      "type": "INDOORS"
+    },
+    {
+      "name": "THE ANCIENT RUINS",
+      "description": "These same old ruins again! They were here long before the rest of the maze.",
+      "type": "OUTDOORS"
+    }
+  ],
+  "clues": [
+    "Poisoned tea was certainly not in the ancient ruins, nor was it in the fountain.",
+    "The tallest suspect and the person who brought a pair of gardening shears had a history together.",
+    "A flowerpot was not in the ancient ruins. Or was it? (It wasn't.)",
+    "Miss Saffron was addicted to a product made by a friend of hers, Earl Grey, and she added just a little poison.",
+    "Dame Obsidian's body was found beside a blood-splattered map."
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "gameId": "murdle_027",
+  "title": "A MYSTERIOUS MURDER IN THE MYSTERIOUS WOODS",
+  "description": "Driving through the mysterious woods gave Deductive Logico the chills, but maybe that was because his AC was on full blast. Pretty soon, he had to pull over, partially to solve the murder of a hitchhiker, and partially because his car died.",
+  "suspects": [
+    {
+      "name": "COACH RASPBERRY",
+      "description": "One of the best coaches this side of the Mississippi, regardless of which side you're on.",
+      "traits": [
+        "6'0\"",
+        "LEFT-HANDED",
+        "BLUE EYES",
+        "BLOND HAIR",
+        "ARIES"
+      ]
+    },
+    {
+      "name": "OFFICER COPPER",
+      "description": "The best part of being a policewoman criminal is that you can cut out the middleman and fail to investigate your own crimes.",
+      "traits": [
+        "5'5\"",
+        "RIGHT-HANDED",
+        "BLUE EYES",
+        "BLOND HAIR",
+        "ARIES"
+      ]
+    },
+    {
+      "name": "GRANDMASTER ROSE",
+      "description": "A chess grand master who is always plotting his next move. Like how to bump off his next opponent! (1... e5)",
+      "traits": [
+        "5'7\"",
+        "LEFT-HANDED",
+        "DARK BROWN EYES",
+        "DARK BROWN HAIR",
+        "SCORPIO"
+      ]
+    }
+  ],
+  "weapons": [
+    {
+      "name": "A SHOVEL",
+      "description": "A multi-use tool: kill someone and bury them with the same shovel!",
+      "specs": "MEDIUM-WEIGHT"
+    },
+    {
+      "name": "A RITUAL DAGGER",
+      "description": "It's made out of some ancient metal that Logico can't identify.",
+      "specs": "MEDIUM-WEIGHT & MADE OF ANCIENT METAL"
+    },
+    {
+      "name": "A POISONOUS SPIDER",
+      "description": "Its unusual webbing shows it's not native to these woods.",
+      "specs": "LIGHT-WEIGHT"
+    }
+  ],
+  "locations": [
+    {
+      "name": "THE SKULL ROCK",
+      "description": "A rock that looks like a skull. Is it natural, or did someone carve it?",
+      "type": "OUTDOORS"
+    },
+    {
+      "name": "THE ANCIENT RUINS",
+      "description": "Wherever these stones appear, you know somebody is getting murdered nearby.",
+      "type": "OUTDOORS"
+    },
+    {
+      "name": "THE ONLY ROAD",
+      "description": "A twisting, winding, half-paved road through the woods.",
+      "type": "OUTDOORS"
+    }
+  ],
+  "motives": [],
+  "clues": [
+    "Logico caught a glimpse of the suspect with the shovel, but all he could see was that his eyes weren't blue.",
+    "A poisonous spider was not on the only road."
+  ],
+  "statements": [
+    {
+      "speaker": "Grandmaster Rose",
+      "statement": "You must study the moves of the pieces. For example, Officer Copper was at the skull rock!"
+    },
+    {
+      "speaker": "Coach Raspberry",
+      "statement": "Well, by golly, a shovel was at the ancient ruins."
+    },
+    {
+      "speaker": "Officer Copper",
+      "statement": "My statement? I brought a poisonous spider."
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "gameId": "murdle_026",
+  "title": "THE MURDER OF A MAILMAN",
+  "description": "Deductive Logico went to check his PO box, but instead of finding a royalty check for Murdle: Volume 1, he found that a mailman had been killed, and the whole place was closed. Neither rain nor shine, thought Logico, but they close at the first sign of murder...",
+  "suspects": [
+    {
+      "name": "DR. CRIMSON",
+      "description": "She's the smartest doctor she's ever met, according to her, and she's probably right. Yeah, her diet is horrible, but if she has a heart attack, she'll operate on herself.",
+      "traits": [
+        "5'9\"",
+        "LEFT-HANDED",
+        "GREEN EYES",
+        "RED HAIR",
+        "AQUARIUS"
+      ]
+    },
+    {
+      "name": "MAYOR HONEY",
+      "description": "He knows where the bodies are buried, and he makes sure they always vote for him.",
+      "traits": [
+        "6'0\"",
+        "LEFT-HANDED",
+        "HAZEL EYES",
+        "LIGHT BROWN HAIR",
+        "SCORPIO"
+      ]
+    },
+    {
+      "name": "GENERAL COFFEE",
+      "description": "An espresso connoisseur who prefers the smell of coffee to napalm in the morning.",
+      "traits": [
+        "6'0\"",
+        "RIGHT-HANDED",
+        "DARK BROWN EYES",
+        "BALD",
+        "SAGITTARIUS"
+      ]
+    }
+  ],
+  "weapons": [
+    {
+      "name": "A LETTER OPENER",
+      "description": "A sharp knife used by people who won't just rip their letters open.",
+      "specs": "LIGHT-WEIGHT"
+    },
+    {
+      "name": "A STAMP STAMP",
+      "description": "A stamp for stamping over stamps.",
+      "specs": "MEDIUM-WEIGHT"
+    },
+    {
+      "name": "A HEAVY PACKAGE",
+      "description": "With a nice red ribbon that'll conceal blood stains.",
+      "specs": "HEAVY-WEIGHT"
+    }
+  ],
+  "locations": [
+    {
+      "name": "A MAIL TRUCK",
+      "description": "Practically indestructible, so it's great for joyrides, so long as you're not the one paying for gas.",
+      "type": "INDOORS"
+    },
+    {
+      "name": "THE LONG LINE",
+      "description": "People standing in line, waiting to mail their letters.",
+      "type": "OUTDOORS"
+    },
+    {
+      "name": "THE SORTING ROOM",
+      "description": "Where the postal workers sort the junk mail, bills, and catalogs using a great machine.",
+      "type": "INDOORS"
+    }
+  ],
+  "motives": [],
+  "clues": [
+    "Letter openers were not allowed in the sorting room, ever since \"the Incident,\" and that rule was not broken today.",
+    "The suspect with the heavy package was self-conscious about their baldness and would prefer it not be mentioned in clues."
+  ],
+  "statements": [
+    {
+      "speaker": "Dr. Crimson",
+      "statement": "I brought a stamp stamp."
+    },
+    {
+      "speaker": "Mayor Honey",
+      "statement": "Dr. Crimson was not in a mail truck."
+    },
+    {
+      "speaker": "General Coffee",
+      "statement": "A letter opener was in a mail truck."
+    }
+  ]
+}

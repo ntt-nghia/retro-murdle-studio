@@ -1,0 +1,108 @@
+{
+  "gameId": "murdle_061",
+  "title": "THE ISLAND OF BAD DREAMS",
+  "description": "Detective Logico never wanted to again lay eyes upon the island where Inspector Bratino had died, but when he closed his eyes, it was all he could see. He had to go back, and when he did, there was another murder for him to solve, and another mysterious figure running around.",
+  "suspects": [
+    {
+      "name": "MISTER SHADOW",
+      "description": "A silhouette in shadow. He moves like the wind and he looks like the night.",
+      "traits": [
+        "LEFT-HANDED",
+        "GREEN EYES",
+        "AQUARIUS"
+      ]
+    },
+    {
+      "name": "PRESIDENT AMARANTH",
+      "description": "The literal French president. Amaranth loves spending time with his constituents, especially a certain one percent of them.",
+      "traits": [
+        "5'10\"",
+        "RIGHT-HANDED",
+        "GRAY EYES",
+        "RED HAIR",
+        "GEMINI"
+      ]
+    },
+    {
+      "name": "CAPTAIN SLATE",
+      "description": "A real-life astronaut. The first woman to travel around the dark side of the moon, and also the first to be suspected of murdering her copilot.",
+      "traits": [
+        "5'5\"",
+        "LEFT-HANDED",
+        "DARK BROWN EYES",
+        "DARK BROWN HAIR",
+        "AQUARIUS"
+      ]
+    },
+    {
+      "name": "MIDNIGHT III",
+      "description": "He learned filmmaking from his father and business from his grandfather. But at murder, he's a natural.",
+      "traits": [
+        "5'8\"",
+        "LEFT-HANDED",
+        "DARK BROWN EYES",
+        "DARK BROWN HAIR",
+        "LIBRA"
+      ]
+    }
+  ],
+  "weapons": [
+    {
+      "name": "AN AXE",
+      "description": "Left on the island. Maybe for good reason."
+    },
+    {
+      "name": "A BROOM",
+      "description": "People say that witches fly on these, but Logico's only swept with them."
+    },
+    {
+      "name": "A CRYSTAL SKULL",
+      "description": "Maybe an actual alien's skull, or maybe just a fun art project.",
+      "specs": "MEDIUM-WEIGHT & MADE OF CRYSTAL"
+    },
+    {
+      "name": "AN 'ALIEN' ARTIFACT",
+      "description": "Maybe real, probably fake. Definitely made of plastic.",
+      "specs": "HEAVY-WEIGHT & MADE OF PLASTIC"
+    }
+  ],
+  "locations": [
+    {
+      "name": "THE DEAD WOODS",
+      "description": "You can almost feel the ancient ruins buried within these dead woods.",
+      "type": "OUTDOORS"
+    },
+    {
+      "name": "THE WRECKED CRUISE SHIP",
+      "description": "Once a fashionable cruise liner, now wrecked and rusted.",
+      "type": "INDOORS"
+    },
+    {
+      "name": "THE RUINED CHURCH",
+      "description": "The roof has caved in and the church is spoiled.",
+      "type": "INDOORS"
+    },
+    {
+      "name": "THE CLIFFSIDE LIGHTHOUSE",
+      "description": "They have now replaced the fire with an automatic LED light that is significantly cheaper.",
+      "type": "INDOORS"
+    }
+  ],
+  "motives": [
+    "TO CLOSE A BUSINESS DEAL",
+    "TO SAVE FACE",
+    "TO ROB A GRAVE",
+    "TO HELP WIN A WAR"
+  ],
+  "clues": [
+    "The suspect who wanted to help win a war had a weapon made of plastic.",
+    "An Aquarius was lit by an LED light. It was not flattering.",
+    "Captain Slate was found babbling in the dead woods.",
+    "Midnight III did not want to save face. He didn't care about face.",
+    "Whoever was beneath a caved-in roof was right-handed.",
+    "An axe was found near a rusted hull.",
+    "Whoever was in the ruined church was right-handed.",
+    "A crystal skull was glittering in the moonlight of the outdoors.",
+    "A piece of straw was found by the body."
+  ]
+}

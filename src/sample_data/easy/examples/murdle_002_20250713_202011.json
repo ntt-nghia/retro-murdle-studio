@@ -1,0 +1,78 @@
+{
+  "gameId": "murdle_002",
+  "title": "AND THEN THERE WAS ANOTHER ONE",
+  "description": "Deductive Logico was thrilled when he heard an old man had been killed on a secluded island. Of course, that was bad, but Logico had always wanted to solve one of those secluded island murders, and this was his big chance.",
+  "suspects": [
+    {
+      "name": "SIGNOR EMERALD",
+      "description": "An Italian jeweler of great renown, Signor Emerald has traveled the world in search of rare, precious stones, which are always falling out of his pockets.",
+      "traits": [
+        "5'8\"",
+        "LEFT-HANDED",
+        "LIGHT BROWN EYES",
+        "BLACK HAIR"
+      ]
+    },
+    {
+      "name": "FATHER MANGO",
+      "description": "He has taken a vow of poverty, but he drives a BMW. He's taken a vow of obedience, but he has a staff of twenty-five. He's taken a vow of chastity, too, which is why he's on vacation.",
+      "traits": [
+        "5'10\"",
+        "LEFT-HANDED",
+        "DARK BROWN EYES",
+        "BALD"
+      ]
+    },
+    {
+      "name": "MISS SAFFRON",
+      "description": "Gorgeous and charming, but maybe not all there in the brains department. Or maybe that's what she wants you to think. Or maybe she wants you to think that's what she wants you to think.",
+      "traits": [
+        "5'2\"",
+        "LEFT-HANDED",
+        "HAZEL EYES",
+        "BLOND HAIR"
+      ]
+    }
+  ],
+  "weapons": [
+    {
+      "name": "A BEAR TRAP",
+      "description": "If you think it's too gruesome to use on a person, just think how the bears feel!",
+      "specs": "HEAVY-WEIGHT"
+    },
+    {
+      "name": "AN ORDINARY BRICK",
+      "description": "Just a regular, ordinary brick. Nothing special. Just a brick.",
+      "specs": "MEDIUM-WEIGHT"
+    },
+    {
+      "name": "A HARPOON",
+      "description": "You could kill a fish with this. Or, honestly, you could kill anything with it.",
+      "specs": "HEAVY-WEIGHT"
+    }
+  ],
+  "locations": [
+    {
+      "name": "THE CLIFFS",
+      "description": "A long drop, but maybe the jagged rocks would break your fall.",
+      "type": "OUTDOORS"
+    },
+    {
+      "name": "THE ANCIENT RUINS",
+      "description": "Some old standing stones with strange glyphs carved on them.",
+      "type": "OUTDOORS"
+    },
+    {
+      "name": "THE DOCKS",
+      "description": "Old, rotten docks that have certainly seen better days. Look out for sharks!",
+      "type": "OUTDOORS"
+    }
+  ],
+  "clues": [
+    "The suspect who brought an ordinary brick was a parishioner of Father Mango's.",
+    "Miss Saffron had a bear trap in her purse.",
+    "The suspect whose family's company produced Logico's magnifying glass was on the cliffs. (See Exhibit A.)",
+    "The ancient ruins seemed to hypnotize the hazel eyes of the suspect standing beside them.",
+    "By the time Logico got there, the old man's body had been nibbled on by sharks."
+  ]
+}

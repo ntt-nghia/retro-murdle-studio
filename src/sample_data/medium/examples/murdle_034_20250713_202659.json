@@ -1,0 +1,93 @@
+{
+  "gameId": "murdle_034",
+  "title": "THE BODY IN THE GRAVEYARD",
+  "description": "Next, Inspector Irratino wanted to go to a graveyard. So he used astrology to determine which graveyard they should visit, a method Deductive Logico detested. When they got to the graveyard, the caretaker had just been killed. Inspector Irratino elbowed Deductive Logico. \"See!\"",
+  "suspects": [
+    {
+      "name": "SIR RULEAN",
+      "description": "A sophisticated gentleman who was just recently knighted, if you believe the shoddy paperwork he carries with him.",
+      "traits": [
+        "5'8\"",
+        "RIGHT-HANDED",
+        "BLUE EYES",
+        "RED HAIR",
+        "LEO"
+      ]
+    },
+    {
+      "name": "VISCOUNT EMINENCE",
+      "description": "The oldest man you have ever seen. It is said that he was old when the old were young.",
+      "traits": [
+        "5'2\"",
+        "LEFT-HANDED",
+        "BLACK EYES",
+        "BLACK HAIR",
+        "PISCES"
+      ]
+    },
+    {
+      "name": "BROTHER BROWNSTONE",
+      "description": "A monk who has dedicated his life to the church, specifically to making money for it.",
+      "traits": [
+        "5'4\"",
+        "LEFT-HANDED",
+        "DARK BROWN EYES",
+        "DARK BROWN HAIR",
+        "CAPRICORN"
+      ]
+    }
+  ],
+  "weapons": [
+    {
+      "name": "A SKELETON ARM",
+      "description": "Cause the death of a person with the bones of a person who's dead.",
+      "specs": "MEDIUM-WEIGHT"
+    },
+    {
+      "name": "A VIAL OF A DEADLY POISON",
+      "description": "Don't worry. It's safely contained by—hey, wait, where's the cork?!",
+      "specs": "LIGHT-WEIGHT"
+    },
+    {
+      "name": "A STRING OF PRAYER BEADS",
+      "description": "Ivory prayer beads covered with tiny engraved symbols.",
+      "specs": "MEDIUM-WEIGHT"
+    }
+  ],
+  "locations": [
+    {
+      "name": "THE COLUMBARIUM",
+      "description": "A vault or wall where ashes are stored. (Now you've learned a new word.)",
+      "type": "INDOORS"
+    },
+    {
+      "name": "THE HUGE MAUSOLEUM",
+      "description": "The rich members of the Midnight family are all buried in this pyramid-shaped tomb.",
+      "type": "INDOORS"
+    },
+    {
+      "name": "THE GIFT SHOP",
+      "description": "You can buy little knickknack gravestones or a plushie of their mascot, Mr. Skull.",
+      "type": "INDOORS"
+    }
+  ],
+  "motives": [],
+  "clues": [
+    "Detective Logico's forensics team discovered a drop of poison in a giant pyramid.",
+    "Inspector Irratino found a finger bone in the columbarium. A telltale sign!"
+  ],
+  "statements": [
+    {
+      "speaker": "Sir Rulean",
+      "statement": "I brought a string of prayer beads."
+    },
+    {
+      "speaker": "Viscount Eminence",
+      "statement": "Yes, well, I brought a skeleton arm."
+    },
+    {
+      "speaker": "Brother Brownstone",
+      "statement": "On the honor of my order, I was not in the gift shop."
+    }
+  ]
+}

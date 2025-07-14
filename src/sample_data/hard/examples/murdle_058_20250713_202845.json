@@ -1,0 +1,112 @@
+{
+  "gameId": "murdle_058",
+  "title": "A MAZE OF DEATH AND HEDGES",
+  "description": "Detective Logico walked through the hedge maze at Dame Obsidian's abandoned manor house. Like the ones at the Investigation Institute, these hedges had grown wild, and the paths were no longer straight. It turns out the gardener had been murdered.",
+  "suspects": [
+    {
+      "name": "VISCOUNT EMINENCE",
+      "description": "The oldest man you have ever seen. It is said that he was old when your grandfather was born, and he'll be old when your grandchildren die.",
+      "traits": [
+        "5'2\"",
+        "LEFT-HANDED",
+        "GRAY EYES",
+        "DARK BROWN HAIR",
+        "PISCES"
+      ]
+    },
+    {
+      "name": "LORD LAVENDER",
+      "description": "A politically conservative MP in the House of Lords, as well as the musical theater composer behind such hits as Mary and the Wonderful Black-and-White Pantsuit and Mirta.",
+      "traits": [
+        "5'9\"",
+        "RIGHT-HANDED",
+        "GREEN EYES",
+        "BLOND HAIR",
+        "VIRGO"
+      ]
+    },
+    {
+      "name": "THE DUCHESS OF VERMILLION",
+      "description": "A tall, old woman with tall, old secrets. If she is the murderer, then it wouldn't be the first time.",
+      "traits": [
+        "5'9\"",
+        "LEFT-HANDED",
+        "GRAY EYES",
+        "WHITE HAIR",
+        "PISCES"
+      ]
+    },
+    {
+      "name": "BARON MAROON",
+      "description": "An incredibly haughty man who holds a grudge. Nobody wants to offend the baron. At least, nobody who's still alive...",
+      "traits": [
+        "6'2\"",
+        "RIGHT-HANDED",
+        "HAZEL EYES",
+        "RED HAIR",
+        "SCORPIO"
+      ]
+    }
+  ],
+  "weapons": [
+    {
+      "name": "POISONED TEA",
+      "description": "Enjoy a nice sip of tea, followed by a long, long nap.",
+      "specs": "HEAVY-WEIGHT & MADE OF CERAMIC, WATER, & LEAVES"
+    },
+    {
+      "name": "A PAIR OF GARDENING SHEARS",
+      "description": "You could trim a hedge or years off someone's life.",
+      "specs": "MEDIUM-WEIGHT & MADE OF METAL"
+    },
+    {
+      "name": "AN ORDINARY BRICK",
+      "description": "Just a regular, ordinary brick. Nothing special. Just a brick.",
+      "specs": "HEAVY-WEIGHT & MADE OF CLAY"
+    },
+    {
+      "name": "A FLOWERPOT",
+      "description": "If you use this to kill, please repot the flowers first.",
+      "specs": "MEDIUM-WEIGHT & MADE OF CERAMIC"
+    }
+  ],
+  "locations": [
+    {
+      "name": "THE LOOKOUT TOWER",
+      "description": "From above the garden, you can see everything. Plus, there's a map of the maze on the wall.",
+      "type": "INDOORS"
+    },
+    {
+      "name": "THE ANCIENT RUINS",
+      "description": "Since these were already falling apart, they had a head start on the test of the maze.",
+      "type": "OUTDOORS"
+    },
+    {
+      "name": "THE FOUNTAIN",
+      "description": "A fountain at the center of the maze. It's bone dry.",
+      "type": "OUTDOORS"
+    },
+    {
+      "name": "THE SECRET GARDEN",
+      "description": "A secret garden in the center of the maze, featuring every flower you can name and hundreds you cannot.",
+      "type": "OUTDOORS"
+    }
+  ],
+  "motives": [
+    "TO PROTECT A SECRET",
+    "TO STEAL A PRIZED BOOK",
+    "TO SEE WHAT IT FELT LIKE TO KILL",
+    "AS A SCIENTIFIC EXPERIMENT"
+  ],
+  "clues": [
+    "Forensics found traces of a metal weapon by the ancient ruins.",
+    "Whoever wanted to steal a prized book was left-handed.",
+    "Whoever wanted to see what it felt like to kill had dark brown hair.",
+    "A single red hair was found in the secret garden.",
+    "Whoever wanted to kill as a scientific experiment was a Virgo.",
+    "An informant told Logico, \"A tea bag was indoors.\" He could be no more specific.",
+    "The suspect who was just as tall as the Duchess of Vermillion was not in the lookout tower.",
+    "The Duchess of Vermillion had brought a brick she could barely carry.",
+    "A flowerpot was used to commit the murder."
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "gameId": "murdle_063",
+  "title": "THE BODY IN THE SNOWDRIFT",
+  "description": "Detective Logico received a letter in the mail from a monastery. Brother Brownstone wanted to speak to him about something of grave importance. But when Logico got to the monastery, Brother Brownstone had been killed!",
+  "suspects": [
+    {
+      "name": "FATHER MANGO",
+      "description": "Father Mango could have enjoyed being a priest in the church for years. They just had one rule: don't get caught murdering people. Now, he was confined to this monastery.",
+      "traits": [
+        "5'10\"",
+        "LEFT-HANDED",
+        "DARK BROWN EYES",
+        "BALD",
+        "TAURUS"
+      ]
+    },
+    {
+      "name": "DEACON VERDIGRIS",
+      "description": "A deacon of the church. She handles the parishioners' donations and, sometimes, their secrets.",
+      "traits": [
+        "5'3\"",
+        "LEFT-HANDED",
+        "BLUE EYES",
+        "GRAY HAIR",
+        "LEO"
+      ]
+    },
+    {
+      "name": "SISTER LAPIS",
+      "description": "A nun who travels the world, doing God's work on His dime. Her habit is cashmere, and her habit is spending.",
+      "traits": [
+        "5'2\"",
+        "RIGHT-HANDED",
+        "LIGHT BROWN EYES",
+        "LIGHT BROWN HAIR",
+        "CANCER"
+      ]
+    },
+    {
+      "name": "BROTHER BROWNSTONE",
+      "description": "Brother Brownstone's brother, who is not a brother of the church, just Brownstone's.",
+      "traits": [
+        "5'4\"",
+        "LEFT-HANDED",
+        "DARK BROWN EYES",
+        "DARK BROWN HAIR",
+        "CAPRICORN"
+      ]
+    }
+  ],
+  "weapons": [
+    {
+      "name": "A STRING OF PRAYER BEADS",
+      "description": "Ivory prayer beads covered with tiny engraved symbols.",
+      "specs": "LIGHT-WEIGHT & MADE OF IVORY"
+    },
+    {
+      "name": "A PRAYER CANDLE",
+      "description": "If you were praying that some-body died, your wish came true.",
+      "specs": "MEDIUM-WEIGHT & MADE OF WAX"
+    },
+    {
+      "name": "SACRAMENTAL WINE",
+      "description": "A great way to show your de-votion is to drink a lot of this holy red wine.",
+      "specs": "MEDIUM-WEIGHT & MADE OF GLASS & WINE"
+    },
+    {
+      "name": "A BOTTLE OF SACRED OIL",
+      "description": "It's not, like, massage oil. It's petroleum oil. But it's still sacred.",
+      "specs": "LIGHT-WEIGHT & MADE OF GLASS & OIL"
+    }
+  ],
+  "locations": [
+    {
+      "name": "THE COURTYARD",
+      "description": "There's a snowdrift there right now, but usually it's pretty nice.",
+      "type": "OUTDOORS"
+    },
+    {
+      "name": "THE FORBIDDEN LIBRARY",
+      "description": "Where they store the books the monks aren't allowed to read.",
+      "type": "INDOORS"
+    },
+    {
+      "name": "THE CHAPEL",
+      "description": "You can hear the monks praying well and singing poorly.",
+      "type": "INDOORS"
+    },
+    {
+      "name": "THE CLIFFS",
+      "description": "Why do people keep building on the side of cliffs? And al-ways over jagged rocks?",
+      "type": "OUTDOORS"
+    }
+  ],
+  "motives": [
+    "TO AVENGE THEIR FATHER",
+    "TO PROVE THEY'RE TOUGH",
+    "OUT OF MADNESS",
+    "FOR RELIGIOUS REASONS"
+  ],
+  "clues": [
+    "Whoever would kill out of madness was right-handed.",
+    "The person with a bottle of sacred oil wanted to kill to avenge their father. It was their father's sacred oil, you see.",
+    "A Taurus was loving the sacramental wine. Maybe too much.",
+    "The prayer beads were not allowed outside, and nobody broke that rule.",
+    "Deacon Verdigris was found wandering outdoors.",
+    "A weapon covered in tiny engraved symbols was brought by the person who had a motive to kill for religious reasons.",
+    "The suspect who was on the cliffs had light brown eyes.",
+    "The second tallest suspect was listening to the sounds of off-key singing.",
+    "The body was found in a snowdrift."
+  ]
+}

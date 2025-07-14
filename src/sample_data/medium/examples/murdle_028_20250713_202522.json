@@ -1,0 +1,92 @@
+{
+  "gameId": "murdle_028",
+  "title": "INVESTIGATION AT THE INVESTIGATION INSTITUTE",
+  "description": "Arriving at the Investigation Institute grounds, Deductive Logico was shocked by their budget. Their grounds had a hedge maze, an observatory, even a miniature golf course! This place could have hired half the detectives in the world. Why him? And who killed the groundskeeper?",
+  "suspects": [
+    {
+      "name": "CRYPTOZOOLOGIST CLOUD",
+      "description": "He knows every sighting of Bigfoot, Yeti, Sasquatch, and also what the difference is.",
+      "traits": [
+        "5'7\"",
+        "RIGHT-HANDED",
+        "GRAY EYES",
+        "WHITE HAIR",
+        "SCORPIO"
+      ]
+    },
+    {
+      "name": "HERBALIST ONYX",
+      "description": "In her greenhouse, she's grown every kind of plant required in the culinary, magick, and poisoning arts.",
+      "traits": [
+        "5'0\"",
+        "RIGHT-HANDED",
+        "DARK BROWN EYES",
+        "BLACK HAIR",
+        "VIRGO"
+      ]
+    },
+    {
+      "name": "CHEF AUBERGINE",
+      "description": "It is said that she once killed her husband, cooked him, and then served him at her restaurant. It's not true, but just the fact that it's said about her tells you something.",
+      "traits": [
+        "5'2\"",
+        "RIGHT-HANDED",
+        "BLUE EYES",
+        "BLOND HAIR",
+        "LIBRA"
+      ]
+    }
+  ],
+  "weapons": [
+    {
+      "name": "A QUASI-PERPETUAL MOTION MACHINE",
+      "description": "It doesn't run forever. More like two or three minutes.",
+      "specs": "HEAVY-WEIGHT"
+    },
+    {
+      "name": "A DOWSING ROD",
+      "description": "You can find water, oil, and suckers with this.",
+      "specs": "MEDIUM-WEIGHT"
+    },
+    {
+      "name": "HYPER-ALLERGENIC OIL",
+      "description": "You read that right. Everyone is deathly allergic to this.",
+      "specs": "LIGHT-WEIGHT"
+    }
+  ],
+  "locations": [
+    {
+      "name": "AN IMPOSSIBLE HEDGE MAZE",
+      "description": "This was designed by the legendary M. C. Escher, so good luck getting out.",
+      "type": "OUTDOORS"
+    },
+    {
+      "name": "THE OBSERVATORY",
+      "description": "For studying the stars, or having a romantic evening, or committing a murder.",
+      "type": "INDOORS"
+    },
+    {
+      "name": "THE MINIATURE GOLF COURSE",
+      "description": "Eighteen holes, featuring windmills, caves, and loop-de-loops. The works!",
+      "type": "OUTDOORS"
+    }
+  ],
+  "clues": [
+    "The second tallest suspect brought hyper-allergenic oil.",
+    "It turns out that a Libra was at the seventeenth hole when the murder was committed."
+  ],
+  "statements": [
+    {
+      "speaker": "Cryptozoologist Cloud",
+      "statement": "A dowsing rod was not in a hedge maze."
+    },
+    {
+      "speaker": "Herbalist Onyx",
+      "statement": "A quasi-perpetual motion machine was not in the observatory."
+    },
+    {
+      "speaker": "Chef Aubergine",
+      "statement": "Herbalist Onyx brought a quasi-perpetual motion machine."
+    }
+  ]
+}

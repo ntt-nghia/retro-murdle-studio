@@ -1,0 +1,80 @@
+{
+  "gameId": "murdle_008",
+  "title": "THE BUTLER DID IT (DIE)",
+  "description": "Immediately after the last one, there was another murder in Dame Obsidian's house! That made her look even guiltier, Logico thought. Especially since it was her butler who was murdered. What kind of person kills somebody else's butler?",
+  "suspects": [
+    {
+      "name": "DAME OBSIDIAN",
+      "description": "As additional background: a week after Dame Obsidian's second husband disappeared, she paved over her garden. The papers had a field day with that. But her sales doubled.",
+      "traits": [
+        "5'4\"",
+        "LEFT-HANDED",
+        "GREEN EYES",
+        "BLACK HAIR"
+      ]
+    },
+    {
+      "name": "SIR RULEAN",
+      "description": "A sophisticated gentleman who was just recently knighted, if you believe the shoddy paperwork he carries with him.",
+      "traits": [
+        "5'8\"",
+        "RIGHT-HANDED",
+        "BLUE EYES",
+        "RED HAIR"
+      ]
+    },
+    {
+      "name": "MISS SAFFRON",
+      "description": "Gorgeous and stunning, but maybe not all there in the brains department. Or maybe that's what she wants you to think. Or maybe she wants you to think that's what she wants you to think.",
+      "traits": [
+        "5'2\"",
+        "LEFT-HANDED",
+        "HAZEL EYES",
+        "BLOND HAIR"
+      ]
+    }
+  ],
+  "weapons": [
+    {
+      "name": "A MAGNIFYING GLASS",
+      "description": "You could use this to find a clue, read the fine print, or start a small fire.",
+      "specs": "MEDIUM-WEIGHT"
+    },
+    {
+      "name": "AN ANTIQUE CLOCK",
+      "description": "Tick, tock, tick, tock. Technically, time is killing us all slowly.",
+      "specs": "HEAVY-WEIGHT"
+    },
+    {
+      "name": "AN AXE",
+      "description": "This axe could chop a tree down. Or a person down!",
+      "specs": "MEDIUM-WEIGHT"
+    }
+  ],
+  "locations": [
+    {
+      "name": "THE SPOOKY ATTIC",
+      "description": "Nothing but cobwebs, family heirlooms, and haunted paintings.",
+      "type": "INDOORS"
+    },
+    {
+      "name": "THE MASTER BEDROOM",
+      "description": "The bed is so big that the bedroom had to be built around it.",
+      "type": "INDOORS"
+    },
+    {
+      "name": "THE GROUNDS",
+      "description": "A meticulously maintained, solid green two-inch monoculture.",
+      "type": "OUTDOORS"
+    }
+  ],
+  "motives": [],
+  "clues": [
+    "Either Miss Saffron brought an axe or an axe was in the master bedroom.",
+    "Sir Rulean had been hiding from the person who brought an axe.",
+    "An antique clock was certainly not on the grounds: it was an inside clock.",
+    "Miss Saffron was seen using a weapon to read the fine print in the ads of a gossip magazine.",
+    "Blood was splattered on a family heirloom."
+  ],
+  "statements": []
+}

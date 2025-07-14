@@ -1,0 +1,113 @@
+{
+  "gameId": "murdle_057",
+  "title": "SING A HYMN OF HORROR",
+  "description": "Father Mango claimed sanctuary in his chapel, and he closed the doors. Almost immediately, however, a parishioner was murdered, and he opened the doors again and said that Logico should figure out who did it, so that he could kick out the other murderer.",
+  "suspects": [
+    {
+      "name": "FATHER MANGO",
+      "description": "He has taken a vow of poverty, but he drives a BMW. He's taken a vow of obedience, but he has a staff of twenty-five. He didn't take a vow not to murder, though, and he did that, too.",
+      "traits": [
+        "5'9\"",
+        "LEFT-HANDED",
+        "DARK BROWN EYES",
+        "BALD",
+        "TAURUS"
+      ]
+    },
+    {
+      "name": "BISHOP AZURE",
+      "description": "A bishop in the church, Azure has been known to pray for both her friends and her enemies. Of course, she asks for different things...",
+      "traits": [
+        "5'4\"",
+        "RIGHT-HANDED",
+        "LIGHT BROWN EYES",
+        "DARK BROWN HAIR",
+        "GEMINI"
+      ]
+    },
+    {
+      "name": "DEACON VERDIGRIS",
+      "description": "A deacon of the church, She handles the parishioners' donations and, sometimes, their secrets.",
+      "traits": [
+        "5'3\"",
+        "LEFT-HANDED",
+        "BLUE EYES",
+        "GRAY HAIR",
+        "LEO"
+      ]
+    },
+    {
+      "name": "BROTHER BROWNSTONE",
+      "description": "A monk who has dedicated his life to the church, specifically to making money for it.",
+      "traits": [
+        "5'4\"",
+        "LEFT-HANDED",
+        "DARK BROWN EYES",
+        "DARK BROWN HAIR",
+        "CAPRICORN"
+      ]
+    }
+  ],
+  "weapons": [
+    {
+      "name": "AN ANTIQUE FLINTLOCK",
+      "description": "It can fire a bullet as far as four feet and cover you in gunpowder",
+      "specs": "MEDIUM-WEIGHT & MADE OF METAL"
+    },
+    {
+      "name": "A BOTTLE OF WINE",
+      "description": "Watch out for stains, because the red doesn't come out.",
+      "specs": "MEDIUM-WEIGHT & MADE OF GLASS"
+    },
+    {
+      "name": "A HOLY RELIC",
+      "description": "It's a totem of a loving god with a beauteous visage.",
+      "specs": "MEDIUM-WEIGHT & MADE OF BONE"
+    },
+    {
+      "name": "YARN",
+      "description": "Sometimes, when you're you've missed a stitch, you could just strangle somebody.",
+      "specs": "LIGHT-WEIGHT & MADE OF WOOL"
+    }
+  ],
+  "locations": [
+    {
+      "name": "THE CHOIR LOFT",
+      "description": "There's no one singing there now. It's quiet. But during the services, you should hear the organ!",
+      "type": "INDOORS"
+    },
+    {
+      "name": "THE FRONT STEPS",
+      "description": "Kind of a hassle to walk up and down, but it adds to the ambience.",
+      "type": "OUTDOORS"
+    },
+    {
+      "name": "THE GRAVEYARD",
+      "description": "A small graveyard next to the church. Most of the graves are old, but perhaps, one is more recent...",
+      "type": "OUTDOORS"
+    },
+    {
+      "name": "THE VESTIBULE",
+      "description": "An entrance room with many doors and a table covered in fliers for church events.",
+      "type": "INDOORS"
+    }
+  ],
+  "motives": [
+    "BECAUSE THEY WERE BECOMING THEIR PARENTS",
+    "A GHOST MADE THEM",
+    "AS PRACTICE",
+    "FOR RELIGIOUS REASONS"
+  ],
+  "clues": [
+    "Whoever had a bottle of wine was left-handed.",
+    "Gunpowder was found on the church fliers.",
+    "The person who wanted to kill for religious reasons was not in the graveyard.",
+    "Father Mango was outside when the murder happened.",
+    "A weapon made of bone was brought by the person who wanted to kill as practice.",
+    "A Gemini was standing on the front steps.",
+    "Whoever might kill because they were becoming their parents had blue eyes. (Just like their parents!)",
+    "The suspect with the same height as Bishop Azure was seen with yarn.",
+    "The parishioner's body was found in the choir loft."
+  ],
+  "statements": []
+}

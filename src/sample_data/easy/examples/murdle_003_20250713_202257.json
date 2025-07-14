@@ -1,0 +1,78 @@
+{
+  "gameId": "murdle_003",
+  "title": "THE ART OF THE KILL",
+  "description": "Deductive Logico visited an art museum, which was very confusing to him. No murder was as baffling as some of these paintings. So he was quite relieved when an experimental artist was killed in mysterious circumstances: finally, something he could understand.",
+  "suspects": [
+    {
+      "name": "CAPTAIN SLATE",
+      "description": "A real-life astronaut. The first woman to travel around the dark side of the moon, and also the first to be suspected of murdering her copilot.",
+      "traits": [
+        "5'5\"",
+        "LEFT-HANDED",
+        "DARK BROWN EYES",
+        "DARK BROWN HAIR"
+      ]
+    },
+    {
+      "name": "BISHOP AZURE",
+      "description": "A bishop in a local church, she has been known to pray for both her friends and her enemies. Of course, she asks for different things...",
+      "traits": [
+        "5'4\"",
+        "RIGHT-HANDED",
+        "LIGHT BROWN EYES",
+        "DARK BROWN HAIR"
+      ]
+    },
+    {
+      "name": "BLACKSTONE, ESQ.",
+      "description": "Incredibly talented at the most important skill for an attorney: getting paid.",
+      "traits": [
+        "6'0\"",
+        "RIGHT-HANDED",
+        "BLACK EYES",
+        "BLACK HAIR"
+      ]
+    }
+  ],
+  "weapons": [
+    {
+      "name": "A GLASS OF POISONED WINE",
+      "description": "This is your typical glass of poisoned wine. A mystery classic.",
+      "specs": "LIGHT-WEIGHT"
+    },
+    {
+      "name": "AN ABSTRACT STATUE",
+      "description": "No matter how hard he looked at this, Logico did not understand.",
+      "specs": "HEAVY-WEIGHT"
+    },
+    {
+      "name": "A RARE VASE",
+      "description": "Logico thought about how, technically, every vase someone makes by hand is rare, because there is only one of them.",
+      "specs": "HEAVY-WEIGHT"
+    }
+  ],
+  "locations": [
+    {
+      "name": "THE ROOFTOP GARDEN",
+      "description": "A rooftop garden! With pigeons! And you can feed the pigeons! Very cool.",
+      "type": "OUTDOORS"
+    },
+    {
+      "name": "THE ENTRY HALL",
+      "description": "According to a plaque on the wall, even the architecture of the entry hall is art.",
+      "type": "INDOORS"
+    },
+    {
+      "name": "AN ART STUDIO",
+      "description": "In the back of the museum, it's littered with flyers for art classes.",
+      "type": "INDOORS"
+    }
+  ],
+  "clues": [
+    "Blackstone, Esq., was suspicious of the person who brought an abstract statue.",
+    "Captain Slate brought a glass of poisoned wine.",
+    "An abstract statue was not in the art studio. (Sometimes the students' art seemed abstract, but that was just because it was bad.)",
+    "Either Blackstone, Esq., was standing on top of flyers for art classes, or Captain Slate was in the rooftop garden.",
+    "The body of the experimental artist was found under a plaque on the wall."
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "gameId": "murdle_005",
+  "title": "PHYSICIAN, HEAL MYSELF!",
+  "description": "When Deductive Logico came to in a private hospital, his knew his injuries wouldn't hurt half as much as the bill. But his surgeon, Dr. Crimson, offered a trade: if he solved another patient's murder, they'd give him a two percent discount. He immediately agreed.",
+  "suspects": [
+    {
+      "name": "OFFICER COPPER",
+      "description": "The best part of being a policewoman criminal is that you can cut out the middleman and fail to investigate your own crimes.",
+      "traits": [
+        "5'5\"",
+        "RIGHT-HANDED",
+        "BLUE EYES",
+        "BLOND HAIR"
+      ]
+    },
+    {
+      "name": "DR. CRIMSON",
+      "description": "She's the smartest doctor she's ever met, according to her, and she's probably right. Yeah, she smokes, but if she gets cancer, she'll find a cure.",
+      "traits": [
+        "5'9\"",
+        "LEFT-HANDED",
+        "GREEN EYES",
+        "RED HAIR"
+      ]
+    },
+    {
+      "name": "SISTER LAPIS",
+      "description": "A nun who travels the world, doing God's work on His dime. Her habit is cashmere, and her habit is spending.",
+      "traits": [
+        "5'2\"",
+        "RIGHT-HANDED",
+        "LIGHT BROWN EYES",
+        "LIGHT BROWN HAIR"
+      ]
+    }
+  ],
+  "weapons": [
+    {
+      "name": "A VIAL OF ACID",
+      "description": "According to the label, you should not take a sip of this, no matter how tempting it seems.",
+      "specs": "LIGHT-WEIGHT"
+    },
+    {
+      "name": "A HEAVY MICROSCOPE",
+      "description": "The slides are so tiny, but the microscope's so heavy!",
+      "specs": "HEAVY-WEIGHT"
+    },
+    {
+      "name": "A SURGICAL SCALPEL",
+      "description": "Somehow, it being smaller makes it seem more dangerous.",
+      "specs": "LIGHT-WEIGHT"
+    }
+  ],
+  "locations": [
+    {
+      "name": "THE PARKING LOT",
+      "description": "An enormous parking lot with uniformed valets parking luxury sedans.",
+      "type": "OUTDOORS"
+    },
+    {
+      "name": "THE ROOF",
+      "description": "Huge AC units and other industrial equipment cover the roof, providing a number of excellent hiding spots.",
+      "type": "OUTDOORS"
+    },
+    {
+      "name": "THE GIFT SHOP",
+      "description": "This hospital is so nice you can buy jewelry at the gift shop. But don't worry: there's a discount rack, too.",
+      "type": "INDOORS"
+    }
+  ],
+  "clues": [
+    "A vial of acid was certainly not on the roof. (They had acid-detecting sensors there.)",
+    "The suspect who was in the gift shop had light brown eyes.",
+    "Officer Copper had a weapon with a label on it reading DO NOT DRINK.",
+    "Surprisingly, Dr. Crimson did not bring her surgical scalpel (or any surgical scalpel, for that matter).",
+    "The patient's body was found beneath a luxury sedan."
+  ]
+}

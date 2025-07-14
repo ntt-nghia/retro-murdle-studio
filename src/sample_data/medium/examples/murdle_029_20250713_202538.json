@@ -1,0 +1,93 @@
+{
+  "gameId": "murdle_029",
+  "title": "OH NO, NOT IN THE CHATEAU!",
+  "description": "\"Hello!\" Logico called. \"I'm here to meet with the president!\" Nobody answered, and he looked around. It seemed like the chateau was designed by Escher, too. Stairways and hallways twisted around each other, and every available surface was covered in books. Perhaps the least unexpected sight was the dead body.",
+  "suspects": [
+    {
+      "name": "SOCIOLOGIST UMBER",
+      "description": "As a representative from the hard sciences, she is always asking people to question their priors and if they've read Weber.",
+      "traits": [
+        "5'4\"",
+        "LEFT-HANDED",
+        "BLUE EYES",
+        "BLOND HAIR",
+        "LEO"
+      ]
+    },
+    {
+      "name": "PHILOLOGIST FLINT",
+      "description": "You can learn a lot about a word from its etymology, like where it came from, and what it used to mean.",
+      "traits": [
+        "5'2\"",
+        "LEFT-HANDED",
+        "GREEN EYES",
+        "BLOND HAIR",
+        "AQUARIUS"
+      ]
+    },
+    {
+      "name": "NUMEROLOGIST NIGHT",
+      "description": "A mathematical and esoteric prodigy. Not only do they know the value of X, they know the meaning of X.",
+      "traits": [
+        "5'9\"",
+        "LEFT-HANDED",
+        "BLUE EYES",
+        "DARK BROWN HAIR",
+        "PISCES"
+      ]
+    }
+  ],
+  "weapons": [
+    {
+      "name": "A CURSED DAGGER",
+      "description": "A dying duchess cursed this dagger when she used it to end her own life.",
+      "specs": "MEDIUM-WEIGHT"
+    },
+    {
+      "name": "A SELENITE WAND",
+      "description": "For casting spells and bashing skulls.",
+      "specs": "MEDIUM-WEIGHT"
+    },
+    {
+      "name": "AN EXCLUSIVE PIN",
+      "description": "If this is pinned to someone's lapel, they're a member of a secret society.",
+      "specs": "LIGHT-WEIGHT"
+    }
+  ],
+  "locations": [
+    {
+      "name": "THE FRONT DRIVEWAY",
+      "description": "Huge stone statues of various animals line the elegant drive to the chateau.",
+      "type": "OUTDOORS"
+    },
+    {
+      "name": "THE ARCANE ATTIC",
+      "description": "Rumored to be haunted, guaranteed to contain a bunch of old junk.",
+      "type": "INDOORS"
+    },
+    {
+      "name": "THE BALLROOM",
+      "description": "For grand parties and also basketball games.",
+      "type": "INDOORS"
+    }
+  ],
+  "motives": [],
+  "clues": [
+    "An Aquarius was standing beside a basketball goal.",
+    "Numerologist Night calculated that the selenite wand corresponded to an inauspicious number, so they wouldn't touch it."
+  ],
+  "statements": [
+    {
+      "speaker": "Sociologist Umber",
+      "statement": "All I can say is I brought a cursed dagger."
+    },
+    {
+      "speaker": "Philologist Flint",
+      "statement": "If you consider the origin of the words, you could say: I was wearing an exclusive pin."
+    },
+    {
+      "speaker": "Numerologist Night",
+      "statement": "Based on the numbers, an exclusive pin was in the arcane attic."
+    }
+  ]
+}

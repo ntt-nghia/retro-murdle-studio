@@ -1,0 +1,113 @@
+{
+  "gameId": "murdle_060",
+  "title": "DEATH ON THE COMMUNE: A TRUE-CRIME SEQUEL",
+  "description": "Deductive Logico remembered something about that commune: on the edge of their lands, there were ancient ruins. So he traveled back upstate, and not only were there ancient ruins, but there was a murder, too. A long-time cultist had been killed.",
+  "suspects": [
+    {
+      "name": "COMRADE CHAMPAGNE",
+      "description": "A communist and a rich one. Comrade Champagne likes nothing more than to travel the world, sharing the message of communism while sipping on the finest sparkling wines.",
+      "traits": [
+        "5'11\"",
+        "LEFT-HANDED",
+        "HAZEL EYES",
+        "BLOND HAIR",
+        "CAPRICORN"
+      ]
+    },
+    {
+      "name": "MX. TANGERINE",
+      "description": "Proving that non-binary people can be murderers, too, they are a communist, farmer, and potential suspect.",
+      "traits": [
+        "5'9\"",
+        "LEFT-HANDED",
+        "HAZEL EYES",
+        "BLOND HAIR",
+        "PISCES"
+      ]
+    },
+    {
+      "name": "ASSISTANT APPLEGREEN",
+      "description": "Her father is a principal, and the more time she spends on this commune, the less proud he is.",
+      "traits": [
+        "5'3\"",
+        "LEFT-HANDED",
+        "BLUE EYES",
+        "BLOND HAIR",
+        "VIRGO"
+      ]
+    },
+    {
+      "name": "PRINCIPAL APPLEGREEN",
+      "description": "A strict principal about everything except getting away with murder. His hands are always covered in chalk.",
+      "traits": [
+        "5'11\"",
+        "RIGHT-HANDED",
+        "BLUE EYES",
+        "BALD",
+        "LIBRA"
+      ]
+    }
+  ],
+  "weapons": [
+    {
+      "name": "AN ALUMINUM PIPE",
+      "description": "Safer than lead, unless it hits you in the head.",
+      "specs": "HEAVY-WEIGHT & MADE OF METAL"
+    },
+    {
+      "name": "AN ANTIQUE CLOCK",
+      "description": "Tick, tock, tick, tock. Tech-nically, time is killing us all slowly.",
+      "specs": "HEAVY-WEIGHT & MADE OF WOOD & METAL"
+    },
+    {
+      "name": "A MAGNIFYING GLASS",
+      "description": "You could use this to find a clue or identify a bug.",
+      "specs": "MEDIUM-WEIGHT & MADE OF METAL & GLASS"
+    },
+    {
+      "name": "AN OLD SWORD",
+      "description": "This was used by the bad guys in some old war. It's all rusted.",
+      "specs": "HEAVY-WEIGHT & MADE OF METAL"
+    }
+  ],
+  "locations": [
+    {
+      "name": "THE MEETING HOUSE",
+      "description": "Where the official discussion is done, and where absolutely nothing is accomplished.",
+      "type": "INDOORS"
+    },
+    {
+      "name": "THE OLD MILL",
+      "description": "A great place to grind grain or hide secrets.",
+      "type": "INDOORS"
+    },
+    {
+      "name": "THE ANCIENT RUINS",
+      "description": "Do they have religious signifi-cance? Maybe to the old gods...",
+      "type": "OUTDOORS"
+    },
+    {
+      "name": "THE LIBRARY",
+      "description": "More books than you've ever seen. (But all by one guy.)",
+      "type": "INDOORS"
+    }
+  ],
+  "motives": [
+    "BY THE ORDER OF A CULT",
+    "TO TEACH THEM A LESSON",
+    "TO MOTIVATE LOGICO",
+    "TO PREVENT A CHANGE IN THE WILL"
+  ],
+  "clues": [
+    "A magnifying glass was used as a prop during the official discussion.",
+    "Principal Applegreen brought an antique clock to tell time.",
+    "The person with an aluminum pipe wanted to motivate Logico.",
+    "Whoever was in the library was right-handed.",
+    "A Capricorn was milling about the old mill.",
+    "A Pisces was a member of the Deep Well of Wisdom.",
+    "All members of the Deep Well of Wisdom desire to kill by the order of their cult.",
+    "Whoever wanted to teach the long-time cultist a lesson was holding a medium-weight weapon.",
+    "The body of the long-time cultist was found draped upon the an-cient ruins."
+  ],
+  "statements": []
+}

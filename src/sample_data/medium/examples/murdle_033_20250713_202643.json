@@ -1,0 +1,93 @@
+{
+  "gameId": "murdle_033",
+  "title": "A RECENT DEATH IN AN ANCIENT TEMPLE",
+  "description": "The Investigation Institute had been funding the excavation of an ancient temple, but while they were working on the project, one of the archeologists was killed— was it by ancient magick? They insisted Inspector Irratino accompany Logico, to make sure that magick got a fair shake.",
+  "suspects": [
+    {
+      "name": "INSPECTOR IRRANTINO",
+      "description": "An esoteric detective. While Logico believes only what he can prove, Irratino believes only what he can't.",
+      "traits": [
+        "6'2\"",
+        "LEFT-HANDED",
+        "GREEN EYES",
+        "DARK BROWN HAIR",
+        "AQUARIUS"
+      ]
+    },
+    {
+      "name": "BISHOP AZURE",
+      "description": "A bishop in a local church, Azure has been known to pray for both her friends and her enemies. Of course, she asks for different things...",
+      "traits": [
+        "5'4\"",
+        "RIGHT-HANDED",
+        "LIGHT BROWN EYES",
+        "DARK BROWN HAIR",
+        "GEMINI"
+      ]
+    },
+    {
+      "name": "CHANCELLOR TUSCANY",
+      "description": "As the head of Deduction College, she has deduced the best way to get the most money from alumni. (Blackmail.)",
+      "traits": [
+        "5'5\"",
+        "LEFT-HANDED",
+        "GREEN EYES",
+        "GRAY HAIR",
+        "LIBRA"
+      ]
+    }
+  ],
+  "weapons": [
+    {
+      "name": "A CRYSTAL SKULL",
+      "description": "Made entirely of crystal. Maybe an ancient alien skull or maybe just a fun art project.",
+      "specs": "MEDIUM-WEIGHT, MADE OF CRYSTAL"
+    },
+    {
+      "name": "A SKELETON ARM",
+      "description": "Cause the death of a person with the bones of a person who's dead.",
+      "specs": "MEDIUM-WEIGHT"
+    },
+    {
+      "name": "A RITUAL DAGGER",
+      "description": "It's made out of some ancient metal that Logico can't identify.",
+      "specs": "MEDIUM-WEIGHT, MADE OF ANCIENT METAL"
+    }
+  ],
+  "locations": [
+    {
+      "name": "THE GRAND ENTRANCE",
+      "description": "Thanks to the ravages of time, now more of a crumbling entrance.",
+      "type": "OUTDOORS"
+    },
+    {
+      "name": "THE SACRED CHAMBER",
+      "description": "Who knows what happened in here behind these heavy iron doors?",
+      "type": "INDOORS"
+    },
+    {
+      "name": "THE HIGH ALTAR",
+      "description": "A massive stone altar draped in rotting fabric.",
+      "type": "INDOORS"
+    }
+  ],
+  "motives": [],
+  "clues": [
+    "Chancellor Tuscany did not trust the person who had the crystal skull.",
+    "Logico discovered a splintered piece of bone outdoors, using the principle of rationality. (He tripped over it.)"
+  ],
+  "statements": [
+    {
+      "speaker": "Inspector Irratino",
+      "statement": "A ritual dagger was at the high altar."
+    },
+    {
+      "speaker": "Bishop Azure",
+      "statement": "I brought a ritual dagger."
+    },
+    {
+      "speaker": "Chancellor Tuscany",
+      "statement": "Bishop Azure was not in the sacred chamber."
+    }
+  ]
+}

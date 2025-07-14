@@ -1,0 +1,110 @@
+{
+  "gameId": "murdle_064",
+  "title": "DEDUCTION COLLEGE QQQ",
+  "description": "If the answers Logico needed were in the past, he was going to have to hit the books. So he went to his old alma mater, the College of Deduction, to do some research. But someone was trying to stop him. Either that or the librarian was killed for unrelated reasons.",
+  "suspects": [
+    {
+      "name": "DEAN GLAUCOUS",
+      "description": "The dean of some such and such department at Deduction College. What does he do? Well, he handles the money, for one...",
+      "traits": [
+        "5'6\"",
+        "RIGHT-HANDED",
+        "LIGHT BROWN EYES",
+        "LIGHT BROWN HAIR",
+        "VIRGO"
+      ]
+    },
+    {
+      "name": "MISTER SHADOW",
+      "description": "A silhouette in shadow. He moves like the wind and he looks like the night.",
+      "traits": [
+        "LEFT-HANDED",
+        "AQUARIUS"
+      ]
+    },
+    {
+      "name": "CHANCELLOR TUSCANY",
+      "description": "As the head of Deduction College, she has deduced the best way to prevent herself from being killed by a rival. (Kill them first.)",
+      "traits": [
+        "5'5\"",
+        "LEFT-HANDED",
+        "GREEN EYES",
+        "GRAY HAIR",
+        "LIBRA"
+      ]
+    },
+    {
+      "name": "MISS SAFFRON",
+      "description": "Gorgeous and stunning, but maybe not all there in the brains department. Or maybe that's what she wants you to think. Or maybe she wants you to think that's what she wants you to think.",
+      "traits": [
+        "5'2\"",
+        "LEFT-HANDED",
+        "HAZEL EYES",
+        "BLOND HAIR",
+        "LIBRA"
+      ]
+    }
+  ],
+  "weapons": [
+    {
+      "name": "A CRYSTAL SKULL",
+      "description": "Maybe an actual alien's skull or maybe just a hoax.",
+      "specs": "MEDIUM-WEIGHT & MADE OF CRYSTAL"
+    },
+    {
+      "name": "A GRADUATION CORD",
+      "description": "It would be an honor to be strangled by one of these.",
+      "specs": "LIGHT-WEIGHT & MADE OF CLOTH"
+    },
+    {
+      "name": "A SHARP PENCIL",
+      "description": "Back then, they used actual lead. One stab and you'd die from lead poisoning.",
+      "specs": "LIGHT-WEIGHT & MADE OF WOOD & METAL"
+    },
+    {
+      "name": "A HEAVY BACKPACK",
+      "description": "Finally, a use for all of those logic textbooks.",
+      "specs": "HEAVY-WEIGHT & MADE OF CLOTH & BOOKS"
+    }
+  ],
+  "locations": [
+    {
+      "name": "THE BOOKSTORE",
+      "description": "The biggest moneymaker on campus. A sign offers a deal on textbooks, three for $750.",
+      "type": "INDOORS"
+    },
+    {
+      "name": "OLD MAIN",
+      "description": "The first building on campus, the most important, and the least maintained. Paint is peeling off the walls!",
+      "type": "INDOORS"
+    },
+    {
+      "name": "THE STADIUM",
+      "description": "The field features the absolute highest-quality fake grass money can buy.",
+      "type": "OUTDOORS"
+    },
+    {
+      "name": "THE ARBORETUM",
+      "description": "An arboretum in the middle of campus. They've got oak, pine—all the trees!",
+      "type": "OUTDOORS"
+    }
+  ],
+  "motives": [
+    "TO PROVE A POINT",
+    "TO STOP LOGICO",
+    "FOR THE GREATER GOOD",
+    "TO CREATE A DIVERSION"
+  ],
+  "clues": [
+    "The person who wanted to create a diversion was in the stadium.",
+    "Mister Shadow did not want to kill for the greater good.",
+    "A Virgo was looking at a pine tree. It was pretty.",
+    "In the labyrinth engraved on the ancient ruins, chamber 1 is connected with the chamber bearing the second letter of the last name of the suspect in the bookstore. (See Exhibit C.)",
+    "Logico found a shard of a crystal in Old Main.",
+    "Whoever wanted to prove a point was right-handed.",
+    "A graduation cord was seen lying on the ground outdoors.",
+    "Miss Saffron was seen with a sharp pencil—maybe she is smart!",
+    "A heavy backpack was found beside the librarian."
+  ],
+  "statements": []
+}

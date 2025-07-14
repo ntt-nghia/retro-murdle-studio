@@ -1,0 +1,93 @@
+{
+  "gameId": "murdle_036",
+  "title": "A CRUISE TO DIE FOR",
+  "description": "Deductive Logico was excited they were taking a cruise, but it turned out it was on a cargo ship in the Bermuda Triangle. When the first mate died, Irratino was ecstatic. Finally, proof of the paranormal!",
+  "suspects": [
+    {
+      "name": "MX. TANGERINE",
+      "description": "Proving that non-binary people can be murderers, too, they are an artist, poet, and suspect.",
+      "traits": [
+        "5'5\"",
+        "LEFT-HANDED",
+        "HAZEL EYES",
+        "BLOND HAIR",
+        "PISCES"
+      ]
+    },
+    {
+      "name": "ADMIRAL NAVY",
+      "description": "The firstborn son of an Admiral Navy who himself was the firstborn son of an Admiral Navy.",
+      "traits": [
+        "5'9\"",
+        "RIGHT-HANDED",
+        "BLUE EYES",
+        "LIGHT BROWN HAIR",
+        "CANCER"
+      ]
+    },
+    {
+      "name": "CAPTAIN SLATE",
+      "description": "A real-life astronaut. The first woman to travel around the dark side of the moon, and also the first to be suspected of murdering her copilot.",
+      "traits": [
+        "5'5\"",
+        "LEFT-HANDED",
+        "DARK BROWN EYES",
+        "DARK BROWN HAIR",
+        "AQUARIUS"
+      ]
+    }
+  ],
+  "weapons": [
+    {
+      "name": "POISONED RUM",
+      "description": "Yo ho ho and a bottle of arsenic.",
+      "specs": "MEDIUM-WEIGHT"
+    },
+    {
+      "name": "A SAILOR'S ROPE",
+      "description": "Fraying into little white fibers.",
+      "specs": "MEDIUM-WEIGHT"
+    },
+    {
+      "name": "A FLARE",
+      "description": "You could shoot a flare into the sky or into somebody's head.",
+      "specs": "LIGHT-WEIGHT"
+    }
+  ],
+  "locations": [
+    {
+      "name": "THE CAPTAIN'S QUARTERS",
+      "description": "Covered in posters of the captain's favorite waves.",
+      "type": "INDOORS"
+    },
+    {
+      "name": "THE CARGO HOLD",
+      "description": "Millions of pounds of cargo, mostly cheap electronics and fast fashion.",
+      "type": "INDOORS"
+    },
+    {
+      "name": "OVERBOARD",
+      "description": "Here you might get murdered by the sharks, too.",
+      "type": "OUTDOORS"
+    }
+  ],
+  "motives": [],
+  "clues": [
+    "Much to his embarrassment, Admiral Navy had to call for help when he went overboard.",
+    "The other person just as tall as Mx. Tangerine was seen playing with a flare."
+  ],
+  "statements": [
+    {
+      "speaker": "Mx. Tangerine",
+      "statement": "I was not in the cargo hold."
+    },
+    {
+      "speaker": "Admiral Navy",
+      "statement": "A sailor's rope was in the captain's quarters."
+    },
+    {
+      "speaker": "Captain Slate",
+      "statement": "What do you want me to say? I was in the captain's quarters."
+    }
+  ]
+}

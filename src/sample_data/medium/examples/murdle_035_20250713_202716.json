@@ -1,0 +1,93 @@
+{
+  "gameId": "murdle_035",
+  "title": "MURDER AT THE CULT: A TRUE-CRIME DOCUMENTARY",
+  "description": "Inspector Irratino and Deductive Logico took the train upstate to a commune that Irratino had read about in a zine. When they got there, they discovered it was a leaderless society, but only because their supreme leader had just been murdered.",
+  "suspects": [
+    {
+      "name": "ASSISTANT APPLEGREEN",
+      "description": "She dropped out of the publishing game and moved to this commune. Her father is currently not proud.",
+      "traits": [
+        "5'3\"",
+        "LEFT-HANDED",
+        "BLUE EYES",
+        "BLOND HAIR",
+        "VIRGO"
+      ]
+    },
+    {
+      "name": "PHILOLOGIST FLINT",
+      "description": "You can learn a lot about a word from its etymology, like where it came from, and have you heard this before?",
+      "traits": [
+        "5'2\"",
+        "LEFT-HANDED",
+        "GREEN EYES",
+        "BLOND HAIR",
+        "AQUARIUS"
+      ]
+    },
+    {
+      "name": "NUMEROLOGIST NIGHT",
+      "description": "A mathematical and esoteric prodigy. Not only do they know the value of E, they know the meaning of E.",
+      "traits": [
+        "5'9\"",
+        "LEFT-HANDED",
+        "BLUE EYES",
+        "DARK BROWN HAIR",
+        "PISCES"
+      ]
+    }
+  ],
+  "weapons": [
+    {
+      "name": "A SELENITE WAND",
+      "description": "For casting spells and bashing skulls.",
+      "specs": "MEDIUM-WEIGHT"
+    },
+    {
+      "name": "A SOUP LADLE",
+      "description": "For serving soup at the commune.",
+      "specs": "LIGHT-WEIGHT"
+    },
+    {
+      "name": "A PSEUDO-SCIENTIFIC APPARATUS",
+      "description": "Wow, your inner blaxons are really off the chart!",
+      "specs": "HEAVY-WEIGHT"
+    }
+  ],
+  "locations": [
+    {
+      "name": "THE BARRACKS",
+      "description": "Where everyone sleeps except their leader. (Their leader never sleeps.)",
+      "type": "INDOORS"
+    },
+    {
+      "name": "THE LIBRARY",
+      "description": "More books than you've ever seen. (But all by one guy.)",
+      "type": "INDOORS"
+    },
+    {
+      "name": "THE ANCIENT RUINS",
+      "description": "They seem to hypnotize you. You get woozy around them.",
+      "type": "INDOORS"
+    }
+  ],
+  "motives": [],
+  "clues": [
+    "The tallest suspect could not have fit in the library: it had low ceilings.",
+    "Whoever was in the barracks had green eyes."
+  ],
+  "statements": [
+    {
+      "speaker": "Assistant Applegreen",
+      "statement": "I did not bring a selenite wand."
+    },
+    {
+      "speaker": "Philologist Flint",
+      "statement": "A pseudo-scientific apparatus was not by the ancient ruins."
+    },
+    {
+      "speaker": "Numerologist Night",
+      "statement": "Based on the numbers, I brought a selenite wand."
+    }
+  ]
+}
