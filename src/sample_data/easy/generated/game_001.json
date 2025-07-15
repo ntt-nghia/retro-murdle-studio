@@ -1,0 +1,64 @@
+{
+  "gameId": "murdle_cruise_002",
+  "title": "MURDER ON THE HIGH SEAS",
+  "description": "Detective Logico took a cruise to relax. But when the ship's bartender was found dead, his vacation became work. At least the ocean views were still nice.",
+  "suspects": [
+    {
+      "name": "CAPTAIN NEPTUNE",
+      "description": "He has sailed the seven seas and sunk three ships. His passengers love him, but his crew fears him. He steers the ship like he steers conversations - badly.",
+      "traits": ["6'0\"", "RIGHT-HANDED", "BLUE EYES", "WHITE HAIR"]
+    },
+    {
+      "name": "CHEF MARINA",
+      "description": "She cooks five-star meals in a tiny kitchen. Her knife skills are perfect, and her temper is worse. She hates when people complain about the food.",
+      "traits": ["5'4\"", "LEFT-HANDED", "DARK BROWN EYES", "BLACK HAIR"]
+    },
+    {
+      "name": "RICH PASSENGER CORAL",
+      "description": "She owns three houses and two yachts. This cruise is cheap fun for her. She tips badly and treats staff like servants.",
+      "traits": ["5'8\"", "RIGHT-HANDED", "GREEN EYES", "BLOND HAIR"]
+    }
+  ],
+  "weapons": [
+    {
+      "name": "A LIFE PRESERVER",
+      "description": "Supposed to save lives, not end them. This one is heavy enough to knock someone overboard forever.",
+      "specs": "HEAVY-WEIGHT & MADE OF CORK & CANVAS"
+    },
+    {
+      "name": "A GALLEY KNIFE",
+      "description": "Sharp enough to cut through frozen fish. Also sharp enough to cut through excuses and alibis.",
+      "specs": "LIGHT-WEIGHT & MADE OF STEEL"
+    },
+    {
+      "name": "AN ANCHOR CHAIN",
+      "description": "Keeps the ship from floating away. Could also keep a person from floating away, permanently.",
+      "specs": "HEAVY-WEIGHT & MADE OF METAL"
+    }
+  ],
+  "locations": [
+    {
+      "name": "THE DINING HALL",
+      "description": "Where passengers eat fancy food and complain about everything. The waiters smile, but their eyes show pain.",
+      "type": "INDOORS"
+    },
+    {
+      "name": "THE UPPER DECK",
+      "description": "Perfect for watching sunsets and throwing things overboard. The ocean is deep and keeps secrets well.",
+      "type": "OUTDOORS"
+    },
+    {
+      "name": "THE ENGINE ROOM",
+      "description": "Hot, loud, and full of dangerous machines. Only crew members are allowed down here for good reasons.",
+      "type": "INDOORS"
+    }
+  ],
+  "clues": [
+    "The person with the life preserver was seen on the upper deck during dinner time.",
+    "Chef Marina never leaves her galley knife unattended - she brings it everywhere she goes.",
+    "Only Captain Neptune has keys to the engine room, and only he goes there.",
+    "Rich Passenger Coral was complaining loudly about her dinner in the dining hall.",
+    "Either the galley knife was in the dining hall, or the anchor chain was in the engine room.",
+    "The bartender's body was found floating next to the ship with rope burns on his neck."
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "gameId": "game_101",
+  "title": "Murder in the Void",
+  "description": "A shocking incident has occurred aboard the orbital research station Prometheus-7. With Earth hundreds of miles below, the crew must solve this mystery before their next supply mission arrives.",
+  "suspects": [
+    {
+      "name": "Commander Torres",
+      "description": "A seasoned space veteran with 15 years of command experience. Known for her strict adherence to protocols and protective nature toward her crew.",
+      "traits": ["tall", "left-handed", "blue eyes", "brown hair", "Leo"]
+    },
+    {
+      "name": "Dr. Chen",
+      "description": "The station's chief medical officer and xenobiologist. Brilliant but secretive, she often works late shifts in the research labs.",
+      "traits": ["short", "right-handed", "green eyes", "black hair", "Virgo"]
+    },
+    {
+      "name": "Engineer Rodriguez",
+      "description": "The station's maintenance specialist who keeps all systems running smoothly. Has an easy-going personality but takes equipment safety very seriously.",
+      "traits": ["medium height", "right-handed", "brown eyes", "blond hair", "Aries"]
+    }
+  ],
+  "weapons": [
+    {
+      "name": "Plasma Cutter",
+      "description": "A powerful industrial tool used for cutting through metal hull plates during repairs.",
+      "specs": "Heavy-weight, requires safety clearance"
+    },
+    {
+      "name": "Pressure Wrench",
+      "description": "A specialized wrench designed for high-pressure valve maintenance in zero gravity.",
+      "specs": "Medium-weight, standard maintenance tool"
+    },
+    {
+      "name": "Emergency Beacon",
+      "description": "A compact communication device used to signal distress calls to Earth.",
+      "specs": "Light-weight, portable emergency equipment"
+    }
+  ],
+  "locations": [
+    {
+      "name": "Command Bridge",
+      "description": "The nerve center of the station with navigation controls and communication arrays.",
+      "type": "INDOORS"
+    },
+    {
+      "name": "Engineering Bay",
+      "description": "The technical heart of the station filled with life support systems and repair equipment.",
+      "type": "INDOORS"
+    },
+    {
+      "name": "Observation Deck",
+      "description": "A panoramic viewing area with massive windows offering stunning views of Earth and space.",
+      "type": "INDOORS"
+    }
+  ],
+  "motives": [],
+  "clues": [
+    "The shortest suspect was spotted near the command bridge during the incident",
+    "Heavy industrial tools are strictly prohibited on the command bridge for safety reasons",
+    "Someone with green eyes left clear fingerprints on the emergency beacon",
+    "The observation deck was undergoing window maintenance, making it inaccessible during the incident",
+    "A right-handed person was seen leaving the command bridge in a hurry",
+    "Security footage shows the engineering bay was occupied by someone tall throughout the evening"
+  ],
+  "statements": [
+    {
+      "speaker": "Commander Torres",
+      "statement": "I brought the plasma cutter to the engineering bay for hull repairs"
+    },
+    {
+      "speaker": "Dr. Chen",
+      "statement": "I was running diagnostics on the observation deck's atmospheric systems"
+    },
+    {
+      "speaker": "Engineer Rodriguez",
+      "statement": "I saw Commander Torres working in the engineering bay all evening"
+    }
+  ]
+}

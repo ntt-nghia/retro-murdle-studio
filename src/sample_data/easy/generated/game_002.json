@@ -1,0 +1,65 @@
+{
+  "gameId": "murdle_circus_001",
+  "title": "DEATH UNDER THE BIG TOP",
+  "description": "Detective Logico went to the circus for fun. But when the popcorn vendor was found dead, the only thing funny was how bad the clown's alibi was. Now he had to solve a murder before the next show started.",
+  "suspects": [
+    {
+      "name": "MADAME SCARLETT THE TRAPEZE ARTIST",
+      "description": "She flies through the air with the greatest of ease. And she kills people with even greater ease. Her safety net has more holes than her story.",
+      "traits": ["5'6\"", "LEFT-HANDED", "GREEN EYES", "RED HAIR"]
+    },
+    {
+      "name": "BOBO THE KILLER CLOWN",
+      "description": "His jokes are bad, but his temper is worse. Kids cry when they see him, and adults run away. Even other clowns think he is scary.",
+      "traits": ["5'4\"", "RIGHT-HANDED", "BLUE EYES", "RAINBOW HAIR"]
+    },
+    {
+      "name": "CAPTAIN WHIPCRACK THE LION TAMER",
+      "description": "He tamed lions for thirty years until one ate his hand. Now he tames people instead. Much easier prey, he says.",
+      "traits": ["6'2\"", "RIGHT-HANDED", "DARK BROWN EYES", "BLACK HAIR"]
+    }
+  ],
+  "weapons": [
+    {
+      "name": "A JUGGLING PIN",
+      "description": "Perfect for juggling or cracking skulls. This one has suspicious red stains that are definitely not ketchup.",
+      "specs": "MEDIUM-WEIGHT & MADE OF WOOD"
+    },
+    {
+      "name": "A CIRCUS ROPE",
+      "description": "Strong enough to hold a flying trapeze artist. Also strong enough to strangle a popcorn vendor.",
+      "specs": "LIGHT-WEIGHT & MADE OF HEMP"
+    },
+    {
+      "name": "A LION WHIP",
+      "description": "Good for making lions jump through hoops. Even better for making people stop breathing.",
+      "specs": "MEDIUM-WEIGHT & MADE OF LEATHER"
+    }
+  ],
+  "locations": [
+    {
+      "name": "THE BIG TOP",
+      "description": "Where the magic happens under bright lights. Also where people die when the lights go out.",
+      "type": "INDOORS"
+    },
+    {
+      "name": "THE ANIMAL CAGES",
+      "description": "Home to lions, tigers, and one very hungry bear. The smell is almost as bad as finding a dead body.",
+      "type": "OUTDOORS"
+    },
+    {
+      "name": "THE DRESSING TENT",
+      "description": "Where performers put on makeup and costumes. Also where they wash off blood and plan alibis.",
+      "type": "INDOORS"
+    }
+  ],
+  "clues": [
+    "The suspect with green eyes was practicing their act when the murder happened.",
+    "A weapon made of hemp was found next to the cotton candy machine in the big top.",
+    "Captain Whipcrack never goes near the animal cages since the lion ate his hand.",
+    "The killer had rainbow hair and left colorful face paint on their weapon.",
+    "Either Madame Scarlett was in the dressing tent, or Bobo was in the animal cages.",
+    "The juggling pin was covered in the same face paint that only right-handed clowns use.",
+    "The body was found behind the animal cages, covered in sawdust and shame."
+  ]
+}
